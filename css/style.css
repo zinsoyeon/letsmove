@@ -82,28 +82,26 @@ nav.headerNav ul li.pole   { float:left; background-image: url("../image/comm/na
 nav.headerNav ul li.yudo   { float:right; background-image: url("../image/comm/nav_judo.png" ); }
 nav.headerNav ul li.futsal { float:right; background-image: url("../image/comm/nav_futsal.png" ); }
 
-nav.gall {
-    position: relative;  width: 100%; text-align: center;
+.introduce nav.gall {
+    position: relative;  width: 100%; padding: 100px 220px; text-align: center;
 }
-nav.gall ul {
-        margin: 5% 5% 0 5% ; width: 80%; display: inline-block;  overflow: hidden;
-}
-
-nav.gall ul li {
-    float:left; font-size: 1em;  display: block; height: 100px;
-    color: #fff;
-    text-align: center; overflow: hidden; margin:10px;
+.introduce nav.gall ul {
+         width: 100%; display: inline-block;  overflow: hidden;
 }
 
-nav.gall ul li a {
+.introduce nav.gall ul li {
+    float:left; font-size: 1em;  display: block; height: 100px;  padding:20px;
+    text-align: center; overflow: hidden;
+}
+
+.introduce nav.gall ul li a {  background-size:  auto 22%  ; }
+.introduce nav.gall ul li a {
     text-align:center;  display: block; width: 100%; height: 100%; text-indent: -9999px;
     background-color: #FF593C;
     background-repeat: no-repeat;
     background-size:  auto 20%  ;
     background-position: center center;
-
     transition:0.5s all;
-
 }
 
 nav.gall ul li a:hover{
@@ -318,6 +316,7 @@ article p.eng { font-size: 1.2em }
 @media (max-width: 1300px) {
 
     article{ padding: 100px 50px 60px 50px; }
+
     .letsmove article { padding: 120px 100px 120px 100px;  }
 
     .staff article {padding: 100px 10px 60px 50px; }
@@ -326,6 +325,10 @@ article p.eng { font-size: 1.2em }
     .staff article ul.supportlist { width: 200px; float: left ; margin-left: 50px;   }
     .staff article ul li p.sns { position: absolute; top:02px; right: 0px; width: 60px; }
 
+    .introduce article { padding: 0px 80px 50px 80px; text-align: center;   }
+    .introduce nav.gall {padding: 30px 80px;  text-align: center;}
+    .introduce nav.gall ul { }
+    .introduce nav.gall ul li { padding:5px; width: 20%; }
 
     .yogaillust { padding-right:0;
         background-repeat: no-repeat; background-size: auto 180px ; }
@@ -351,6 +354,7 @@ article p.eng { font-size: 1.2em }
 
     .staff article ul.stafflist { width: 300px;  }
     .staff article ul.supportlist { width: 150px; float: left;  margin-left: 30px;   }
+
     .staff article ul li p.sns { position: absolute; top:0px; right: 0px; width: 60px; }
     .yogaillust > span:first-child{ width:80%; }
     .yogaillust > span:last-child{ width:55%; }
@@ -358,24 +362,55 @@ article p.eng { font-size: 1.2em }
     .slide_list > li {  height: 200px;   }
     .slide_list > li img {   height: 100%; width:auto }
 
+
+    .introduce article { padding:0 40px 50px 40px; }
+    .introduce nav.gall {padding: 30px 35px;  text-align: center;}
+    .introduce article h4 {
+        font-size: 1.5em; font-weight:700; height:80px; width:300px; padding: 50px 0 0 0 ; margin-bottom: 10px;
+        background-repeat: no-repeat; background-size: auto 30px ; background-position: left top;
+        background-image: url("../image/comm/bull_punch.png");
+    }
+    .introduce article p.kor { line-height: 1.6em;  font-size: 1.1em}
+    .introduce article p.eng { line-height: 1.6em; letter-spacing: 0em ; font-size: 1em}
+
+    .introduce nav.gall { position: relative;  width: 100%; text-align: center; }
+    .introduce nav.gall { width: 100%;  }
+    .introduce nav.gall ul li {  padding:5px; width: 20%; }
+    .introduce nav.gall ul li a {  background-size:  auto 22%  ; }
+
+
 }
 
-@media (max-width:400px) {
+@media (max-width:414px) {
 
     .letsmove article h4 {
         height:50px; width:150px;
         background-image: url("../image/comm/main_tit.png" ) ;
-        background-repeat: no-repeat;
         background-size:  50% auto;
-        background-position: left center;
-        text-indent: -9999px;
+        background-position: left bottom;
         margin-bottom: 15px;
     }
 
-    .letsmove article { padding:60px 10px 10px 30px;}
+    .staff article h6 {margin-left: 0;}
+    .staff article ul.supportlist { width: 150px; float: left;  margin-left: 45px;   }
 
-    .letsmove article p.kor { line-height: 1.5em; margin-bottom: 10px; font-size: 1em; letter-spacing: -0.1em ;  }
+    .letsmove article { padding:50px 10px 10px 30px;}
+
+    .letsmove article p.kor { line-height: 1.5em; margin-bottom: 10px; font-size: 0.9em; letter-spacing: -0.1em ;  }
     .letsmove article p.eng { line-height: 1.5em;letter-spacing: -0.05em ; font-size: 0.9em;  }
+
+
+    .introduce article { padding:30px; }
+    .introduce nav.gall { padding: 30px 20px 0px 20px;  text-align: center;}
+    .introduce nav.gall ul li {  padding:3px; width: 20%; }
+    .introduce nav.gall ul li a {  background-size:  auto 25%  ; }
+
+    .yogaContents article { padding-top:0px}
+    .yogaillust { padding-right:0;
+        background-repeat: no-repeat; background-size: auto 120px ; }
+
+    .yogaillust > span:first-child{ width:80%; }
+    .yogaillust > span:last-child{ width:55%; }
 }
 
 

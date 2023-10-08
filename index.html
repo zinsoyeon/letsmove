@@ -33,20 +33,13 @@
         var windowWidth = $(window).width();
         var windowHeight = $(window).height();
 
-        $("#mainTrailer").css('height',windowHeight-60);
-        $("#mainTrailer").css('width',windowWidth);
+        if (windowWidth > 767) {
+            $("#mainTrailer").css('height', windowHeight);
+            $("#mainTrailer").css('width', windowWidth);
+        }
 
-        var nw = $("nav.gall ul").width()/5 - 20;
-        // $("nav.gall ul li").css('height',nw-2);
-        // $("nav.gall ul li").css('width',nw-2);
-        $("nav.gall ul li").animate(
-            { 'width': nw-2 || 'px' , 'height': nw-2
-            },10
-        )
-        $("nav.gall ul").animate(
-            { 'height': nw-2 }, 10
-        )
-
+        var nw = $("nav.gall ul li ").width();
+        $("nav.gall ul li").css('height',nw);
 
     }
 

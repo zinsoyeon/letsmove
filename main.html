@@ -32,25 +32,28 @@
             var h = $(window).height();
             var w = $(window).width();
             $("nav.gall ul li").css('height',w);
-
             main();
         })
     });
 
-    function main(){
+    function main() {
 
         var windowWidth = $(window).width(); //요소의 높이를 반환 S
         var windowHeight = $(window).height(); //요소의 높이를 반환 S
-        var $letsmoveMainArticle = $("#letsmoveMain > article") ;
-        var $letsmoveMainDiv = $("#letsmoveMain > article > div ") ;
+        var $letsmoveMainArticle = $("#letsmoveMain > article");
+        var $letsmoveMainDiv = $("#letsmoveMain > article > div ");
 
-        $letsmoveMainArticle.css({ "height": windowHeight || 'px' });
-        $letsmoveMainDiv.css({"margin-top":( $letsmoveMainArticle.height() - $letsmoveMainDiv.height() ) / 2 || 'px' });
+        if (windowWidth > 767) {
+            $letsmoveMainArticle.css({"height": windowHeight || 'px'});
+            $letsmoveMainDiv.css({"margin-top": ($letsmoveMainArticle.height() - $letsmoveMainDiv.height()) / 2 || 'px'});
+        }
 
         $("#mainTrailer").css('height',windowHeight-60);
         $("#mainTrailer").css('width',windowWidth);
         $("#yogaVideoPlay").css('height',windowHeight-60);
         $("#yogaVideoPlay").css('width',windowWidth);
+
+
 
     }
 
