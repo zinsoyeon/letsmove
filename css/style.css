@@ -378,10 +378,12 @@ article p.eng { font-size: 1.2em }
         margin-bottom: 15px;
     }
 
-    .staff article h6 {margin-left: 0;}
-    .staff article ul.supportlist { width: 150px; float: left;  margin-left: 45px;   }
+    .staff article h5 { font-size: 1.1em ; margin-bottom: 30px;}
+    .staff article h6 {margin-left: 0; margin-top: 20px; font-size: 0.8em}
+    .staff article ul.stafflist { width: 300px;  font-size: 0.8em  }
+    .staff article ul.supportlist { width: 180px;  margin-top: 20px;  margin-left: 25px; font-size: 0.8em }
 
-    .letsmove article { padding:50px 10px 10px 30px;}
+    .letsmove article { padding:50px 10px 50px 30px;}
 
     .letsmove article p.kor { line-height: 1.5em; margin-bottom: 10px; font-size: 0.9em; letter-spacing: -0.1em ;  }
     .letsmove article p.eng { line-height: 1.5em;letter-spacing: -0.05em ; font-size: 0.9em;  }
@@ -398,6 +400,13 @@ article p.eng { font-size: 1.2em }
 
     .yogaillust > span:first-child{ width:80%; }
     .yogaillust > span:last-child{ width:55%; }
+
+
+    .purpose article { padding:30px; }
+    .purpose article h5 {  font-size: 1.3em;}
+    .purpose article p { font-size:1em; line-height: 1.6em; margin-bottom: 10px; letter-spacing: -0.05em }
+
+
 }
 
 
