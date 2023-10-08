@@ -26,6 +26,34 @@
         slider();
     })
 
+    /* html 화면 크기 리사이즈 확인 */
+    $(function(){
+        $(window).resize(function(){
+            var h = $(window).height();
+            var w = $(window).width();
+            $("nav.gall ul li").css('height',w);
+
+            main();
+        })
+    });
+
+    function main(){
+
+        var windowWidth = $(window).width(); //요소의 높이를 반환 S
+        var windowHeight = $(window).height(); //요소의 높이를 반환 S
+        var $letsmoveMainArticle = $("#letsmoveMain > article") ;
+        var $letsmoveMainDiv = $("#letsmoveMain > article > div ") ;
+
+        $letsmoveMainArticle.css({ "height": windowHeight || 'px' });
+        $letsmoveMainDiv.css({"margin-top":( $letsmoveMainArticle.height() - $letsmoveMainDiv.height() ) / 2 || 'px' });
+
+        $("#mainTrailer").css('height',windowHeight-60);
+        $("#mainTrailer").css('width',windowWidth);
+        $("#yogaVideoPlay").css('height',windowHeight-60);
+        $("#yogaVideoPlay").css('width',windowWidth);
+
+    }
+
     function slider() {
         let swiper = undefined;
         let slideNum = $('.slider .swiper-slide').length //슬라이드 총 개수
@@ -79,33 +107,6 @@
             });
         }
     }
-
-
-    /* html 화면 크기 리사이즈 확인 */
-    $(function(){
-        $(window).resize(function(){
-            var h = $(window).height();
-            var w = $(window).width();
-            $("nav.gall ul li").css('height',w);
-
-            main();
-
-        });
-    });
-
-    function main(){
-
-            var windowHeight = $(window).height(); //요소의 높이를 반환 S
-
-            var $letsmoveMainArticle = $("#letsmoveMain > article") ;
-            var $letsmoveMainDiv = $("#letsmoveMain > article > div ") ;
-            $letsmoveMainArticle.css({ "height": windowHeight || 'px' });
-            $letsmoveMainDiv.css({"margin-top" :( $letsmoveMainArticle.height() - $letsmoveMainDiv.height() )/ 2 || 'px'
-
-        });
-
-    }
-
 
     // Load the IFrame Player API code asynchronously.
     var tag = document.createElement('script');
@@ -211,12 +212,17 @@
             $yogalist.css({ "display":"none" });
 
             // 요가재생
-            if( yogaFlag == true) {
+            if( yogaFlag == true ) {
                 console.log("yogaFlag" + yogaFlag);
                 playerMain.stopVideo();
                 playerYoga.playVideo();
                 playerYoga.mute(); //자동재생하려면 mute해야함
                 yogaFlag = false;
+                $('.yogagirl').fadeOut( 1000, 'linear' );
+                $('.yogatext').fadeOut( 1000, 'linear' );
+            } else {
+                $('.yogagirl').fadeIn( 1000, 'linear' );
+                $('.yogatext').fadeIn( 1000, 'linear' );
             }
 
         } else {
@@ -230,7 +236,7 @@
 
 <body>
     <header>
-        <h1>움직이는 여자들의 이야기</h1>
+        <h1><a href="index.html">움직이는 여자들의 이야기</a></h1>
     </header>
 
     <nav class="headerNav" id = "headerNav" class="headerNav">
@@ -266,7 +272,7 @@
 
     </section>
 
-    <main id="main">
+    <main id="main" class="main">
         <section class="trailer">
             <div class="blind"><p>트레일러영상</p></div>
             <div id="mainTrailer"></div>
@@ -487,9 +493,9 @@
 
         <div class="yogaVideo" id="yogaVideo">
             <section class="trailer">
-                <div class="yogatext">요가</div>
-                <div class="yogagirl">요가하는 사람</div>
-                <div class="blind"><p>트레일러영상</p></div>
+<!--                <div class="yogatext">요가</div>-->
+<!--                <div class="yogagirl">요가하는 사람</div>-->
+                <div class="blind"><p>요가 영상 - 요가 화면으로 넘어올때 재생됨</p></div>
                 <div id="yogaVideoPlay"></div>
             </section>
         </div>

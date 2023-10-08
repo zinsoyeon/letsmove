@@ -38,15 +38,18 @@ article{ padding:100px 200px; margin:0 auto;  }
 
 
 
-.blind{ position: absolute; top: 0; left: 0; display: inline-block; border: 1px solid #00f; width: 100%; height: 100%;
-    background-color: #fff;
+.blind{position: absolute; top: 0; left: 0; display: inline-block; width: 100%; height: 100%;
+    /*background-color: #fff;*/
     background-repeat: no-repeat; background-size: 100% ; background-position: center ;
-    background-image: url("../image/comm/sample01.png");
-    opacity: 1; text-align: center;  font-size: 50px; color: #fff; z-index: 9 }
-.yogaVideo .blind{
-    background-image: url("../image/comm/sample02.png");
+    /*background-image: url("../image/comm/sample01.png");*/
+    opacity: 0.5; text-align: center;  font-size: 50px; color: #fff; z-index: 9 ;  }
+.main .blind{
+    /*background-image: url("../image/comm/sample01.png");*/
 }
-.blind  p { border: 1px solid #fff; position: absolute; top: 40%; left: 40%; width: 20%; height:10%; text-align: center;    }
+.yogaVideo .blind{
+    /*background-image: url("../image/comm/sample02.png");*/
+}
+.blind  p {  position: absolute; top: 40%; left: 10%; width: 80%; height:10%; text-align: center;    }
 
 footer { background: #F8F8F8; font-size: 1em; padding:50px; }
 footer p{ text-align: center ;  line-height: 22px; height: 22px;}
