@@ -6,7 +6,7 @@ header h1 { position: absolute; top:0; left: calc(50% - 160px) ; font-size: 1em;
     background-image: url("../image/comm/header_large_logo_w.png" ) ;
     background-repeat: no-repeat;
     background-size:  100% auto;
-    background-position: center;
+    background-position: center center;
     text-indent: -9999px;
     cursor:pointer;  z-index: 9999;
 }
@@ -14,10 +14,10 @@ header h1.main { background-image: url("../image/comm/header_small_logo_w.png" )
     background-size:  100% auto;  width:100px; left: calc(50% - 50px) ;
 }
 nav.headerNav {
-   height:60px; width: 80%; z-index: 9 ;
+   height:60px; width: 100%; z-index: 9 ;
 }
 nav.headerNav ul {
-    position: relative; top: 0px;
+    position: relative; top: 0px; width: 100%; display: inline-block;
 }
 
 nav.headerNav ul li {
@@ -44,9 +44,6 @@ nav.headerNav ul li {
         background-size:  auto 43% ;
     }
 
-    header h1 {
-        width:280px;
-    }
 }
 @media (max-width: 767px) {
 
@@ -67,7 +64,7 @@ nav.headerNav ul li {
     }
 
     header h1 {
-        width:260px;
+        width:260px; left: calc(50% - 130px) ;
         background-size:  auto 30% ;
     }
 }
@@ -163,11 +160,11 @@ main.mt60 { margin-top: 60px; }
     text-indent: -9999px;
     margin-bottom: 15px;
 }
-.letsmove article p.kor { line-height: 1.8em; margin-bottom: 20px;  letter-spacing: -0.05em ;  }
+.letsmove article p.kor { line-height: 1.6em; margin-bottom: 20px;  letter-spacing: -0.05em ;  }
 .letsmove article p.eng { line-height: 1.6em; letter-spacing: 0em ;  }
 
 
-article p.kor { font-size: 2em }
+article p.kor { font-size: 1.6em }
 article p.eng { font-size: 1.2em }
 
 
@@ -189,7 +186,7 @@ article p.eng { font-size: 1.2em }
     background-image: url("../image/comm/bull_punch.png");
 }
 .staff article ul.stafflist { width: 650px; float: left;}
-.staff article ul.supportlist { width: 230px; float: left; }
+.staff article ul.supportlist { width: 300px; float: left; }
 
 .staff article h6 { width: 150px; height: 80px; float: left;; line-height: 1em }
 .staff article h6 strong { clear: both; width:100%; display:inline-block; font-size: 1em ; color: #000000; font-weight:700; }
@@ -234,11 +231,11 @@ article p.eng { font-size: 1.2em }
 .yogaContents .yogaContentsTitle .author { position:absolute;top:0; right: 0;   display: inline-block ;}
 .yogaContents .yogaContentsTitle .author .sns { float: right;   display: inline-block; }
 
-.yogaContents h6 { vertical-align:text-bottom; line-height: 1em;  vertical-align:bottom; }
+.yogaContents h6 { vertical-align:text-bottom; line-height: 1em;   }
 .yogaContents h6 span { text-decoration: none ; vertical-align:text-bottom; font-size: 0.7em; font-weight: 500; margin-left: 3px}
 .yogaContents > article > div  {  display: inline-block; margin:0 auto;}
 .yogaContents > article > div > p {   float: left;
-    font-size: 1em; clear:both; line-height: 1.8em; font-size: 1.2em; margin-bottom: 30px; letter-spacing: -0.05em ; display: inline-block }
+  clear:both; line-height: 1.8em; font-size: 1.2em; margin-bottom: 30px; letter-spacing: -0.05em ; display: inline-block }
 .yogaContents > article > p.txtindent{ padding-left: 30px;}
 .yogaContents > article > p .yellow {
     background-repeat: no-repeat; background-size: 100% ; background-position: left bottom;
@@ -255,7 +252,7 @@ article p.eng { font-size: 1.2em }
 .slider .inner {overflow: hidden;width: 100%;margin: 0 auto;}
 .slide_list > li {position: relative; width: calc(50% - 20px); margin:0 10px;
      font-size: 20px;line-height: 150px;color: #000;text-align: center; overflow: hidden ;    }
-.slide_list > li img { width: auto; width: 100%; height:auto }
+.slide_list > li img { width: 100%; height:auto }
 
 /* 영역별 밝기 설정 */
 .slide_list > li:after {content:'';
@@ -294,13 +291,13 @@ article p.eng { font-size: 1.2em }
 
 
 @media (max-width: 1800px) {
-    article p.kor { font-size: 2em }
+    article p.kor { font-size: 1.5em }
     article p.eng { font-size: 1.2em }
 }
 
 @media (max-width: 1500px) {
     article{ padding: 100px 50px 60px 50px; }
-    article p.kor { font-size: 1.6em }
+    article p.kor { font-size: 1.3em }
     article p.eng { font-size: 1.1em }
 }
 
@@ -311,9 +308,9 @@ article p.eng { font-size: 1.2em }
     .letsmove article { padding: 120px 100px 120px 100px;  }
 
     .staff article {padding: 100px 10px 60px 50px; }
-    .staff article h6 { width: 90px; margin-left: 50px ; height: 50px;}
-    .staff article ul.stafflist { width: 350px;  }
-    .staff article ul.supportlist { width: 200px; float: left ; margin-left: 50px;   }
+    .staff article h6 { width: 110px; margin-left: 40px ; height: 50px;}
+    .staff article ul.stafflist { width: 400px;  }
+    .staff article ul.supportlist { width: 250px; float: left ; margin-left: 40px;   }
     .staff article ul li p.sns { position: absolute; top:02px; right: 0px; width: 60px; }
 
     .introduce article { padding: 0px 80px 50px 80px; text-align: center;   }
@@ -330,8 +327,8 @@ article p.eng { font-size: 1.2em }
     .slide_list > li {  height: 300px;   }
     .slide_list > li img {   height: 100%; width:auto }
 
-    article p.kor { font-size: 1.25em }
-    article p.eng { font-size: 1em }
+    article p.kor { font-size: 1.1em }
+    article p.eng { font-size: 0.8em }
 
 }
 
