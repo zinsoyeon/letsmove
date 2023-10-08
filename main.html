@@ -29,19 +29,24 @@
     /* html 화면 크기 리사이즈 확인 */
     $(function(){
         $(window).resize(function(){
-            var h = $(window).height();
-            var w = $(window).width();
-            $("nav.gall ul li").css('height',w);
             main();
         })
+    });
+
+    $("#mainTitle").on('click',function() {
+        alert("00");
     });
 
     function main() {
 
         var windowWidth = $(window).width(); //요소의 높이를 반환 S
         var windowHeight = $(window).height(); //요소의 높이를 반환 S
+
         var $letsmoveMainArticle = $("#letsmoveMain > article");
         var $letsmoveMainDiv = $("#letsmoveMain > article > div ");
+
+
+        $("nav.gall ul li").css('height',windowWidth);
 
         if (windowWidth > 767) {
             $letsmoveMainArticle.css({"height": windowHeight || 'px'});
@@ -239,18 +244,18 @@
 
 <body>
     <header>
-        <h1><a href="index.html">움직이는 여자들의 이야기</a></h1>
+        <nav class="headerNav" id = "headerNav" class="headerNav">
+            <ul>
+                <li class="move"><a href="#letsmoveMain">움직여</a></li>
+                <li class="yoga"><a href="#yogaMain">요가</a></li>
+                <li class="pole"><a href="#poleMain">폴스포츠</a></li>
+                <li class="yudo"><a href="#yudoMain">유도</a></li>
+                <li class="futsal"><a href="#futsalMain">유도</a></li>
+            </ul>
+        </nav>
+        <h1 id="mainTitle">움직이는 여자들의 이야기</h1>
     </header>
 
-    <nav class="headerNav" id = "headerNav" class="headerNav">
-        <ul>
-            <li class="move"><a href="#letsmoveMain">움직여</a></li>
-            <li class="yoga"><a href="#yogaMain">요가</a></li>
-            <li class="pole"><a href="#poleMain">폴스포츠</a></li>
-            <li class="yudo"><a href="#yudoMain">유도</a></li>
-            <li class="futsal"><a href="#futsalMain">유도</a></li>
-        </ul>
-    </nav>
 
     <section class="letsmove" id="letsmoveMain">
 
