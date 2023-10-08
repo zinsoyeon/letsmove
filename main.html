@@ -1,0 +1,652 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width,initial-scale=1.0,minimum-scale=1.0,maximum-scale=1.0,user-scalable=no">
+    <link rel="shortcut icon" href="/favicon.ico">
+    <link rel="stylesheet" href="./css/comm.css">
+    <link rel="stylesheet" href="./css/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/Swiper/4.5.1/css/swiper.min.css">
+    <title>움직여!</title>
+</head>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/Swiper/4.5.1/js/swiper.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/1.12.4/jquery.js"></script>
+<script>
+
+    var flag = true;
+    /* html 최초 로드 및 이벤트 상시 대기 실시 */
+
+    $(window).on('load', function() {
+        console.log("window onload : start");
+        console.log("");
+
+        //메소드 호출
+        main();
+        slider();
+    })
+
+    function slider() {
+        let swiper = undefined;
+        let slideNum = $('.slider .swiper-slide').length //슬라이드 총 개수
+        let slideInx = 0; //현재 슬라이드 index
+
+        //디바이스 체크
+        // let oldWChk = window.innerWidth > 767 ? 'pc' : 'mo';
+        let oldWChk= 'mo';
+        sliderAct();
+        $(window).on('resize', function() {
+            // let newWChk = window.innerWidth > 767 ? 'pc' : 'mo';
+            let newWChk= 'mo';
+            if (newWChk != oldWChk) {
+                oldWChk = newWChk;
+                sliderAct();
+            }
+        })
+
+        //슬라이드 실행
+        function sliderAct() {
+            //슬라이드 초기화
+            if (swiper != undefined) {
+                swiper.destroy();
+                swiper = undefined;
+            }
+
+            //slidesPerView 옵션 설정
+            let viewNum = 2 ; // oldWChk == 'pc' ? 4 : 2;
+            //loop 옵션 체크
+            let loopChk = slideNum > viewNum;
+
+            swiper = new Swiper(".slider .inner", {
+                slidesPerView: "auto",
+                initialSlide: slideInx,
+                loop: loopChk,
+                centeredSlides: true,
+                speed : 1000,
+                autoplay: { // 자동 슬라이드 설정
+                    delay: 3000, // 시간 설정
+                    disableOnInteraction: false, // false로 설정하면 스와이프 후 자동 재생이 비활성화 되지 않음
+                },
+                navigation: {
+                    nextEl: $('.slider .btn_next'),
+                    prevEl: $('.slider .btn_prev'),
+                },
+                on: {
+                    activeIndexChange: function() {
+                        slideInx = this.realIndex; //현재 슬라이드 index 갱신
+                    }
+                },
+            });
+        }
+    }
+
+
+    /* html 화면 크기 리사이즈 확인 */
+    $(function(){
+        $(window).resize(function(){
+            var h = $(window).height();
+            var w = $(window).width();
+            $("nav.gall ul li").css('height',w);
+
+            main();
+
+        });
+    });
+
+    function main(){
+
+            var windowHeight = $(window).height(); //요소의 높이를 반환 S
+
+            var $letsmoveMainArticle = $("#letsmoveMain > article") ;
+            var $letsmoveMainDiv = $("#letsmoveMain > article > div ") ;
+            $letsmoveMainArticle.css({ "height": windowHeight || 'px' });
+            $letsmoveMainDiv.css({"margin-top" :( $letsmoveMainArticle.height() - $letsmoveMainDiv.height() )/ 2 || 'px'
+
+        });
+
+    }
+
+
+    // Load the IFrame Player API code asynchronously.
+    var tag = document.createElement('script');
+    tag.src = "https://www.youtube.com/player_api";
+    var firstScriptTag = document.getElementsByTagName('script')[0];
+    firstScriptTag.parentNode.insertBefore(tag, firstScriptTag);
+
+    // Replace the 'ytplayer' element with an <iframe> and
+    // YouTube player after the API code downloads.
+    var playerYoga;
+    var playerMain;
+
+    function onYouTubePlayerAPIReady() {
+        playerMain = new YT.Player('mainTrailer', {
+            height: window.innerHeight-document.getElementsByTagName('nav')[0].offsetHeight,
+            width: document.getElementsByTagName('body')[0].offsetWidth,
+            videoId: 'Rrq-Bvhbkao',
+            playerVars: {
+                'autoplay': 1, //자동재생
+                'rel': 0,
+                'showinfo': 0,
+                'modestbranding':0,
+                'playsinline': 0,
+                'rel': 0,
+                'controls': 1,	//youtube 콘트롤 표시
+                'color':'white',
+                'loop': 0, //반복 여부
+            },
+            events: {
+                'onReady': onPlayerReadyMain,
+            }
+        });
+
+        playerYoga = new YT.Player('yogaVideoPlay', {
+            height: window.innerHeight-document.getElementsByTagName('nav')[0].offsetHeight,
+            width: document.getElementsByTagName('body')[0].offsetWidth,
+            videoId: 'Rrq-Bvhbkao',
+            playerVars: {
+                'autoplay': 0, //자동재생
+                'rel': 0,
+                'showinfo': 0,
+                'modestbranding': 1,
+                'playsinline': 1,
+                'rel': 0,
+                'controls': 1,	//youtube 콘트롤 표시
+                'color':'white',
+                'loop': 1, //반복 여부
+            } , events: {
+                'onReady': onPlayerReadyYoga,
+            }
+        });
+
+
+    }
+
+    function onPlayerReadyMain(event) {
+        playerMain.playVideo();
+        playerMain.mute(); //자동재생하려면 mute해야함
+    }
+    function onPlayerReadyYoga(event) {
+        event.target.stopVideo();
+        playerYoga.mute(); //자동재생하려면 mute해야함
+    }
+
+    var yogaFlag = true; // 요가 스크롤
+
+    $(window).scroll(function(){
+
+        var scrollPosition = $(window).scrollTop();
+        // var scrollPositi  = $(window).scrollTop();
+        // var scrollPositi  = window.pageYoffset;
+        var $yogaMain = $('#yogaMain');
+        var $nav = $('header');
+        var $navTitle = $('header h1');
+        var yogaMainPosition = $yogaMain.offset().top-300;
+        // headerNav
+
+        var $movelist = $('#headerNav ul li.move');
+        var $yogalist = $('#headerNav ul li.yoga');
+        var $polelist = $('#headerNav ul li.pole');
+        var $yudolist = $('#headerNav ul li.yudo');
+        var $futsallist = $('#headerNav ul li.futsal');
+
+
+        if (scrollPosition < yogaMainPosition) { // 메인
+
+            $nav.css('background-color','#FF593C');
+            $navTitle.css({ "background-image":"url('../image/comm/header_large_logo_w.png' )"
+                ,"background-size":" 100% auto" })
+
+            $('#headerNav ul li').css({ "display":"inline-block" });
+            $movelist.css({ "display":"none" });
+            $yogalist.css({ "float":"left" });
+            $polelist.css({ "float":"left" });
+
+        } else if (scrollPosition >= yogaMainPosition) { // 요가
+            $nav.css('background-color','#FFCF55');
+
+            $('#headerNav ul li').css({ "float":"right" });
+            $navTitle.css({ "background-image":"url('../image/comm/nav_yoga_on.png' )"
+                           ,"background-size":"auto 50%" });
+            $movelist.css({ "display":"inline-block" ,"float":"left" });
+            $yogalist.css({ "display":"none" });
+
+            // 요가재생
+            if( yogaFlag == true) {
+                console.log("yogaFlag" + yogaFlag);
+                playerMain.stopVideo();
+                playerYoga.playVideo();
+                playerYoga.mute(); //자동재생하려면 mute해야함
+                yogaFlag = false;
+            }
+
+        } else {
+            $nav.css('background-color', '#FF593C');
+        }
+
+    }) ;
+
+
+</script>
+
+<body>
+    <header>
+        <h1>움직이는 여자들의 이야기</h1>
+    </header>
+
+    <nav class="headerNav" id = "headerNav" class="headerNav">
+        <ul>
+            <li class="move"><a href="#letsmoveMain">움직여</a></li>
+            <li class="yoga"><a href="#yogaMain">요가</a></li>
+            <li class="pole"><a href="#poleMain">폴스포츠</a></li>
+            <li class="yudo"><a href="#yudoMain">유도</a></li>
+            <li class="futsal"><a href="#futsalMain">유도</a></li>
+        </ul>
+    </nav>
+
+    <section class="letsmove" id="letsmoveMain">
+
+        <article>
+            <div>
+                <h4>움직여!</h4>
+                <p class="kor">
+                    뛰고, 차고, 오르고, 호흡하며 끊임없이 움직이는 여자들의 이야기<br/>
+                    보여지고 평가받는 대상으로서의 몸이 아닌 움직이고 기능하는 몸에 대한 이야기<br/>
+                    그리고 요가/폴스포츠/유도/풋살을 하는 여자들의 시작과 계기, 그리고 변화에 대한 이야기를<br/>
+                    임소연 과학기술학 박사&서민정 퍼스널 트레이너의 코멘터리와 함께 영상으로 담아낸 웹 영상 시리즈입니다.
+                </p>
+                <p class="eng">
+                    MOVE!(움직여!) is a web video series that tells the stories of women in constant motion—running, driving, climbing, and breathing.<br/>
+                    It's a narrative about moving and functioning bodies, not as objects to be seen and judged, but as bodies that move and function.<br/>
+                    It delves into the beginning, catalysts, and transformations of women engaged in yoga, pole sports, judo, and futsal.<br/>
+                    Dr. Im So-yeon, a Ph.D. in Science and Technology Studies, and Seo Min-jeong, a personal trainer, provide commentary<br/>
+                    as we capture these stories through vivid images.
+                </p>
+            </div>
+        </article>
+
+    </section>
+
+    <main id="main">
+        <section class="trailer">
+            <div class="blind"><p>트레일러영상</p></div>
+            <div id="mainTrailer"></div>
+        </section>
+    </main>
+
+
+    <section class="purpose">
+        <article>
+            <h5><strong>움직여!</strong>는</h5>
+            <p>우리를 둘러싼 수없이 많은 여성의 신체 이미지에 대한 의문점에서 출발했습니다.<br/>
+            정형화되고 이상적으로 그려진 이미지의 범람은 20~49세 여성의 절반 이상이 자신의 몸에 만족하지 못하며
+            그 이유로 ‘살이 쪘기 때문’이라고 응답하는 현실, 그리고 10대 여성 거식증 환자의 절반 이상이 10~14살 어린이라는
+            현실로부터 결코 그 책임이 가볍지 않을 것입니다.</p>
+
+            <p>한국문화예술위원회의 온라인미디어 예술활동 지원사업 [아트 체인지업]을 통해 진행된 이 프로젝트에서는
+            여성과 몸, 그중에서도 보여지고 평가받는 대상이 아닌 ‘주체적으로 움직이고 기능하는 몸’을 주제로
+            총 4편의 시리즈 영상과 이를 한 편의 완결된 서사로 갈무리한 컴필레이션 영상이 제작되었습니다.</p>
+
+            <p>시리즈 영상에서는 요가,폴스포츠,유도,풋살 총 4가지의 운동을 자신의 일상 속에서 즐기는 인터뷰이의 이야기가
+            임소연 과학기술학 박사 & 서민정 퍼스널 트레이너의 코멘터리와 함께 속도감 있게 담겼으며,
+            촬영 영상과 모션그래픽이 함께 어우러져 ‘움직이는 몸’을 생생하게 시각화합니다.<br/>
+            이를 통해 자신의 몸을 정형화된 사회적 미의 기준에 맞추어 가공하고 꾸미고 끝없이 말려야만 하는 대상이 아닌,
+            무궁무진한 가능성을 가진 하나의 전진 기지로 바라보는 감각을 이용자에게 전달하고자 합니다.</p>
+
+            <p>일각에서는 여성들 사이에 부는 근래의 운동 열풍마저도
+            <span class="italic">'단순히 마른 몸'이 아닌 '잔 근육도 적당히 있지만 여전히 여성스러운 라인을 가진 탄탄하고 마른 몸'</span>
+            으로 평가의 기준이 오히려 한 단계 상향화되었음을 방증한다는
+            비판을 제기하기도 합니다. 여전히 마르면서도 동시에 역설적으로 탄탄한 몸을 가지기 위해서는 운동 강습이나
+            식단 같은 곳에 쓸 수 있는 상당한 시간적 금전적 자본이 필요하기 때문에 오히려 이미 가진 자만이 더 추구할 수
+            있다는 자본주의 사회의 단면을 가감없이 보여준다는 의견 역시 존재합니다.</p>
+
+            <p>여성과 운동의 관계는 획일적이지 않으며, 개개인의 상황에 따라 그 경험 역시 다를 수 있음을 인식하는 작업이
+            필요합니다. 중요한 것은 이 모든 것이 건강하고 지속 가능하며 여성 당사자에게 권한을 부여하는 방식으로
+            이들이 격려 받고 서로 지원할 수 있는 환경을 만드는 것입니다. 혼자가 아니라는 감각은 매우 중요합니다.<br/>
+            여성은 운동과 신체 활동을 통해 내 몸에 대한 주체성을 되찾고 여성을 둘러싼 유해한 사회 규범에 얼마든지
+            도전할 수 있음을, 동시에 운동은 우리가 서로 연결되고 함께 커뮤니티를 구축하는 강력한 수단이 될 수 있으며,
+            함께 할 때 강하다는 것을 생생한 이야기와 시각적 이미지를 통해 전달하고자 합니다.</p>
+        </article>
+    </section>
+
+    <section class="staff">
+
+        <article>
+        <h5>움직여! 프로젝트 제작진</h5>
+            <ul class="stafflist">
+                <li>
+                    <p class="role">
+                        <span>연출 & 제작</span>
+                        <span>Director & Producer</span>
+                    </p>
+                    <p class="nm">
+                        <span>도유진</span>
+                        <span>DO YOUJIN</span>
+                    </p>
+                    <p class="sns">
+                        <a href="" class="facebook">facebook</a>
+                        <a href="" class="instagram">instagram</a>
+                        <a href="" class="youtube">youtube</a>
+                    </p>
+                </li>
+
+                <li>
+                    <p class="role">
+                        <span>편집</span>
+                        <span>Editor</span>
+                    </p>
+                    <p class="nm">
+                        <span>권은지, 박수현</span>
+                        <span>GWON EUNJI, PARK SOO HYUN</span>
+                    </p>
+                </li>
+
+                <li>
+                    <p class="role">
+                        <span>촬영감독</span>
+                        <span>Cinematographer</span>
+                    </p>
+                    <p class="nm">
+                        <span>김민주</span>
+                        <span>KIM MINJU</span>
+                    </p>
+                </li>
+
+
+                <li>
+                    <p class="role">
+                        <span>촬영</span>
+                        <span>Assistant camera</span>
+                    </p>
+                    <p class="nm">
+                        <span>도유진, 박수현</span>
+                        <span>DO YOUJIN, PARK SOO HYUN</span>
+                    </p>
+                </li>
+
+
+
+                <li>
+                    <p class="role">
+                        <span>디자인</span>
+                        <span>Designer</span>
+                    </p>
+                    <p class="nm">
+                        <span>지예나</span>
+                        <span>JI YENA</span>
+                    </p>
+                </li>
+
+                <li>
+                    <p class="role">
+                        <span>모션그래픽</span>
+                        <span>Motion graphic</span>
+                    </p>
+                    <p class="nm">
+                        <span>제니 미디어</span>
+                        <span>JENNY MEDIA</span>
+                    </p>
+                </li>
+
+
+                <li>
+                    <p class="role">
+                        <span>작곡</span>
+                        <span>Music composer</span>
+                    </p>
+                    <p class="nm">
+                        <span>김수정</span>
+                        <span>KIM SOOJUNG</span>
+                    </p>
+                </li>
+
+
+
+                <li>
+                    <p class="role">
+                        <span>색보정</span>
+                        <span>Colorist</span>
+                    </p>
+                    <p class="nm">
+                        <span>김선형</span>
+                        <span>KIM SEON-HYEONG</span>
+                    </p>
+                </li>
+
+
+
+                <li>
+                    <p class="role">
+                        <span>오디오믹싱</span>
+                        <span>Sound designer</span>
+                    </p>
+                    <p class="nm">
+                        <span>이인경</span>
+                        <span>LEE INGYEONG</span>
+                    </p>
+                </li>
+
+                <li>
+                    <p class="role">
+                        <span>자막 & 베리어 프리</span>
+                        <span>Subtitles</span>
+                    </p>
+                    <p class="nm">
+                        <span>21세기 자막단</span>
+                        <span>21ST CENTURY PRODUCTIONS</span>
+                    </p>
+                </li>
+
+
+
+                <li>
+                    <p class="role">
+                        <span>제작보조</span>
+                        <span>Production assistant</span>
+                    </p>
+                    <p class="nm">
+                        <span>유수영</span>
+                        <span>YOU SOOYOUNG</span>
+                    </p>
+                </li>
+
+                <li>
+                    <p class="role">
+                        <span>자문</span>
+                        <span>Advisor</span>
+                    </p>
+                    <p class="nm">
+                        <span>이미영</span>
+                        <span>YI MIYOUNG</span>
+                    </p>
+                </li>
+
+            </ul>
+            <h6>
+                <strong>도움주신 분들</strong>
+                <span>Special thanks</span>
+            </h6>
+            <ul class="supportlist">
+                <li>
+                    <p class="nm">
+                        <span>도유진</span>
+                        <span>DO YOUJIN</span>
+                    </p>
+                </li>
+                <li>
+                    <p class="nm">
+                        <span>권은지, 박수현</span>
+                        <span>GWON EUNJI, PARK SOO HYUN</span>
+                    </p>
+                </li>
+            </ul>
+
+        </article>
+    </section>
+
+    <section class="yoga" id="yogaMain">
+
+        <div class="yogaVideo" id="yogaVideo">
+            <section class="trailer">
+                <div class="yogatext">요가</div>
+                <div class="yogagirl">요가하는 사람</div>
+                <div class="blind"><p>트레일러영상</p></div>
+                <div id="yogaVideoPlay"></div>
+            </section>
+        </div>
+
+        <div class="slider">
+            <div class="inner">
+                <ul class="swiper-wrapper slide_list">
+                    <li class="swiper-slide"><img src="image/comm/gall_yoga01.png" alt="" /></li>
+                    <li class="swiper-slide"><img src="image/comm/gall_yoga02.png" alt="" /></li>
+                    <li class="swiper-slide"><img src="image/comm/gall_yoga03.png" alt="" /></li>
+                    <li class="swiper-slide"><img src="image/comm/gall_yoga01.png" alt="" /></li>
+                    <li class="swiper-slide"><img src="image/comm/gall_yoga02.png" alt="" /></li>
+                </ul>
+            </div>
+            <span class="btn btn_prev">이전</span>
+            <span class="btn btn_next">다음</span>
+        </div>
+    </section>
+
+    <section class="yogaContents" id="yogaContents">
+        <article>
+            <div class="yogaCont">
+                <div class="yogaContentsTitle" >
+                    <h6>01. 요가<span>_이소영님</span></h6>
+                    <div class="author">
+                        <p class="nm">작성자 : 김지영</p>
+                        <p class="sns">
+                            <a href="" class="facebook">facebook</a>
+                            <a href="" class="instagram">instagram</a>
+                            <a href="" class="youtube">youtube</a>
+                        </p>
+                    </div>
+                </div>
+                <p>소제목 1</p>
+                <p>19세기의 버지니아 울프는 여자에게 일정한 돈, 자기만의 방, 생각을 표현할 용기가 필요하다고 했다.<br/>
+                    21세기 버전으로 다시 말한다면 현대의 여성에게는 자신만의 숲과 나에게 맞는 운동이 되지 않을까?<br/>
+                    여기 이것으로 자신의 삶을 새롭게 꾸려가는 이가 있다.<br/>
+                    강원도 정선에서 '포레스트 요가'를 수련하고 가르치고 있는 이소영씨는<br/>
+                    <span class="yellow">10년이 넘던 커리어를 하나의 운동을 만난 것을 계기로 정리하게 되었다.</span>
+                </p>
+                <p class="txtindent">
+                    “ IT회사에서 브랜딩 디자이너로 일했는데 버려질 무언가를 계속해서 만들어 내야 한다는 사실이 힘들었어요.<br/>
+                    대량으로 만들어지고 버려지는 반복되는 과정을 지켜보며 이런저런 고민이 많았죠.<br/>
+                    그런 고민의 와중에 우연히 요가를 만나게 됐어요. 회사에서 주는 장기 휴가로 발리 우붓이라는 지역을 갔는데,<br/>
+                    그곳이 요가의 성지같은 곳이었거든요. 요가에 대해서 전혀 모르는 상태로 우연히 숙소 근처에서 열리는<br/>
+                    아침 요가에 참석하게 됐어요. 그런데 그날 우연히 경험한 숲 속의 요가가 너무 좋았던 거에요.<br/>
+                    야외 샬라여서 바람, 습도, 소리를 그대로 느낄 수 있었죠. “
+                </p>
+                <p class="txtindent">
+                    많고 많은 요가의 종류 중에서도 소영씨가 수련하고 가르치는 것은 ‘포레스트 요가’다.<br/>
+                    하나의 자세를 오래 유지하는 정적인 요가이면서도 코어의 근육이 많이 관여하는 운동이기도 하다.<br/>
+                    특히 통증에 대한 치유의 목적이 크다.
+
+                </p>
+                <p class="yogaillust">
+                    작은 야외 살라에서의 요가 경험은 예상치 않게 소영씨의 삶을 차츰차츰 바꿔나갔다.<br />
+                    한국에 돌아와서도 꾸준히 혼자서 요가 수련을 이어나가던 소영씨는 <br />
+                    어느날 문득 누군가에게 요가를 가르쳐보고 싶다는 생각을 하게 되었다.<br />
+                    지구에 무해하고, 타인을 도와줄 수 있는 일.<br />
+                    <span>디자이너로서 고민해왔던 윤리적인 문제에서 벗어날 수 있는 일이었다.</span><br/>
+                    <span>그렇게 요가 지도자로서의 첫 발을 내딛게 된 소영씨는 거주지에 대해서도 고민을 시작했다.</span>
+                </p>
+                <p class="txtindent">
+                    “서울 생활에 지쳐서 어디론가 벗어나고 싶은 마음에 제주도에 살았어요.<br/>
+                    그런데 제주도에서는 포레스트 요가를 수련하기가 너무 어려웠어요.<br/>
+                    선생님들이 다들 육지에 계시거든요. 수련을 계속 하려면 육지로 가야할 것 같긴 한데<br/>
+                    서울로는 정말 다시 가고 싶지 않았어요. 그 바쁘고 경쟁적인 삶이 싫어서 다른 일을 선택한 거니까요.<br/>
+                    그러다가 아주 친한 친구가 살고 있는 정선이 눈에 들어왔어요.<br/>
+                    우연히 이곳에 오게 된 건데 감사하게도 정선에 저를 필요로 하는 분들이 많아 즐겁게 일을 하고 있죠.”
+                </p>
+                <p>
+                    요가가 소영씨의 삶에 가져온 변화는 직업, 거주지뿐 아니다.<br/>
+                    일상에 여백과 부드러움이 생겼다는 점이 사실 가장 만족스러운 부분이다.<br/>
+                    밤낮없이 일하던 삶은 이제 없다. 수업으로 시간을 꽉 채우기 보다 스스로를 보살필 시간을 줄 수 있게 되었다.
+                </p>
+                <p class="txtindent">
+                    “처음 배웠을 때부터 느낌이 달랐어요. 다른 운동도 많이 해봤는데 요가는 달라요.<br/>
+                    일상으로 아주 깊숙이 들어왔죠.<br/>
+                    다른 운동은 어딘가로 가서 해야 하다 보니 사실 나가는게 어려워서 못하게 되는 경우가 많잖아요.<br/>
+                    근데 요가는 내 눈 앞에 항상 있는 거에요.<br/>
+                    그러니까 조금 귀찮은 날에도 일단 매트 위에 앉아서 숨이라도 쉬어요.<br/>
+                    아주 간단한 자세로 시작했다가 점점 빠져들게 되는 거죠. 요가는 개념 자체가 수련에 가깝기도 하고,<br/>
+                    매트만 깔려 있으면 어디서도 할 수 있다 보니까 벗어날 수가 없더라고요.😊”
+                </p>
+                <p>
+                    바쁜 도시 서울에서 경쟁적인 삶에 익숙했던 소영씨는 자신의 몸도 몰아 부치듯이 대하는 것에 익숙했다.<br/>
+                    억지로 힘쓰고, 애써서 버티다 보면 몸에 힘이 잔뜩 들어갈 수밖에 없었다.
+                </p>
+                <p class="txtindent">
+                    “재미있게도 요가는 신체의 모든 것을 드러내요. 자신의 성격, 성향 같은 것도요.<br/>
+                    저는 항상 스스로를 푸시하는 사람이었더라고요. 뭔가를 늘 열심히 하는데 몰아 부치듯이 하는 거죠.<br/>
+                    그런데 포레스트 요가를 하면서는 내려놓는 연습을 하게 됐어요. 힘을 쓴다는 것이 나쁜 것은 아니지만<br/>
+                    너무 그 방향으로만 나를 몰아 붙이면 불균형이 일어나게 되니까요.”
+                </p>
+                <p>
+                    소영씨는 요가를 하면서 스스로 어떤 사람인지 점점 더 잘 알아차리게 되었다고 말한다.<br/>
+                    사람들은 대부분의 시간을 습관처럼 살아간다. 하지만 몸도, 생각도 그저 습관처럼 움직이다 보면<br/>
+                    자신이 어떤 상태로 살아가는지 알아차리기 어렵다.
+                </p>
+                <p class="txtindent">
+                    “어느날은 '브릿지'라는 자세를 하며 가슴으로 호흡을 하는데 호흡이 너무나 시원하게 제 가슴 속으로 들어오면서<br/>
+                    갑자기 눈물이 쏟아지는 거에요. 내가 힘쓰고 애써 스스로를 몰아 부칠 때는 느낄 수 없었던 자유로움을<br/>
+                    그 순간 온 몸으로 느꼈기 때문인 것 같아요. 왠지 부끄럽기도 하고 시원하기도 한, 다양한 감정들이 오갔어요.”
+                </p>
+                <p>
+                    소영씨는 요가를 만나 내 몸과 마음에 공간을 만드는 법을 알게 되었다.<br/>
+                    내 몸과 마음이 편안하게 쉬어갈 수 있는 공간.<br/>
+                    요가는 소영씨에게 도시에서는 쉽사리 내어주지 않던 편안한 숲과 같은 공간을 내주었다.
+                </p>
+                <p>
+                    요가를 바라보는 이런 저런 시선들에 대해서도 하고 싶은 말이 많다.
+                </p>
+                <p class="txtindent">
+                    “제가 요가 수련하는 모습을 올리는 인스타그램 계정이 있는데요.<br/>
+                    어느날 어떤 분이 너무 야해서 보기 불편하다는 말을 하시더라고요.<br/>
+                    되려 웃으면서 당신이 대체 어떤 생각을 하시냐고 되물었어요.”
+                </p>
+                <p>
+                    소영씨가 영상과 사진으로 스스로 수련하는 모습을 기록으로 남겨두는 것은 스스로 더 개선하고 싶기 때문이다.<br/>
+                    하지만 소영씨가 느끼기에 세상 사람들의 시선을 여전히 외부를 향해 더 뻗어있다.
+                </p>
+                <p class="txtindent">
+                    “그런데 많은 사람들이 여전히 이런 질문을 하세요. 요가를 하면 몸매가 예뻐지나요?<br/>
+                    저보다 나이가 있으신 선생님이 이제 막 요가 선생님 경력을 시작하시는 단계에서 아드님한테 물어봤대요.<br/>
+                    너라면 어떤 강사에게 등록을 하겠냐고. 그랬더니 아들이 이렇게 대답하더래요.<br/>
+                    “엄마, 간단해. 젊고 마르고 예쁘면 돼.”<br/>
+                    이런 현실들이 참 안타깝죠. 또 그런 시각에 맞춰서 마른 몸을 유지하려고 노력하는 분들도 계시고요.<br/>
+                    그게 아름다움이라고 생각하는 건데 시선이 자신이 아닌 타인에게 가있는 상태인 거죠.<br/>
+                    그런 분들에게 제가 뭐라고 한들 그게 들리지 않겠죠.”
+                </p>
+                <p>
+                    타인의 시선이 아닌 내 안의 재미를 찾을 것. 이것을 깨닫고 소영씨의 삶은 크게 변화했다.<br/>
+                    그 변화를 소영씨는 사람들과 나누고 싶다
+                </p>
+                <p class="txtindent">
+                    “남들의 시선이 뭐가 중요할까요. 보여주는 것보다 내가 즐거운 게 중요하죠.<br/>
+                    누군가를 보여주거나 내 몸을 아름답게 만들기 위해서가 아니라 그냥 그 운동이 정말 재밌어서 하는 거에요.<br/>
+                    그 재미에 정말 심취하다 보면 자연스럽게 자신 안으로 들어오게 된다고 생각해요.<br/>
+                </p>
+                <p>
+                    단지 아름다운 모습을 가꾸는 것뿐만 아니라 세상에는 정말 다채롭고 다양한 재미가 있거든요.<br/>
+                    나를 말려가는 타인의 시선, 사회의 시선에서 벗어나길 바라요.<br/>
+                    어떤 운동을 해야할지 막막하신 분들이 있다면 희소식을 알려드릴게요.<br/>
+                    세상에는 수백, 수천가지 운동이 있어서 어떻게든 하나쯤은 나에게 맞는 운동을 찾을 수 있다고 장담해요.<br/>
+                    그러니 호기심을 가지고 더 찾아보시고, 삶에서 더 다채로운 재미를 즐기시길 바라요.”
+                </p>
+            </div>
+        </article>
+
+    </section>
+
+    <footer>
+        <p>움직이는 여자들의 이야기 움직여!</p>
+        <p>Contact  <a href="mailto:hi@youjin.do"> hi@youjin.do</a></p>
+        <p>© 2023 Youjin Do All rights reserved.</p>
+        <p class="logo">footer logo</p>
+    </footer>
+
+</body>
+</html>

@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width,initial-scale=1.0,minimum-scale=1.0,maximum-scale=1.0,user-scalable=no">
+    <link rel="shortcut icon" href="/favicon.ico">
+    <link rel="stylesheet" href="./css/comm.css">
+    <link rel="stylesheet" href="./css/style.css">
+    <title>움직여!</title>
+</head>
+
+<script  src="https://code.jquery.com/jquery-latest.min.js"></script>
+<script>
+
+    /* html 최초 로드 및 이벤트 상시 대기 실시 */
+    $(window).load(function(){
+        //메소드 호출
+        main();
+    });
+
+
+    /* html 화면 크기 리사이즈 확인 */
+    $(function(){
+        $(window).resize(function(){
+
+            main();
+        });
+    });
+
+    function main(){
+
+        var windowWidth = $(window).width();
+        var windowHeight = $(window).height();
+
+        $("#mainTrailer").css('height',windowHeight-60);
+        $("#mainTrailer").css('width',windowWidth);
+
+        var nw = $("nav.gall ul").width()/5 - 20;
+        // $("nav.gall ul li").css('height',nw-2);
+        // $("nav.gall ul li").css('width',nw-2);
+        $("nav.gall ul li").animate(
+            { 'width': nw-2 || 'px' , 'height': nw-2
+            },10
+        )
+        $("nav.gall ul").animate(
+            { 'height': nw-2 }, 10
+        )
+
+
+    }
+
+    // Load the IFrame Player API code asynchronously.
+    var tag = document.createElement('script');
+    tag.src = "https://www.youtube.com/player_api";
+    var firstScriptTag = document.getElementsByTagName('script')[0];
+    firstScriptTag.parentNode.insertBefore(tag, firstScriptTag);
+
+    // Replace the 'ytplayer' element with an <iframe> and
+    // YouTube player after the API code downloads.
+    var player;
+    function onYouTubePlayerAPIReady() {
+        player = new YT.Player('mainTrailer', {
+            height: window.innerHeight-document.getElementsByTagName('nav')[0].offsetHeight,
+            width: document.getElementsByTagName('body')[0].offsetWidth,
+            videoId: 'Rrq-Bvhbkao',
+            playerVars: {
+                'autoplay': 1, //자동재생
+                'rel': 0,
+                'showinfo': 0,
+                'modestbranding': 1,
+                'playsinline': 1,
+                'rel': 0,
+                'controls': 1,	//youtube 콘트롤 표시
+                'color':'white',
+                'loop': 1, //반복 여부
+            },
+            events: {
+                'onReady': onPlayerReady,
+            }
+        });
+    }
+
+    function onPlayerReady(event) {
+        player.playVideo();
+        player.mute(); //자동재생하려면 mute해야함
+    }
+
+</script>
+
+<body>
+    <header>
+        <h1 class="main">움직여!</h1>
+    </header>
+
+
+
+    <main id="main" class="mt60">
+        <section class="trailer">
+            <div class="blind"><p>트레일러영상</p></div>
+            <div id="mainTrailer"></div>
+        </section>
+    </main>
+
+    <section class="introduce">
+
+        <nav class="gall">
+            <ul>
+                <li class="move"><a href="main.html#letsmove">움직여</a></li>
+                <li class="yoga"><a href="main.html#yogaContents">요가</a></li>
+                <li class="pole"><a href="main.html#letsmove">폴스포츠</a></li>
+                <li class="yudo"><a href="main.html#letsmove">유도</a></li>
+                <li class="futsal"><a href="main.html#letsmove">풋살</a></li>
+            </ul>
+        </nav>
+
+        <article>
+            <h4>움직여!</h4>
+            <p class="kor">
+                뛰고, 차고, 오르고, 호흡하며 끊임없이 움직이는 여자들의 이야기<br/>
+                보여지고 평가받는 대상으로서의 몸이 아닌 움직이고 기능하는 몸에 대한 이야기<br/>
+                그리고 요가/폴스포츠/유도/풋살을 하는 여자들의 시작과 계기, 그리고 변화에 대한 이야기를<br/>
+                임소연 과학기술학 박사&서민정 퍼스널 트레이너의 코멘터리와 함께 영상으로 담아낸 웹 영상 시리즈입니다.
+            </p>
+            <p class="eng">
+                MOVE!(움직여!) is a web video series that tells the stories of women in constant motion—running, driving, climbing, and breathing.<br/>
+                It's a narrative about moving and functioning bodies, not as objects to be seen and judged, but as bodies that move and function.<br/>
+                It delves into the beginning, catalysts, and transformations of women engaged in yoga, pole sports, judo, and futsal.<br/>
+                Dr. Im So-yeon, a Ph.D. in Science and Technology Studies, and Seo Min-jeong, a personal trainer, provide commentary<br/>
+                as we capture these stories through vivid images.
+            </p>
+        </article>
+
+    </section>
+
+
+    <footer>
+        <p>움직이는 여자들의 이야기 움직여!</p>
+        <p>Contact  <a href="mailto:hi@youjin.do"> hi@youjin.do</a></p>
+        <p>© 2023 Youjin Do All rights reserved.</p>
+        <p class="logo">footer logo</p>
+    </footer>
+
+</body>
+</html>

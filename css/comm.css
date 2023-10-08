@@ -1,0 +1,64 @@
+@font-face { /* 애플산돌고딕 폰트 적용 */
+    font-family: "SDGothic";
+    src: url("../font/AppleSDGothicNeoL.ttf") format("truetype");
+    font-weight: 500;
+}
+@font-face { /* 애플산돌고딕 폰트 적용 */
+    font-family: "SDGothic";
+    src: url("../font/AppleSDGothicNeoM.ttf") format("truetype");
+    font-weight: 600;
+}
+@font-face { /* 애플산돌고딕 폰트 적용 */
+    font-family: "SDGothic";
+    src: url("../font/AppleSDGothicNeoEB.ttf") format("truetype");
+    font-weight: 700;
+}
+@font-face { /* 애플산돌고딕 폰트 적용 */
+    font-family: "SDGothic";
+    src: url("../font/AppleSDGothicNeoEB.ttf") format("truetype");
+    font-weight: 800;
+}
+
+* { margin:0; padding:0; box-sizing: content-box;
+    font-family: 'SDGothic', AppleSDGothicNeo-Regular, /*'Malgun Gothic', '맑은 고딕',*/ dotum, '돋움', sans-serif;
+    word-break:keep-all; list-style:none; text-indent: 0; font-size: 1em; line-height: 1em;
+    box-sizing: border-box;  text-align: left;
+}
+
+article{ padding:100px 200px; margin:0 auto;  }
+.introduce article { padding: 120px 250px 100px 250px;  }
+.letsmove article { padding: 60px 250px 0px 250px;  }
+
+
+.sns a { width: 20px; height: 20px ; margin:0px; float: left;  display: inline-block; overflow: hidden; text-indent: -9999px ;
+    background-repeat: no-repeat; background-size: 70% auto; background-position: center;}
+.sns .youtube { background-image: url("../image/comm/btn_youtube.png" ); }
+.sns .instagram { background-image: url("../image/comm/btn_insta.png" ); }
+.sns .facebook {background-image: url("../image/comm/btn_facebook.png" ); }
+
+
+
+.blind{ position: absolute; top: 0; left: 0; display: inline-block; border: 1px solid #00f; width: 100%; height: 100%;
+    background-color: #fff;
+    background-repeat: no-repeat; background-size: 100% ; background-position: center ;
+    background-image: url("../image/comm/sample01.png");
+    opacity: 1; text-align: center;  font-size: 50px; color: #fff; z-index: 9 }
+.yogaVideo .blind{
+    background-image: url("../image/comm/sample02.png");
+}
+.blind  p { border: 1px solid #fff; position: absolute; top: 40%; left: 40%; width: 20%; height:10%; text-align: center;    }
+
+footer { background: #F8F8F8; font-size: 1em; padding:50px; }
+footer p{ text-align: center ;  line-height: 22px; height: 22px;}
+footer p:nth-child(1){ margin-bottom: 5px; color:#666666;   font-weight: 600; letter-spacing: -0.095em }
+footer p:nth-child(2){ color:#7E7E7E; font-size: 0.9em; font-weight: 400; }
+footer p:nth-child(2) a { color:#666 !important; }
+footer p:nth-child(2){ color:#7E7E7E; font-size:  0.9em; font-weight: 400; }
+footer p.logo{
+    height:40px; width:40px; margin: 0 auto;
+    background-image: url("../image/comm/footer_logo.png" ) ;
+    background-repeat: no-repeat;
+    background-size:  50% auto;
+    background-position: left center;
+    text-indent: -9999px;
+}
