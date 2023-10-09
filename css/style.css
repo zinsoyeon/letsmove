@@ -1,83 +1,166 @@
+/* 상단 메뉴 */
+@media (min-width: 768px) {
 
-header { position: fixed; height:60px; width: 100%; top: 0; left:0; z-index: 800;
-    background-color: #FF593C;}
-header h1 { position: absolute; top:0; left: calc(50% - 160px) ; font-size: 1em; margin: 0px auto ; display: block;
-    height:60px; width:320px;
-    background-image: url("../image/comm/header_large_logo_w.png" ) ;
-    background-repeat: no-repeat;
-    background-size:  100% auto;
-    background-position: center center;
-    text-indent: -9999px;
-    cursor:pointer;  z-index: 9999;
-}
-header h1.main { background-image: url("../image/comm/header_small_logo_w.png" ) ;
-    background-size:  100% auto;  width:100px; left: calc(50% - 50px) ;
-}
-nav.headerNav {
-   height:60px; width: 100%; z-index: 9 ;
-}
-nav.headerNav ul {
-    position: relative; top: 0px; width: 100%; display: inline-block;
-}
+    header { position: fixed; top: 0; left: 0; height: 60px; width: 100%;
+         z-index: 800; background-color: #FF593C; }
 
-nav.headerNav ul li {
-    float:left; font-size: 1em;
-    position: relative;
-    margin: 5px auto ; display: block;
-    height:50px; width:12%;
-    color: #fff;
-    text-align: center;
-    background-repeat: no-repeat;
-    background-size:  auto 50% ;
-    background-position: center center;
-}
-
-@media (max-width: 1400px) {
-
-    nav.headerNav {
-        width: 100%;
-        left: 0%;
+    header h1 {  position: absolute; top: 0; left: calc(50% - 150px); margin: 0px auto; display: block; height: 60px; width: 300px;
+        background-image: url("../image/comm/header_large_logo_w.png");
+        background-repeat: no-repeat; background-size: 100% auto; background-position: center center;
+        text-indent: -9999px; font-size: 1em; cursor: pointer; z-index: 9999;
     }
 
+    header h1.main {  background-image: url("../image/comm/header_small_logo_w.png"); background-size: 100% auto;
+        width: 100px; left: calc(50% - 50px);  }
+
+    nav.headerNav { position: relative; height: 60px; width: 100%; z-index: 9; text-align: center }
+    nav.headerNav ul {  display: inline-block; width: 100%;
+        padding:0 3% ; max-width: 1400px; }
     nav.headerNav ul li {
-        width:12%;
-        background-size:  auto 43% ;
+        float: left;
+        position: relative;
+        margin: 5px 0;
+        display: block;
+        height: 50px;
+        padding:0 2.5% ;
+        width: 12%;
+        color: #fff; font-size: 1em; text-align: center;
+        background-repeat: no-repeat; background-size: auto 20px ; background-position: center center;
     }
 
+    nav.headerNav ul li a{  text-indent: -9999px; display:inline-block; width: 100%; height: 100%; }
+
+    nav.headerNav ul li.move   { display:none; background-image: url("../image/comm/nav_move.png" ); }
+    nav.headerNav ul li.yoga   { background-image: url("../image/comm/nav_yoga.png" ); }
+    nav.headerNav ul li.pole   { background-image: url("../image/comm/nav_pole.png" );  }
+    nav.headerNav ul li.yudo   { background-image: url("../image/comm/nav_judo.png" ); margin-left:52%; }
+    nav.headerNav ul li.futsal { background-image: url("../image/comm/nav_futsal.png" ); }
+
+    .btn_cate {display: none;}
+
+    /*스태프*/
+    .staff article {
+        padding-right:40px;
+    }
+    .staff article .supportSection { float: left; margin-left:20px; }
+    .staff article ul.stafflist { width: 650px; float: left;}
+    .staff article ul.supportlist { width: 300px; float: left; }
+    .staff article h6 { width: 150px; height: 80px; float: left; line-height: 1em }
+
+}
+
+@media (max-width: 1200px) {
+    article {
+        padding: 100px 50px 60px 50px;
+    }
+
+    .letsmove article {
+        padding: 120px 100px 120px 80px;
+    }
+
+    .staff article {
+        padding: 60px 10px 60px 40px;
+    }
+
+    .staff article h6 {
+        width: 90px;
+        height: 50px;
+        float: left;
+    }
+
+    .staff article .supportSection { float: left; margin-left:20px; }
+    .staff article ul.stafflist {
+        width: 370px;
+        float: left;
+    }
+
+    .staff article ul.supportlist {
+        width: 210px;
+        float: left;
+        margin-left: 20px;
+    }
+
+    .staff article ul li {   }
+    .staff article ul li p.sns {
+        position: absolute;
+        top: 02px;
+        right: 0px !important;
+        width: 70px!important;
+    }
 }
 @media (max-width: 767px) {
 
-    nav.headerNav {
-        width: 100%;
-        left: 0%;
-    }
-
-    nav.headerNav ul li {
-        width:10%;
-        background-size: auto 20px  ;
-    }
-    nav.headerNav ul li.move {
-        width:20%;
-    }
-    nav.headerNav ul li.pole {
-        width:15%;
-    }
+    header { position: fixed; top: 0; left: 0; height: 50px; width: 100%;
+        z-index: 800; background-color: #FF593C; }
 
     header h1 {
-        width:260px; left: calc(50% - 130px) ;
-        background-size:  auto 30% ;
+        /*width:260px; left: calc(50% - 130px) ;*/
+        /*background-size:  auto 30% ;*/
     }
+    header h1 {
+        position: absolute;
+        top: 0;
+        font-size: 1em;
+        margin: 0px auto;
+        display: block;
+        height: 50px;
+        width: 260px; left: calc(50% - 130px)   ;
+        background-image: url("../image/comm/header_large_logo_w.png");
+        background-repeat: no-repeat; background-size: 100% auto;
+        background-position: center center;
+        text-indent: -9999px;
+        cursor: pointer;
+        z-index: 9999;
+    }
+
+   /* header h1.main {
+        background-image: url("../image/comm/header_small_logo_w.png");
+        background-size: 100% auto;
+        width: 100px;
+        left: calc(50% - 50px);
+    } */
+    header .btn_cate { position: absolute; top: 0px;
+        left: 10px; width: 50px; height: 50px;
+        background-image: url("../image/comm/btn_category.png");
+        background-repeat: no-repeat; background-size: 25px auto;
+        background-position: center center; text-indent: -9999px ; cursor: pointer }
+
+    nav.headerNav { position: relative }
+    nav.headerNav ul {  display: none;
+        position: absolute; top: 50px !important; width: 100%;   height:50px !important;
+        background-color:#FFBDB1;   padding: 0 40px;
+    }
+    nav.headerNav ul li {
+        float:left ; font-size: 1em;
+        position: relative; text-align:center ;
+        height:50px ; padding:0 3% ; width: 20%;  display: block;
+        color: #fff   ;  margin :0  ;
+        text-indent: 0; background-image: none ;
+    }
+    nav.headerNav ul li.move { display: block; margin-right:30% ;}
+    nav.headerNav ul li a{ font-weight: 600;
+        text-indent: 0px; display:inline-block; width: 100%; height: 100%; line-height: 50px;
+        background: none ; color: #fff ; font-size: 1em ; text-decoration: none; text-align: center ; }
+
+
+    .staff article {padding: 60px 0px 60px 50px;
+        font-size: 0.9em; }
+    .staff article h6 { width: 110px;  height: 50px;   }
+    .staff article ul.stafflist { width: 300px;  float: left ;   }
+    .staff article ul.supportlist { width: 180px; float: left ; margin-left: 20px;   }
+    .staff article ul li p.sns { position: absolute; top:02px; right: 0px; width: 60px; }
+
+    .staff article .supportSection { float: left; margin-left:0px !important;   }
+
 }
 
-nav.headerNav ul li a{
-    text-indent: -9999px; display:inline-block; width: 100%; height: 100%; }
-nav.headerNav ul li.on {  }
+@media (max-width:414px) {
 
-nav.headerNav ul li.move   { display:none; float:left; background-image: url("../image/comm/nav_move.png" ); }
-nav.headerNav ul li.yoga   { float:left; background-image: url("../image/comm/nav_yoga.png" ); }
-nav.headerNav ul li.pole   { float:left; background-image: url("../image/comm/nav_pole.png" ); }
-nav.headerNav ul li.yudo   { float:right; background-image: url("../image/comm/nav_judo.png" ); }
-nav.headerNav ul li.futsal { float:right; background-image: url("../image/comm/nav_futsal.png" ); }
+    .staff article h5 { font-size: 1.1em ; margin-bottom: 30px;}
+    .staff article h6 {   font-size: 0.8em; margin-left:0px !important;   }
+    .staff article ul.stafflist { width: 320px;  font-size: 0.8em ;  }
+    .staff article ul.supportlist {width: 320px; margin-left:0; margin-top: 20px;    font-size: 0.8em }
+}
 
 .introduce nav.gall {
     position: relative;  width: 100%; padding: 100px 220px 50px 220px; text-align: center;
@@ -185,10 +268,7 @@ article p.eng { font-size: 1.2em }
     background-repeat: no-repeat; background-size: auto 30px ; background-position: left top;
     background-image: url("../image/comm/bull_punch.png");
 }
-.staff article ul.stafflist { width: 650px; float: left;}
-.staff article ul.supportlist { width: 300px; float: left; }
 
-.staff article h6 { width: 150px; height: 80px; float: left;; line-height: 1em }
 .staff article h6 strong { clear: both; width:100%; display:inline-block; font-size: 1em ; color: #000000; font-weight:700; }
 .staff article h6 span { clear: both; width:100%; display:inline-block; font-size: 0.8em ; color: #7e7e7e;  font-weight:500; }
 
@@ -236,7 +316,7 @@ article p.eng { font-size: 1.2em }
 .yogaContents > article > div  {  display: inline-block; margin:0 auto;}
 .yogaContents > article > div > p {   float: left;
   clear:both; line-height: 1.8em; font-size: 1.2em; margin-bottom: 30px; letter-spacing: -0.05em ; display: inline-block }
-.yogaContents > article > p.txtindent{ padding-left: 30px;}
+.yogaContents > article  p.txtindent{ margin-left: 30px; }
 .yogaContents > article > p .yellow {
     background-repeat: no-repeat; background-size: 100% ; background-position: left bottom;
     background-image: url("../image/comm/highlight_yellow.png");  }
@@ -257,7 +337,7 @@ article p.eng { font-size: 1.2em }
 /* 영역별 밝기 설정 */
 .slide_list > li:after {content:'';
     position: absolute; top: 0;left: 0; width: 100%; height: 100%;
-    background:rgba(255,255,255,0.5);
+    background:rgba(255,255,255,0.4);
     transition: all 0.3s;opacity: 1;  }
 
 .slide_list > li.swiper-slide-active:after,
@@ -281,13 +361,9 @@ article p.eng { font-size: 1.2em }
 /*    .slide_list > li { height: 200px; }*/
 /*}*/
 
-/*@media (max-width: 767px) {*/
-/*    .slide_list > li { width: calc(50% - 20px);}*/
-/*    .slide_list > li.swiper-slide-next:after,*/
-/*    .slide_list > li.swiper-slide-prev:after,*/
-/*    .slide_list > li.swiper-slide-duplicate-next:after,*/
-/*    .slide_list > li.swiper-slide-duplicate-prev:after {opacity: 1;}*/
-/*}*/
+@media (max-width: 767px) {
+  .slide_list > li { width: calc(50% - 20px);}
+}
 
 
 @media (max-width: 1800px) {
@@ -307,11 +383,6 @@ article p.eng { font-size: 1.2em }
 
     .letsmove article { padding: 120px 100px 120px 100px;  }
 
-    .staff article {padding: 100px 10px 60px 50px; }
-    .staff article h6 { width: 110px; margin-left: 40px ; height: 50px;}
-    .staff article ul.stafflist { width: 400px;  }
-    .staff article ul.supportlist { width: 250px; float: left ; margin-left: 40px;   }
-    .staff article ul li p.sns { position: absolute; top:02px; right: 0px; width: 60px; }
 
     .introduce article { padding: 0px 80px 50px 80px; text-align: center;   }
     .introduce nav.gall {padding: 30px 80px;  text-align: center;}
@@ -337,18 +408,18 @@ article p.eng { font-size: 1.2em }
     article{ padding: 100px 50px 60px 50px; }
     .letsmove article { padding: 120px 40px 100px 40px;  }
 
-    .staff article {padding: 50px 10px 60px 30px; }
+    /*.staff article {padding: 50px 10px 60px 30px; }*/
 
-    .staff article ul.stafflist { width: 300px;  }
-    .staff article ul.supportlist { width: 150px; float: left;  margin-left: 30px;   }
+    /*.staff article ul.stafflist { width: 300px;  }*/
+    /*.staff article ul.supportlist { width: 150px; float: left;  margin-left: 30px;   }*/
 
-    .staff article ul li p.sns { position: absolute; top:0px; right: 0px; width: 60px; }
+    /*.staff article ul li p.sns { position: absolute; top:0px; right: 0px; width: 60px; }*/
     .yogaillust > span:first-child{ width:80%; }
     .yogaillust > span:last-child{ width:55%; }
+    .yogaContents > article  p.txtindent{ margin-left: 0px !important; }
 
     .slide_list > li {  height: 200px;   }
     .slide_list > li img {   height: 100%; width:auto }
-
 
     .introduce article { padding:0 40px 50px 40px; }
     .introduce nav.gall {padding: 30px 35px;  text-align: center;}
@@ -365,8 +436,9 @@ article p.eng { font-size: 1.2em }
     .introduce nav.gall ul li {  padding:5px; }
     .introduce nav.gall ul li a {  background-size:  auto 22%  ; }
 
-
 }
+
+
 
 @media (max-width:414px) {
 
@@ -378,10 +450,6 @@ article p.eng { font-size: 1.2em }
         margin-bottom: 15px;
     }
 
-    .staff article h5 { font-size: 1.1em ; margin-bottom: 30px;}
-    .staff article h6 {margin-left: 0; margin-top: 20px; font-size: 0.8em}
-    .staff article ul.stafflist { width: 300px;  font-size: 0.8em  }
-    .staff article ul.supportlist { width: 180px;  margin-top: 20px;  margin-left: 25px; font-size: 0.8em }
 
     .letsmove article { padding:50px 10px 50px 30px;}
 
@@ -391,7 +459,11 @@ article p.eng { font-size: 1.2em }
 
     .introduce article { padding:30px; }
     .introduce nav.gall { padding: 30px 20px 0px 20px;  text-align: center;}
-    .introduce nav.gall ul li {  padding:3px; }
+
+    .introduce nav.gall ul li {
+        float:left; font-size: 1em;  display: block; height: 100px; width: 33%; padding:10px;
+        text-align: center; overflow: hidden;
+    }
     .introduce nav.gall ul li a {  background-size:  auto 25%  ; }
 
     .yogaContents article { padding-top:0px}
@@ -401,14 +473,10 @@ article p.eng { font-size: 1.2em }
     .yogaillust > span:first-child{ width:80%; }
     .yogaillust > span:last-child{ width:55%; }
 
-
     .purpose article { padding:30px; }
     .purpose article h5 {  font-size: 1.3em;}
     .purpose article p { font-size:1em; line-height: 1.6em; margin-bottom: 10px; letter-spacing: -0.05em }
 
 
 }
-
-
-/*요가*/
 

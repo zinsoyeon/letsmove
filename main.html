@@ -18,24 +18,30 @@
     /* html 최초 로드 및 이벤트 상시 대기 실시 */
 
     $(window).on('load', function() {
-        console.log("window onload : start");
-        console.log("");
-
         //메소드 호출
         main();
         slider();
-    })
+
+
+    });
 
     /* html 화면 크기 리사이즈 확인 */
     $(function(){
         $(window).resize(function(){
             main();
-        })
+        });
+
+        $('.btn_cate').on('click', function() {
+            var $headerNavUl = $('header nav.headerNav ul');
+            if ( $headerNavUl.css('display') == 'none' ){
+                $headerNavUl.css({"display": "block"});
+            } else {
+                $headerNavUl.css({"display": "none"});
+            }
+
+        });
     });
 
-    $("#mainTitle").on('click',function() {
-        alert("00");
-    });
 
     function main() {
 
@@ -48,9 +54,13 @@
 
         $("nav.gall ul li").css('height',windowWidth);
 
+        var $headerNavUl= $('header nav.headerNav ul');
         if (windowWidth > 767) {
             $letsmoveMainArticle.css({"height": windowHeight || 'px'});
             $letsmoveMainDiv.css({"margin-top": ($letsmoveMainArticle.height() - $letsmoveMainDiv.height()) / 2 || 'px'});
+            // $headerNavUl.css({"display": "inline-block"});
+        } else {
+            // $headerNavUl.css({"display": "none"});
         }
 
         $("#mainTrailer").css('height',windowHeight-60);
@@ -100,7 +110,7 @@
                 centeredSlides: true,
                 speed : 1000,
                 autoplay: { // 자동 슬라이드 설정
-                    delay: 3000, // 시간 설정
+                    delay: 2000, // 시간 설정
                     disableOnInteraction: false, // false로 설정하면 스와이프 후 자동 재생이 비활성화 되지 않음
                 },
                 navigation: {
@@ -188,8 +198,10 @@
         // var scrollPositi  = window.pageYoffset;
         var $yogaMain = $('#yogaMain');
         var $nav = $('header');
+        var $headerNav = $('#headerNav');
+        var $headerNavUl= $('header nav.headerNav ul');
         var $navTitle = $('header h1');
-        var yogaMainPosition = $yogaMain.offset().top-300;
+        var yogaMainPosition = $yogaMain.offset().top;
         // headerNav
 
         var $movelist = $('#headerNav ul li.move');
@@ -198,44 +210,80 @@
         var $yudolist = $('#headerNav ul li.yudo');
         var $futsallist = $('#headerNav ul li.futsal');
 
+        var windowWidth = $(window).width(); //요소의 높이를 반환 S
 
-        if (scrollPosition < yogaMainPosition) { // 메인
+        if (windowWidth > 767) {
+            $headerNav.css({"display": "inline-block"});
+            if (scrollPosition < yogaMainPosition) { // 메인
+                $nav.css('background-color', '#FF593C');
+                $headerNavUl.css('background-color', '#FF593C');
 
-            $nav.css('background-color','#FF593C');
-            $navTitle.css({ "background-image":"url('../image/comm/header_large_logo_w.png' )"
-                ,"background-size":" 100% auto" })
+                $navTitle.css({
+                    "background-image": "url('../image/comm/header_large_logo_w.png' )"
+                    , "background-size": " 100% auto"
+                })
 
-            $('#headerNav ul li').css({ "display":"inline-block" });
-            $movelist.css({ "display":"none" });
-            $yogalist.css({ "float":"left" });
-            $polelist.css({ "float":"left" });
+                $('#headerNav ul li').css({"display": "inline-block"});
+                $movelist.css({"display": "none"});
+                $yudolist.css({"margin-left": "52%"} );
 
-        } else if (scrollPosition >= yogaMainPosition) { // 요가
-            $nav.css('background-color','#FFCF55');
+            } else if (scrollPosition >= yogaMainPosition) { // 요가
+                $nav.css('background-color', '#FFCF55');
+                $headerNavUl.css('background-color', '#FFCF55');
 
-            $('#headerNav ul li').css({ "float":"right" });
-            $navTitle.css({ "background-image":"url('../image/comm/nav_yoga_on.png' )"
-                           ,"background-size":"auto 50%" });
-            $movelist.css({ "display":"inline-block" ,"float":"left" });
-            $yogalist.css({ "display":"none" });
+                $navTitle.css({
+                    "background-image": "url('../image/comm/nav_yoga_on.png' )"
+                    , "background-size": "auto 50%"
+                });
+                $('#headerNav ul li').css({"margin-left": "0"});
+                $movelist.css({"display": "inline-block", "margin-right": "52%"} );
+                $yogalist.css({"display": "none"});
 
-            // 요가재생
-            if( yogaFlag == true ) {
-                console.log("yogaFlag" + yogaFlag);
-                playerMain.stopVideo();
-                playerYoga.playVideo();
-                playerYoga.mute(); //자동재생하려면 mute해야함
-                yogaFlag = false;
-                $('.yogagirl').fadeOut( 1000, 'linear' );
-                $('.yogatext').fadeOut( 1000, 'linear' );
+                // 요가재생
+                if (yogaFlag == true) {
+                    console.log("yogaFlag" + yogaFlag);
+                    playerMain.stopVideo();
+                    playerYoga.playVideo();
+                    playerYoga.mute(); //자동재생하려면 mute해야함
+                    yogaFlag = false;
+                }
+
             } else {
-                $('.yogagirl').fadeIn( 1000, 'linear' );
-                $('.yogatext').fadeIn( 1000, 'linear' );
+                $movelist.css({"display": "none"});
             }
-
         } else {
-            $nav.css('background-color', '#FF593C');
+            $('#headerNav ul li').css({"margin-left": "0", "margin-right": "0"} );
+            $movelist.css({"display": "inline-block"});
+            $yogalist.css({"display": "inline-block"});
+
+            if (scrollPosition < yogaMainPosition) { // 메인
+                $nav.css('background-color', '#FF593C');
+                $headerNavUl.css('background-color', '#FFBDB1');
+                $('#headerNav ul li a').css({"color": "#fff "} );
+                $('#headerNav ul li a').css({"font-weight": "500"} );
+                $('#headerNav ul li.move a').css({"font-weight": "700"} );
+            } else if (scrollPosition >= yogaMainPosition) { // 요가
+                $nav.css('background-color', '#FFCF55');
+                $headerNavUl.css('background-color', '#FFECBB');
+                $('#headerNav ul li a').css({"color": "#000"} );
+                $('#headerNav ul li a').css({"font-weight": "500"} );
+                $('#headerNav ul li.yoga a').css({"font-weight": "700"} );
+            }
+            /*else if (scrollPosition >= poleMainPosition) { // 폴
+                $nav.css('background-color', '#FF90B8');
+                $headerNavUl.css('background-color', '#FFD3E3');
+            } else if (scrollPosition >= yudoMainPosition) { // 유도
+                $nav.css('background-color', '#3CDDC7');
+                $headerNavUl.css('background-color', '#B1F1E9');
+            } else if (scrollPosition >= futsalMainPosition) { // 풋살
+                $nav.css('background-color', '#4790F8');
+                $headerNavUl.css('background-color', '#B5D3FC');
+            } */else {
+                $nav.css('background-color', '#FF593C');
+                $headerNavUl.css('background-color', '#FFBDB1');
+            }
         }
+
 
     }) ;
 
@@ -250,9 +298,10 @@
                 <li class="yoga"><a href="#yogaMain">요가</a></li>
                 <li class="pole"><a href="#poleMain">폴스포츠</a></li>
                 <li class="yudo"><a href="#yudoMain">유도</a></li>
-                <li class="futsal"><a href="#futsalMain">유도</a></li>
+                <li class="futsal"><a href="#futsalMain">풋살</a></li>
             </ul>
         </nav>
+        <span class="btn_cate">메뉴</span>
         <h1 id="mainTitle">움직이는 여자들의 이야기</h1>
     </header>
 
@@ -475,25 +524,26 @@
                 </li>
 
             </ul>
-            <h6>
-                <strong>도움주신 분들</strong>
-                <span>Special thanks</span>
-            </h6>
-            <ul class="supportlist">
-                <li>
-                    <p class="nm">
-                        <span>도유진</span>
-                        <span>DO YOUJIN</span>
-                    </p>
-                </li>
-                <li>
-                    <p class="nm">
-                        <span>권은지, 박수현</span>
-                        <span>GWON EUNJI, PARK SOO HYUN</span>
-                    </p>
-                </li>
-            </ul>
-
+            <div class="supportSection">
+                <h6>
+                    <strong>도움주신 분들</strong>
+                    <span>Special thanks</span>
+                </h6>
+                <ul class="supportlist">
+                    <li>
+                        <p class="nm">
+                            <span>도유진</span>
+                            <span>DO YOUJIN</span>
+                        </p>
+                    </li>
+                    <li>
+                        <p class="nm">
+                            <span>권은지, 박수현</span>
+                            <span>GWON EUNJI, PARK SOO HYUN</span>
+                        </p>
+                    </li>
+                </ul>
+            </div>
         </article>
     </section>
 
