@@ -1,5 +1,20 @@
 /* 상단 메뉴 */
-@media (min-width: 768px) {
+
+header { position: fixed; top: 0; left: 0; height: 60px; width: 100%;
+    z-index: 800; background-color: #FF593C; }
+
+header.move   { background-color: #FF593C !important;}
+header.move ul  { background-color: #FF593C !important;}
+header.yoga   { background-color: #FFCF55 !important;}
+header.yoga ul  { background-color: #FFCF55 !important;}
+header.pole   { background-color: #FF90B8 !important;}
+header.pole ul  { background-color: #FF90B8 !important;}
+header.yudo   { background-color: #3CDDC7 !important;}
+header.yudo ul  { background-color: #3CDDC7 !important;}
+header.futsal { background-color: #4790F8 !important;}
+header.futsal ul  { background-color: #4790F8 !important;}
+
+@media (min-width: 821px) {
 
     header { position: fixed; top: 0; left: 0; height: 60px; width: 100%;
          z-index: 800; background-color: #FF593C; }
@@ -13,19 +28,18 @@
     header h1.main {  background-image: url("../image/comm/header_small_logo_w.png"); background-size: 100% auto;
         width: 100px; left: calc(50% - 50px);  }
 
-    nav.headerNav { position: relative; height: 60px; width: 100%; z-index: 9; text-align: center }
-    nav.headerNav ul {  display: inline-block; width: 100%;
-        padding:0 3% ; max-width: 1400px; }
+    nav.headerNav { position: relative; height: 60px; width: 100%; z-index: 9; text-align: center ; }
+    nav.headerNav ul {  display: inline-block; width: 100%; height: 60px; margin: 0 auto;
+          max-width: 1400px; text-align: center }
     nav.headerNav ul li {
         float: left;
         position: relative;
         margin: 5px 0;
         display: block;
-        height: 50px;
-        padding:0 2.5% ;
-        width: 12%;
+        height: 50px;  
+        width: 12%;;
         color: #fff; font-size: 1em; text-align: center;
-        background-repeat: no-repeat; background-size: auto 20px ; background-position: center center;
+        background-repeat: no-repeat; background-size: auto 25px ; background-position: center center;
     }
 
     nav.headerNav ul li a{  text-indent: -9999px; display:inline-block; width: 100%; height: 100%; }
@@ -42,56 +56,18 @@
     .staff article {
         padding-right:40px;
     }
-    .staff article .supportSection { float: left; margin-left:20px; }
-    .staff article ul.stafflist { width: 650px; float: left;}
-    .staff article ul.supportlist { width: 300px; float: left; }
-    .staff article h6 { width: 150px; height: 80px; float: left; line-height: 1em }
+    .staff article .supportSection { float: left; }
+    .staff article ul.stafflist { width: 600px; float: left;  clear:both;  }
+    .staff article ul.supportlist { width: 220px; float: left; }
+    .staff article h6 { width: 150px; height: 80px; float: left;   line-height: 1em }
+    .staff article h6 { width: 150px; height: 80px; float: left;   line-height: 1em }
 
 }
 
-@media (max-width: 1200px) {
-    article {
-        padding: 100px 50px 60px 50px;
-    }
-
-    .letsmove article {
-        padding: 120px 100px 120px 80px;
-    }
-
-    .staff article {
-        padding: 60px 10px 60px 40px;
-    }
-
-    .staff article h6 {
-        width: 90px;
-        height: 50px;
-        float: left;
-    }
-
-    .staff article .supportSection { float: left; margin-left:20px; }
-    .staff article ul.stafflist {
-        width: 370px;
-        float: left;
-    }
-
-    .staff article ul.supportlist {
-        width: 210px;
-        float: left;
-        margin-left: 20px;
-    }
-
-    .staff article ul li {   }
-    .staff article ul li p.sns {
-        position: absolute;
-        top: 02px;
-        right: 0px !important;
-        width: 70px!important;
-    }
-}
-@media (max-width: 767px) {
+@media (max-width: 820px) {
 
     header { position: fixed; top: 0; left: 0; height: 50px; width: 100%;
-        z-index: 800; background-color: #FF593C; }
+        z-index: 800; }
 
     header h1 {
         /*width:260px; left: calc(50% - 130px) ;*/
@@ -113,12 +89,13 @@
         z-index: 9999;
     }
 
-   /* header h1.main {
+   header h1.main {
         background-image: url("../image/comm/header_small_logo_w.png");
         background-size: 100% auto;
         width: 100px;
         left: calc(50% - 50px);
-    } */
+    }
+
     header .btn_cate { position: absolute; top: 0px;
         left: 10px; width: 50px; height: 50px;
         background-image: url("../image/comm/btn_category.png");
@@ -130,38 +107,55 @@
         position: absolute; top: 50px !important; width: 100%;   height:50px !important;
         background-color:#FFBDB1;   padding: 0 40px;
     }
+
+    header.move ul  { background-color: #FFBDB1 !important;}
+    header.yoga ul  { background-color: #FFECBB !important;}
+    header.pole ul  { background-color: #FFD3E3 !important;}
+    header.yudo ul  { background-color: #B1F1E9 !important;}
+    header.futsal ul  { background-color: #B5D3FC !important;}
+
     nav.headerNav ul li {
         float:left ; font-size: 1em;
-        position: relative; text-align:center ;
-        height:50px ; padding:0 3% ; width: 20%;  display: block;
+        position: relative; text-align:center !important;
+        height:50px ; padding:0 3% !important; ; width: auto ;  display: block;
         color: #fff   ;  margin :0  ;
         text-indent: 0; background-image: none ;
     }
-    nav.headerNav ul li.move { display: block; margin-right:30% ;}
+    nav.headerNav ul li.move { display: block; margin-right:32% !important;}
     nav.headerNav ul li a{ font-weight: 600;
         text-indent: 0px; display:inline-block; width: 100%; height: 100%; line-height: 50px;
-        background: none ; color: #fff ; font-size: 1em ; text-decoration: none; text-align: center ; }
+        background: none ; color: #fff ; font-size: 1.1em ; text-decoration: none; text-align: center ; }
 
 
     .staff article {padding: 60px 0px 60px 50px;
         font-size: 0.9em; }
-    .staff article h6 { width: 110px;  height: 50px;   }
+    .staff article h6 { float: left ; width: 110px;  height: 50px; display: inline-block;   }
     .staff article ul.stafflist { width: 300px;  float: left ;   }
     .staff article ul.supportlist { width: 180px; float: left ; margin-left: 20px;   }
-    .staff article ul li p.sns { position: absolute; top:02px; right: 0px; width: 60px; }
+    .staff article ul li p.sns { position: absolute; top:02px; right: 0px; width: 75px; }
 
     .staff article .supportSection { float: left; margin-left:0px !important;   }
 
 }
 
+@media (max-width:560px) {
+
+    nav.headerNav ul li.move { margin-right:20% !important;}
+}
+
 @media (max-width:414px) {
 
     .staff article h5 { font-size: 1.1em ; margin-bottom: 30px;}
-    .staff article h6 {   font-size: 0.8em; margin-left:0px !important;   }
-    .staff article ul.stafflist { width: 320px;  font-size: 0.8em ;  }
-    .staff article ul.supportlist {width: 320px; margin-left:0; margin-top: 20px;    font-size: 0.8em }
+    .staff article h6 { font-size: 0.8em; margin-left:0px !important;   }
+    .staff article ul.stafflist { width: 320px;  font-size: 0.8em ; margin-top:20px  }
+    .staff article .supportSection { margin-top:50px;}
+    .staff article ul.supportlist { width: 320px; margin-left:0; margin-top: 0px; font-size: 0.8em }
+    .staff article ul.stafflist li {  height:45px !important;}
+    .staff article ul.supportlist li { height:45px !important;}
+    nav.headerNav ul li.move { margin-right:0% !important;}
 }
 
+.introduce { padding-bottom: 100px}
 .introduce nav.gall {
     position: relative;  width: 100%; padding: 100px 220px 50px 220px; text-align: center;
 }
@@ -195,9 +189,10 @@ nav.gall ul li.futsal  a { background-image: url("../image/comm/nav_futsal.png" 
 
 
 
+
 main { margin:0px; padding:0px; }
-main.mt60 { margin-top: 60px; }
-.trailer { position:relative; height:100%; margin:0px; padding:0px; display:inline-block; width: 100%; /*background: #fdd */ }
+.mainTrailer { position:relative; height:100%; margin:0px; padding:0px; display:inline-block; width: 100%; /*background: #fdd */ padding:0;}
+.mainTrailer iframe {margin:0}
 
 .trailer .yogatext {display: none;
     position: absolute; bottom:10%; left: 5%; height: 200px; width: 200px;
@@ -220,7 +215,7 @@ main.mt60 { margin-top: 60px; }
 
 
 
-.introduce article { padding-top:50px;  }
+.introduce article { padding-top:50px; padding-left:250px; }
 .introduce article h4 {
     font-size: 1.5em; font-weight:700; height:80px; width:300px; padding: 50px 0 0 0 ; margin-bottom: 10px;
     background-repeat: no-repeat; background-size: auto 30px ; background-position: left top;
@@ -232,7 +227,7 @@ main.mt60 { margin-top: 60px; }
 
 /*움직여 상세 페이지*/
 .letsmove { text-align: center; }
-.letsmove article { display: inline-block; }
+.letsmove article { display: inline-block; padding: 180px 100px 0px 300px }
 .letsmove article div { display: inline-block;  }
 .letsmove article h4 {
     height:80px; width:250px;
@@ -250,25 +245,26 @@ main.mt60 { margin-top: 60px; }
 article p.kor { font-size: 1.6em }
 article p.eng { font-size: 1.2em }
 
-
+.purpose article {padding:50px 200px}
 .purpose article h5 { font-weight: 500; font-size: 1.7em; line-height: 1.8em; margin-bottom: 10px;}
 .purpose article h5 strong { font-weight:700; color:#FF593C;  letter-spacing: -0.05em; margin-right:5px}
 .purpose article p { font-size:1.3em; line-height: 1.8em; margin-bottom: 20px; letter-spacing: -0.05em }
 
 .purpose article p .italic { font-style: italic}
+.purpose article p a { color:#000;  }
 
 
 
 
-
-.staff { border-top :1px solid #FF593C; text-align: center;}
+.staff { text-align: center; margin-top:50px}
 .staff article { margin:0 auto; height:100%; display: inline-block;     }
 
-.staff article h5 { font-size: 1.3em ; font-weight:700; height:80px; width:300px; padding: 50px 0 0 0 ; margin-bottom: 10px;
+.staff article h5 { font-size: 1.3em ;  font-weight:700; height:80px; width:300px; padding: 50px 0 0 0 ; margin-bottom: 10px;
     background-repeat: no-repeat; background-size: auto 30px ; background-position: left top;
     background-image: url("../image/comm/bull_punch.png");
 }
 
+.staff article h6 { display: inline-block; }
 .staff article h6 strong { clear: both; width:100%; display:inline-block; font-size: 1em ; color: #000000; font-weight:700; }
 .staff article h6 span { clear: both; width:100%; display:inline-block; font-size: 0.8em ; color: #7e7e7e;  font-weight:500; }
 
@@ -285,7 +281,7 @@ article p.eng { font-size: 1.2em }
 .staff article ul.stafflist li p.nm span:nth-child(2) { font-size: 0.9em ;  color: #7e7e7e}
 
 
-.staff article ul.supportlist li { position:relative; height: 60px}
+.staff article ul.supportlist li { position:relative; height: 60px }
 .staff article ul.supportlist li p {font-size: 1em; line-height: 1em }
 
 .staff article ul.supportlist li p.nm { float: left;  width: 100%; }
@@ -294,8 +290,19 @@ article p.eng { font-size: 1.2em }
 .staff article ul.supportlist li p.nm span:nth-child(2) { font-size: 0.9em ;  color: #7e7e7e}
 
 
-.staff article ul li p.sns { position: absolute; top:0px; right: 200px; width: 60px; }
+.staff article ul li p.sns { position: absolute; top:0px; right: 200px; width: 80px; }
 
+.govSupport { margin: 0; padding:20px; width: 100%; text-align: center;   display: inline-block; }
+.govList { margin: 0; padding:0; height:180px; text-align: center; }
+.govList .govLogo { clear: both; margin-left:calc(50% - 225px); }
+.govList .txt {  margin: 30px 0 0 0 ; padding:0 50px; height:50px; width: 100%; clear: both; display: inline-block; text-align: center; line-height: 1.3em }
+.govList ul { width:auto; padding:0; display: inline-block;  }
+.govList li { float: left; width:150px;  height: 80px;   display: block;
+    background-position: center; background-repeat: no-repeat; background-size: 80px auto;  }
+.govList li.mcst { background-image: url("../image/comm/logo_mcst.png");  }
+.govList li.arko { background-image: url("../image/comm/logo_arko.png");  }
+.govList li.artson { background-image: url("../image/comm/logo_artson.png");  }
+.govList li a { display: inline-block; width: 100%; height: 100%; text-indent: -9999px; }
 
 .yogaContents { }
 .yogaContents article {
@@ -309,7 +316,7 @@ article p.eng { font-size: 1.2em }
 
 .yogaContents .yogaContentsTitle{ position:relative; clear:both; float: left; width:100%; max-width:1200px;  top:0; right: 0; display: inline-block ; }
 .yogaContents .yogaContentsTitle .author { position:absolute;top:0; right: 0;   display: inline-block ;}
-.yogaContents .yogaContentsTitle .author .sns { float: right;   display: inline-block; }
+.yogaContents .yogaContentsTitle .author .sns { float: right; margin-top: 5px; display: inline-block; }
 
 .yogaContents h6 { vertical-align:text-bottom; line-height: 1em;   }
 .yogaContents h6 span { text-decoration: none ; vertical-align:text-bottom; font-size: 0.7em; font-weight: 500; margin-left: 3px}
@@ -317,12 +324,12 @@ article p.eng { font-size: 1.2em }
 .yogaContents > article > div > p {   float: left;
   clear:both; line-height: 1.8em; font-size: 1.2em; margin-bottom: 30px; letter-spacing: -0.05em ; display: inline-block }
 .yogaContents > article  p.txtindent{ margin-left: 30px; }
-.yogaContents > article > p .yellow {
+.yogaContents > article > .yogaCont > p .yellow {
     background-repeat: no-repeat; background-size: 100% ; background-position: left bottom;
-    background-image: url("../image/comm/highlight_yellow.png");  }
+    background-image: url("../image/comm/highlight_yellow.png"); }
 .yogaillust {
-    padding-right:350px;
-    background-repeat: no-repeat; background-size: auto 220px ; background-position: right bottom;
+    padding-right:350px; padding-top:30px;
+    background-repeat: no-repeat; background-size: auto 250px ; background-position: right bottom;
     background-image: url("../image/comm/yogaIllust.png");
 }
 
@@ -349,21 +356,11 @@ article p.eng { font-size: 1.2em }
 .slide_list > li.swiper-slide-duplicate-prev:after {opacity: 1;}
 
 
-
-/* 화살표 */
-.slider .btn {
-    display: inline-block;width: 35px;height: 35px;margin:30px 15px 0;text-indent: -999em;cursor: pointer;
-    /*background:url('images/arrow.png') center center no-repeat;background-size: cover;*/
-}
-.slider .btn.btn_prev {transform: rotateY(180deg);}
-
-/*@media (min-width: 1000px) {*/
-/*    .slide_list > li { height: 200px; }*/
-/*}*/
-
-@media (max-width: 767px) {
+@media (max-width: 820px) {
   .slide_list > li { width: calc(50% - 20px);}
+    .staff article ul li p.sns {  right: 0px;  }
 }
+
 
 
 @media (max-width: 1800px) {
@@ -384,16 +381,17 @@ article p.eng { font-size: 1.2em }
     .letsmove article { padding: 120px 100px 120px 100px;  }
 
 
-    .introduce article { padding: 0px 80px 50px 80px; text-align: center;   }
+    .introduce article { padding: 30px 30px 50px 30px !important;  text-align: center;   }
     .introduce nav.gall {padding: 30px 80px;  text-align: center;}
     .introduce nav.gall ul { }
     .introduce nav.gall ul li { padding:5px;  }
 
-    .yogaillust { padding-right:0;
-        background-repeat: no-repeat; background-size: auto 180px ; }
+    .yogaillust { padding-right:0; padding-bottom: 170px;
+        background-repeat: no-repeat; background-size: auto 180px; background-position: bottom right;}
     .yogaillust > span{ float: left; clear: both; line-height: 1.8em; width:60%; }
-    .yogaillust > span:first-child{ width:75%; }
-    .yogaillust > span:last-child{ width:60%; }
+    .yogaillust > span:first-child{ width:100% !important;   }
+    .yogaillust > span:last-child{ width:100% !important;   }
+    .yogaContents > article  p.txtindent{ margin-left: 0px !important; }
 
     .slide_list > li {  height: 300px;   }
     .slide_list > li img {   height: 100%; width:auto }
@@ -401,27 +399,23 @@ article p.eng { font-size: 1.2em }
     article p.kor { font-size: 1.1em }
     article p.eng { font-size: 0.8em }
 
+    .slide_list > li {  height: 250px; width: calc(75% - 20px);  }
+    .slide_list > li img {width: 100%; height: auto;  }
 }
 
-@media (max-width: 767px) {
+@media (max-width: 820px) {
 
     article{ padding: 100px 50px 60px 50px; }
     .letsmove article { padding: 120px 40px 100px 40px;  }
 
-    /*.staff article {padding: 50px 10px 60px 30px; }*/
-
-    /*.staff article ul.stafflist { width: 300px;  }*/
-    /*.staff article ul.supportlist { width: 150px; float: left;  margin-left: 30px;   }*/
-
-    /*.staff article ul li p.sns { position: absolute; top:0px; right: 0px; width: 60px; }*/
-    .yogaillust > span:first-child{ width:80%; }
-    .yogaillust > span:last-child{ width:55%; }
+    .yogaillust > span{ width:100% !important;  }
+    .yogaillust { padding-right:0; padding-bottom:150px !important;  }
+    .yogaillust > span:first-child{ width:100% !important;   }
+    .yogaillust > span:last-child{ width:100% !important;   }
     .yogaContents > article  p.txtindent{ margin-left: 0px !important; }
 
-    .slide_list > li {  height: 200px;   }
-    .slide_list > li img {   height: 100%; width:auto }
 
-    .introduce article { padding:0 40px 50px 40px; }
+    .introduce article { padding:30px 40px 50px 40px !important; }
     .introduce nav.gall {padding: 30px 35px;  text-align: center;}
     .introduce article h4 {
         font-size: 1.5em; font-weight:700; height:80px; width:300px; padding: 50px 0 0 0 ; margin-bottom: 10px;
@@ -435,6 +429,8 @@ article p.eng { font-size: 1.2em }
     .introduce nav.gall { width: 100%;  }
     .introduce nav.gall ul li {  padding:5px; }
     .introduce nav.gall ul li a {  background-size:  auto 22%  ; }
+
+    .purpose article { padding:50px !important; }
 
 }
 
@@ -451,7 +447,7 @@ article p.eng { font-size: 1.2em }
     }
 
 
-    .letsmove article { padding:50px 10px 50px 30px;}
+    .letsmove article { padding:100px 10px 50px 30px;}
 
     .letsmove article p.kor { line-height: 1.5em; margin-bottom: 10px; font-size: 0.9em; letter-spacing: -0.1em ;  }
     .letsmove article p.eng { line-height: 1.5em;letter-spacing: -0.05em ; font-size: 0.9em;  }
@@ -466,17 +462,18 @@ article p.eng { font-size: 1.2em }
     }
     .introduce nav.gall ul li a {  background-size:  auto 25%  ; }
 
-    .yogaContents article { padding-top:0px}
-    .yogaillust { padding-right:0;
-        background-repeat: no-repeat; background-size: auto 120px ; }
+    .yogaContents article { padding:0px 20px 20px 30px; }
+    .yogaillust { padding-right:0; padding-bottom: 150px;
+        background-repeat: no-repeat; background-size: auto 150px ; background-position: bottom center }
 
-    .yogaillust > span:first-child{ width:80%; }
-    .yogaillust > span:last-child{ width:55%; }
+    .yogaillust > span:first-child{ width:100% !important;   }
+    .yogaillust > span:last-child{ width:100% !important;   }
 
-    .purpose article { padding:30px; }
+    .purpose article { padding:30px !important; }
     .purpose article h5 {  font-size: 1.3em;}
     .purpose article p { font-size:1em; line-height: 1.6em; margin-bottom: 10px; letter-spacing: -0.05em }
 
-
+    .slide_list > li {  height: 200px; width: calc(75% - 20px);  }
+    .slide_list > li img {  width: 100%; height: auto;  }
 }
 

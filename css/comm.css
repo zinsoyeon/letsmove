@@ -18,23 +18,22 @@
     src: url("../font/AppleSDGothicNeoEB.ttf") format("truetype");
     font-weight: 800;
 }
-
+html {overflow-x: hidden; overflow-y: scroll}
 * { margin:0; padding:0; box-sizing: content-box;
     font-family: 'SDGothic', AppleSDGothicNeo-Regular, /*'Malgun Gothic', '맑은 고딕',*/ dotum, '돋움', sans-serif;
     word-break:keep-all; list-style:none; text-indent: 0; font-size: 1em; line-height: 1em;
     box-sizing: border-box;  text-align: left;
 }
 
-article{ padding:100px 200px; margin:0 auto;  }
-.introduce article { padding: 120px 250px 100px 250px;  }
-.letsmove article { padding: 60px 250px 0px 250px;  }
+article{  margin:0 auto;   }
 
+.line {border-top :1px solid #FF593C; margin-left:5%; width:90%; height: 2px; display: inline-block }
 
-.sns a { width: 20px; height: 20px ; margin:0px; float: left;  display: inline-block; overflow: hidden; text-indent: -9999px ;
-    background-repeat: no-repeat; background-size: 70% auto; background-position: center;}
-.sns .youtube { background-image: url("../image/comm/btn_youtube.png" ); }
-.sns .instagram { background-image: url("../image/comm/btn_insta.png" ); }
-.sns .facebook {background-image: url("../image/comm/btn_facebook.png" ); }
+.sns a {   width: 18px; height: 18px ; margin:0px; float: left;  display: inline-block; overflow: hidden; text-indent: -9999px ;
+    background-repeat: no-repeat; background-size: 100% auto; margin-left:3px; background-position: center; border: 1px solid #ccc}
+.sns .youtube { background-image: url("../image/comm/btn_youtube.png" ); border: none !important; }
+.sns .instagram { background-image: url("../image/comm/btn_insta.png" ); border: none !important; }
+.sns .facebook {background-image: url("../image/comm/btn_facebook.png" ); border: none !important; }
 
 
 
@@ -43,13 +42,14 @@ article{ padding:100px 200px; margin:0 auto;  }
     background-repeat: no-repeat; background-size: 100% ; background-position: center ;
     /*background-image: url("../image/comm/sample01.png");*/
     opacity: 0.5; text-align: center;  font-size: 50px; color: #fff; z-index: 9 ;  }
-.main .blind{
-    /*background-image: url("../image/comm/sample01.png");*/
-}
-.yogaVideo .blind{
-    /*background-image: url("../image/comm/sample02.png");*/
-}
 .blind  p {  position: absolute; top: 40%; left: 10%; width: 80%; height:10%; text-align: center;    }
+
+
+
+.pt00 {padding-top:0px !important;}
+.mt00 {margin-top:0px !important;}
+.mb00 {margin-bottom:0px !important;}
+.mt60 { margin-top: 60px; }
 
 footer { background: #F8F8F8; font-size: 1em; padding:50px; }
 footer p{ text-align: center ;  line-height: 22px; height: 22px;}
