@@ -75,9 +75,9 @@
             location.replace("/letmove/index.html");
         });
 
-        var nw = $("nav.gall ul li ").width();
+        var $gallList = $('nav.gall ul li');
+        var nw = $gallList.width();
         $("nav.gall ul li").css('height',nw);
-
 
     }
     function slider() {
@@ -116,9 +116,9 @@
                 initialSlide: slideInx,
                 loop: loopChk,
                 centeredSlides: true,
-                speed : 1000,
+                speed : 1500,
                 autoplay: { // 자동 슬라이드 설정
-                    delay: 2000, // 시간 설정
+                    delay: 3000, // 시간 설정
                     disableOnInteraction: false, // false로 설정하면 스와이프 후 자동 재생이 비활성화 되지 않음
                 },
                 navigation: {
@@ -547,7 +547,7 @@
         </article>
     </section>
     <footer>
-        <p>움직이는 여자들의 이야기 움직여!</p>
+        <p>움직이는 여자들의 이야기 <strong>움직여!</strong></p>
         <p>Contact  <a href="mailto:hi@youjin.do" target="_blank"> hi@youjin.do</a></p>
         <p>© 2023 Youjin Do All rights reserved.</p>
 <!--        <p class="logo">footer logo</p>-->

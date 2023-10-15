@@ -69,7 +69,8 @@
             $("#mainTrailer iframe").css('height', windowWidth/16*9);
         }
 
-        var nw = $("nav.gall ul li ").width();
+        var $gallList = $('nav.gall ul li');
+        var nw = $gallList.width();
         $("nav.gall ul li").css('height',nw);
 
     }
@@ -129,7 +130,7 @@
 
 
     <footer>
-        <p>움직이는 여자들의 이야기 움직여!</p>
+        <p>움직이는 여자들의 이야기 <strong>움직여!</strong></p>
         <p>Contact  <a href="mailto:hi@youjin.do"> hi@youjin.do</a></p>
         <p>© 2023 Youjin Do All rights reserved.</p>
         <p class="logo">footer logo</p>

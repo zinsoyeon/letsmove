@@ -79,7 +79,8 @@
             location.replace("/letmove/index.html");
         });
 
-        var nw = $("nav.gall ul li ").width();
+        var $gallList = $('nav.gall ul li');
+        var nw = $gallList.width();
         $("nav.gall ul li").css('height',nw);
     }
 
@@ -119,9 +120,9 @@
                 initialSlide: slideInx,
                 loop: loopChk,
                 centeredSlides: true,
-                speed : 1000,
+                speed : 2000,
                 autoplay: { // 자동 슬라이드 설정
-                    delay: 2000, // 시간 설정
+                    delay: 3000, // 시간 설정
                     disableOnInteraction: false, // false로 설정하면 스와이프 후 자동 재생이 비활성화 되지 않음
                 },
                 navigation: {
@@ -273,7 +274,7 @@
                     특히 통증에 대한 치유의 목적이 크다. </p>
 
                 <p class="txtindent">“어느 날은 '브릿지'라는 자세를 하며 가슴으로 호흡하는데 호흡이 너무나 시원하게 제 가슴 속으로 들어오면서 갑자기 눈물이 쏟아지는 거예요. <br/>
-                    <span class="yellow">내가 힘쓰고 애써 스스로를 몰아붙일 때는 느낄 수 없었던 </span><span class="yellow">자유로움을 그 순간 온몸으로 느꼈기 때문인 것 같아요.</span><br/>
+                    <span class="yellow">내가 힘쓰고 애써 스스로를 몰아붙일 때는 느낄 수 없었던 자유로움을 그 순간 온몸으로 느꼈기 때문인 것 같아요.</span><br/>
                     왠지 부끄럽기도 하고 시원하기도 한, 다양한 감정들이 오갔어요.”</p>
 
                 <p>사람들은 대부분의 시간을 습관처럼 살아간다. 하지만 몸도, 생각도 그저 습관처럼 움직이다 보면 자신이 어떤 상태로 살아가는지 알아차리기 어렵다. <br/>
@@ -303,7 +304,7 @@
 
                 <p>
                     하지만 그러한 전형적인 시선에 맞설 수 있는 힘도 결국 운동을 하면서 얻을 수 있어요. <br/>
-                    <span class="yellow">여성 스스로 움직이고 호흡하는 몸을 직접 대면하고, </span><span class="yellow">스스로 느끼는 모든 순간이 쌓여서 사회의 거대한 시선을 버텨내고,</span><span class="yellow"> 결국엔 넘어서는 힘을 가질 수 있게 돼요.”</span>
+                    <span class="yellow">여성 스스로 움직이고 호흡하는 몸을 직접 대면하고,  스스로 느끼는 모든 순간이 쌓여서 사회의 거대한 시선을 버텨내고,  결국엔 넘어서는 힘을 가질 수 있게 돼요.”</span>
                 </p>
 
                 <p>타인의 시선이 아닌 내 안의 재미를 찾을 것. 이것을 깨닫고 소영 씨의 삶은 크게 변화했다. <br/>
@@ -327,7 +328,7 @@
     </section>
 
     <footer>
-        <p>움직이는 여자들의 이야기 움직여!</p>
+        <p>움직이는 여자들의 이야기 <strong>움직여!</strong></p>
         <p>Contact  <a href="mailto:hi@youjin.do"> hi@youjin.do</a></p>
         <p>© 2023 Youjin Do All rights reserved.</p>
         <p class="logo"><a href="" target="_blank">vimeo link</a></p>

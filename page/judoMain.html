@@ -79,7 +79,8 @@
             location.replace("/letmove/index.html");
         });
 
-        var nw = $("nav.gall ul li ").width();
+        var $gallList = $('nav.gall ul li');
+        var nw = $gallList.width();
         $("nav.gall ul li").css('height',nw);
 
     }
@@ -120,9 +121,9 @@
                 initialSlide: slideInx,
                 loop: loopChk,
                 centeredSlides: true,
-                speed : 1000,
+                speed : 1500,
                 autoplay: { // 자동 슬라이드 설정
-                    delay: 2000, // 시간 설정
+                    delay: 3000, // 시간 설정
                     disableOnInteraction: false, // false로 설정하면 스와이프 후 자동 재생이 비활성화 되지 않음
                 },
                 navigation: {
@@ -242,7 +243,7 @@
 
                 <p class="txtindent">“예쁜 몸이 건강하지 않을 수 있고, 건강한 몸이 아름다운 몸일 수 있는 거죠. <Br/>
                     제 몸은 겉보기에만 멀쩡하지 속은 정말 문제가 많았어요. 몸무게가 적게 나가지만 그만큼 근육도 하나도 없었던 거예요. <Br/>
-                    <span class="yellow">모델 때는 운동을 하더라도 옷을 입었을 때 예쁜 몸을 만드는 데 집중했다면, </span><span class="yellow">운동을 하면서는 내 몸이 건강해지는 데 초점을 맞추게 되었어요.</span>”</p>
+                    <span class="yellow">모델 때는 운동을 하더라도 옷을 입었을 때 예쁜 몸을 만드는 데 집중했다면, 운동을 하면서는 내 몸이 건강해지는 데 초점을 맞추게 되었어요.</span>”</p>
 
                 <p>과학기술 연구자 임소연 박사는 매체가 여성의 몸을 바라보는 방식은 실제로 우리의 인식에 많은 영향을 미친다고 말한다. </p>
 
@@ -280,7 +281,7 @@
 
                 <p class="txtindent">“대회마다 매트에 올라가기 전까지는 손발이 저릿저릿할 정도로 긴장을 많이 해요. <Br/>
                     하지만 대회에 나가면서 제일 좋은 것은 크게 성장하는 기회가 된다는 점이에요.<Br/>
-                    <span class="yellow">이기든, 지든 일단 눈앞에 있는 상대랑 최선을 다해 붙고 </span><span class="yellow">나면 항상 거기에서 배울 점이 있어요.</span>”</p>
+                    <span class="yellow">이기든, 지든 일단 눈앞에 있는 상대랑 최선을 다해 붙고 나면 항상 거기에서 배울 점이 있어요.</span>”</p>
 
                 <p>완기 씨가 제일 좋아하고 잘하고 싶은 기술은 허벅다리걸기라는 기술이다. 이유는 단순하다. 제일 칭찬을 많이 받은 기술이기 때문. </p>
 
@@ -304,7 +305,7 @@
     </section>
 
     <footer>
-        <p>움직이는 여자들의 이야기 움직여!</p>
+        <p>움직이는 여자들의 이야기 <strong>움직여!</strong></p>
         <p>Contact  <a href="mailto:hi@youjin.do"> hi@youjin.do</a></p>
         <p>© 2023 Youjin Do All rights reserved.</p>
         <p class="logo"><a href="" target="_blank">vimeo link</a></p>

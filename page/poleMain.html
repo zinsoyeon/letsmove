@@ -71,7 +71,8 @@
             location.replace("/letmove/index.html");
         });
 
-        var nw = $("nav.gall ul li ").width();
+        var $gallList = $('nav.gall ul li');
+        var nw = $gallList.width();
         $("nav.gall ul li").css('height',nw);
 
     }
@@ -112,9 +113,9 @@
                 initialSlide: slideInx,
                 loop: loopChk,
                 centeredSlides: true,
-                speed : 1000,
+                speed : 1500,
                 autoplay: { // 자동 슬라이드 설정
-                    delay: 2000, // 시간 설정
+                    delay: 3000, // 시간 설정
                     disableOnInteraction: false, // false로 설정하면 스와이프 후 자동 재생이 비활성화 되지 않음
                 },
                 navigation: {
@@ -283,8 +284,7 @@
                     “순서와 기술을 짜고 연습하고, 그 동작을 더 잘하기 위한 연습을 하면서 꼬박 1년을 보내니까 대회에 나갔을 때는 긴장을 안 하게 되더라고요. <br/>
                     제 표정에서 그런 게 다 드러나나 봐요. <br/>
                     프로 대회에서 계속 1등을 했어요. 이제 대회는 그만 나가도 되겠다고 생각했어요. 마지막 대회 때 제가 54살이었는데요.<br/>
-                    <span class="yellow"> 54살 먹은 사람도 이 정도로 표현하고 움직일 수 있다는 것을 </span>
-                    <span class="yellow">보여줄 수 있었다는 것만으로도 충분히 행복했거든요.</span>”
+                    <span class="yellow"> 54살 먹은 사람도 이 정도로 표현하고 움직일 수 있다는 것을 보여줄 수 있었다는 것만으로도 충분히 행복했거든요.</span>”
                 </p>
                 <p>
                     희수 씨의 이야기가 방송에 소개되면서 4~50대 여성들로부터 연락을 받기 시작했다<br/>
@@ -368,7 +368,7 @@
     </section>
 
     <footer>
-        <p>움직이는 여자들의 이야기 움직여!</p>
+        <p>움직이는 여자들의 이야기 <strong>움직여!</strong></p>
         <p>Contact  <a href="mailto:hi@youjin.do"> hi@youjin.do</a></p>
         <p>© 2023 Youjin Do All rights reserved.</p>
         <p class="logo"><a href="" target="_blank">vimeo link</a></p>

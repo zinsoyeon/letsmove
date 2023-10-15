@@ -39,7 +39,7 @@ header.futsal ul  { background-color: #4790F8 !important;}
         display: block;
         height: 50px;  
         width: 12%;;
-        color: #fff; font-size: 1em; text-align: center;
+        color: #000; font-size: 1em; text-align: center;
         background-repeat: no-repeat; background-size: auto 25px ; background-position: center center;
     }
 
@@ -105,7 +105,7 @@ header.futsal ul  { background-color: #4790F8 !important;}
 
     nav.headerNav { position: absolute; width: 100%;height:50px !important;   }
     nav.headerNav ul {
-        position: absolute; top: 50px ; left: 200%; width: 100% !important;   height:50px !important;
+        position: absolute; top: 50px ; left: 200%; width: 100% !important;   height:45px !important;
         background-color:#FFBDB1;   padding: 0 30px;  z-index: 0 !important;
     }
 
@@ -118,14 +118,14 @@ header.futsal ul  { background-color: #4790F8 !important;}
     nav.headerNav ul li {
         float:left ; font-size: 1em;
         position: relative; text-align:center !important;
-        height:50px ; padding:0 3% !important; ; width: auto ;  display: block;
-        color: #fff   ;  margin :0  ;
+        height:45px ; padding:0 3% !important;  width: auto ;  display: block;
+        color: #000   ;  margin :0  ;
         text-indent: 0; background-image: none ;
     }
-    nav.headerNav ul li.move { display: block; margin-right:32% !important;}
+    nav.headerNav ul li.move { display: block; margin-right:35% !important; padding:0 0 0 3% !important; }
     nav.headerNav ul li a{ font-weight: 600;
-        text-indent: 0px; display:inline-block; width: 100%; height: 100%; line-height: 50px;
-        background: none ; color: #fff ; font-size: 1.1em ; text-decoration: none; text-align: center ; }
+        text-indent: 0px; display:inline-block; width: 100%; height: 100%; line-height: 45px;
+        background: none ; color: #000 ; font-size: 1.1em ; text-decoration: none; text-align: center ; }
 
 
     .staff article {padding: 60px 0px 60px 50px;
@@ -138,10 +138,13 @@ header.futsal ul  { background-color: #4790F8 !important;}
     .staff article .supportSection { float: left; margin-left:0px !important;   }
 
 }
+@media (max-width:700px) {
 
+    nav.headerNav ul li.move { margin-right:25% !important; padding:0 0 0 3% !important; }
+}
 @media (max-width:560px) {
 
-    nav.headerNav ul li.move { margin-right:20% !important;}
+    nav.headerNav ul li.move { margin-right:20% !important; padding:0 0 0 3% !important; }
 }
 
 @media (max-width:414px) {
@@ -153,7 +156,7 @@ header.futsal ul  { background-color: #4790F8 !important;}
     .staff article ul.supportlist { width: 320px; margin-left:0; margin-top: 0px; font-size: 0.8em }
     .staff article ul.stafflist li {  height:45px !important;}
     .staff article ul.supportlist li { height:45px !important;}
-    nav.headerNav ul li.move { margin-right:0% !important;}
+    nav.headerNav ul li.move { margin-right:0% !important; padding:0 3% 0 3% !important; }
 }
 
 .introduce { padding-bottom: 100px}
@@ -161,15 +164,13 @@ header.futsal ul  { background-color: #4790F8 !important;}
     position: relative;  width: 100%; padding: 100px 220px 50px 220px; text-align: center;
 }
 .introduce nav.gall ul { width: 100%; display: inline-block;  overflow: hidden;}
-.introduce nav.gall ul li {
+.introduce nav.gall li {
     float:left; font-size: 1em;  display: block; height: 100px; width: 20%; padding:10px;
     text-align: center; overflow: hidden;
 }
 .introduce nav.gall ul li a {
     text-align:center;  display: block; width: 100%; height: 100%; text-indent: -9999px;
-    background-repeat: no-repeat;
-    background-size:  auto 20%  ;
-    background-position: center center;
+    background-repeat: no-repeat; background-size: auto 20% ; background-position: center center;
     transition:0.5s all;
 }
 
@@ -184,15 +185,8 @@ nav.gall ul li.judo    a { background-image: url("../image/comm/nav_judo.png" );
 nav.gall ul li.futsal  a { background-image: url("../image/comm/nav_futsal.png" );  background-color: #4790F8;}
 
 
-
-
-
-
-
-
-
 main { margin:0px; padding:0px; }
-.mainTrailer { position:relative; height:100%; margin:0px; padding:0px; display:inline-block; width: 100%; /*background: #fdd */ padding:0;}
+.mainTrailer { position:relative; height:100%; margin:0px; padding:0px; display:inline-block; width: 100%; padding:0;}
 .mainTrailer iframe {margin:0}
 
 .trailer .yogatext {display: none;
@@ -204,6 +198,7 @@ main { margin:0px; padding:0px; }
     text-indent: -9999px;
     z-index: 10;
 }
+
 .trailer .yogagirl { display: none;
     position: absolute; bottom:5%; right: 5%; height: 500px; width: 500px;
     background-image: url("../image/comm/mainyoga.png" ) ;
@@ -213,8 +208,6 @@ main { margin:0px; padding:0px; }
     text-indent: -9999px;
     z-index: 10;
 }
-
-
 
 .introduce article { padding-top:50px; padding-left:250px; }
 .introduce article h4 {
@@ -309,7 +302,7 @@ article p.eng { font-size: 1.2em }
 .interviewContents { }
 .interviewContents article {
     position: relative; text-align: center;
-    height:100%; width: 100%; display: inline-block;
+    height:100%; width: 100%; display: inline-block; margin-bottom: 100px;
 }
 .interviewContents h6 { font-size: 1.5em ; font-weight:700; height:80px; width:300px; padding: 50px 0 0 0 ; margin-bottom: 10px;
     background-repeat: no-repeat; background-size: auto 30px ; background-position: left top;
@@ -327,7 +320,7 @@ article p.eng { font-size: 1.2em }
   clear:both; line-height: 1.8em; font-size: 1.2em; margin-bottom: 30px; letter-spacing: -0.05em ; display: inline-block ; color:#333;}
 .interviewContents > article  p.txtindent{ margin-left: 20px; }
 .interviewContents > article > .interviewCont > p .yellow {
-    background-repeat: repeat-x; background-size: auto 35% ; background-position: left bottom;
+    background-repeat: repeat-x; background-size: 100% 35% ; background-position: left bottom;
     background-image: url("../image/comm/highlight_yellow.png"); }
 .interviewContents > article > .interviewCont > p .name { font-size: 0.85em ; color: #666; margin-right: 5px}
 
@@ -386,10 +379,10 @@ article p.eng { font-size: 1.2em }
     .letsmove article { padding: 120px 100px 120px 100px;  }
 
 
-    .introduce article { padding: 30px 30px 50px 30px !important;  text-align: center;   }
+    .introduce article { padding: 30px 80px 50px 100px !important;  text-align: center;   }
     .introduce nav.gall {padding: 30px 80px;  text-align: center;}
     .introduce nav.gall ul { }
-    .introduce nav.gall ul li { padding:5px;  }
+    .introduce nav.gall ul li { padding:8px;  }
 
     .yogaillust { padding-right:0; padding-bottom: 170px;
         background-repeat: no-repeat; background-size: auto 180px; background-position: bottom right;}
@@ -465,6 +458,8 @@ article p.eng { font-size: 1.2em }
         float:left; font-size: 1em;  display: block; height: 100px; width: 33%; padding:10px;
         text-align: center; overflow: hidden;
     }
+
+    .introduce nav.gall ul li:nth-child(4) {margin-left: 16%}
     .introduce nav.gall ul li a {  background-size:  auto 25%  ; }
 
     .interviewContents article { padding:0px 20px 20px 30px; }
