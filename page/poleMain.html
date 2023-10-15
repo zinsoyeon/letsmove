@@ -47,16 +47,16 @@
 
         if ( windowWidth > 820 ){
             $headerNavUl.css({"left": "0"});
-            $("#letsmoveMain > article").css('height', windowHeight-60);
-            $("#letsmoveMain > article").css('width', windowWidth);
-            $("#mainTrailer iframe").css('height', windowHeight-60);
-            $("#mainTrailer iframe").css('width', windowWidth);
+            $("#vimeoTrailer").css('margin-top', '0px');
+            $("#vimeoTrailer").css('margin-bottom', '0px');
+            $("#vimeoTrailer iframe").css('height', windowHeight-60);
+            $("#vimeoTrailer iframe").css('width', windowWidth);
         } else {
             $headerNavUl.css({"left": "-200%"});
-            $("#letsmoveMain > article").css('height', windowHeight/2);
-            $("#letsmoveMain > article").css('width', windowWidth);
-            $("#mainTrailer iframe").css('width', windowWidth);
-            $("#mainTrailer iframe").css('height', windowWidth/16*9);
+            $("#vimeoTrailer").css('margin-top', '100px');
+            $("#vimeoTrailer").css('margin-bottom', '50px');
+            $("#vimeoTrailer iframe").css('width', windowWidth);
+            $("#vimeoTrailer iframe").css('height', windowWidth/16*9);
         }
 
         $('.btn_cate').on('click', function() {
@@ -152,7 +152,7 @@
 
     <main id="main" class="mt60">
         <section class="trailer">
-            <div class="mainTrailer" id="mainTrailer">
+            <div class="vimeoTrailer" id="vimeoTrailer">
                 <iframe src="https://player.vimeo.com/video/874473746?autoplay=true&loop=true&muted=true"
                         frameborder="0"
                         allow="autoplay; fullscreen; picture-in-picture"
