@@ -19,7 +19,7 @@
     font-weight: 800;
 }
 html {overflow-x: hidden; overflow-y: scroll}
-* { margin:0; padding:0; box-sizing: content-box;
+* { margin:0; padding:0;
     font-family: 'SDGothic', AppleSDGothicNeo-Regular, /*'Malgun Gothic', '맑은 고딕',*/ dotum, '돋움', sans-serif;
     word-break:keep-all; list-style:none; text-indent: 0; font-size: 1em; line-height: 1em;
     box-sizing: border-box;  text-align: left;
@@ -29,7 +29,7 @@ article{  margin:0 auto;   }
 
 .line {border-top :1px solid #FF593C; margin-left:5%; width:90%; height: 2px; display: inline-block }
 
-.sns a {   width: 18px; height: 18px ; margin:0px; float: left;  display: inline-block; overflow: hidden; text-indent: -9999px ;
+.sns a {   width: 18px; height: 18px ; margin:0; float: left;  display: inline-block; overflow: hidden; text-indent: -9999px ;
     background-repeat: no-repeat; background-size: 100% auto; margin-left:3px; background-position: center; border: 1px solid #ccc}
 .sns .youtube { background-image: url("../image/comm/btn_youtube.png" ); border: none !important; }
 .sns .instagram { background-image: url("../image/comm/btn_insta.png" ); border: none !important; }
@@ -46,15 +46,15 @@ article{  margin:0 auto;   }
 
 
 
-.pt00 {padding-top:0px !important;}
-.mt00 {margin-top:0px !important;}
-.mb00 {margin-bottom:0px !important;}
+.pt00 {padding-top:0 !important;}
+.mt00 {margin-top:0 !important;}
+.mb00 {margin-bottom:0 !important;}
 .mt60 { margin-top: 60px; }
 
-footer { background: #F8F8F8; font-size: 1em; padding:50px; }
+footer { background: #F8F8F8;  font-size: 0.9em; padding:50px; }
 footer p{ text-align: center ;  line-height: 22px; height: 22px;}
-footer p:nth-child(1){ margin-bottom: 5px; color:#666666;   font-weight: 600; letter-spacing: -0.095em }
-footer p:nth-child(2){ cmargin-bottom: 5px; olor:#7E7E7E; font-size: 0.9em; font-weight: 400; }
+footer p:nth-child(1){ margin-bottom: 5px; color:#666666;   font-weight: 600; }
+footer p:nth-child(2){ margin-bottom: 5px; color:#7E7E7E; font-size: 0.9em; font-weight: 400; }
 footer p:nth-child(2) a { color:#666 !important; }
 footer p:nth-child(3){ color:#7E7E7E; font-size:  0.9em; font-weight: 400; }
 footer p strong{ font-weight: 700 !important;  }
@@ -69,7 +69,7 @@ footer p.logo{
 
 
 @media (max-width: 820px) {
-    footer { font-size: 0.9em; padding:40px 0 20px 0; }
+    footer { font-size: 0.8em; padding:40px 0 20px 0; }
     footer p {  line-height: 16px; height: 16px;}
 
 
