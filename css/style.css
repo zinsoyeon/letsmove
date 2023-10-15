@@ -9,8 +9,8 @@ header.yoga   { background-color: #FFCF55 !important;}
 header.yoga ul  { background-color: #FFCF55 !important;}
 header.pole   { background-color: #FF90B8 !important;}
 header.pole ul  { background-color: #FF90B8 !important;}
-header.yudo   { background-color: #3CDDC7 !important;}
-header.yudo ul  { background-color: #3CDDC7 !important;}
+header.judo   { background-color: #3CDDC7 !important;}
+header.judo ul  { background-color: #3CDDC7 !important;}
 header.futsal { background-color: #4790F8 !important;}
 header.futsal ul  { background-color: #4790F8 !important;}
 
@@ -23,6 +23,7 @@ header.futsal ul  { background-color: #4790F8 !important;}
         background-image: url("../image/comm/header_large_logo_w.png");
         background-repeat: no-repeat; background-size: 100% auto; background-position: center center;
         text-indent: -9999px; font-size: 1em; cursor: pointer; z-index: 9999;
+        z-index: 9999;
     }
 
     header h1.main {  background-image: url("../image/comm/header_small_logo_w.png"); background-size: 100% auto;
@@ -47,7 +48,7 @@ header.futsal ul  { background-color: #4790F8 !important;}
     nav.headerNav ul li.move   { display:none; background-image: url("../image/comm/nav_move.png" ); }
     nav.headerNav ul li.yoga   { background-image: url("../image/comm/nav_yoga.png" ); }
     nav.headerNav ul li.pole   { background-image: url("../image/comm/nav_pole.png" );  }
-    nav.headerNav ul li.yudo   { background-image: url("../image/comm/nav_judo.png" ); margin-left:52%; }
+    nav.headerNav ul li.judo   { background-image: url("../image/comm/nav_judo.png" ); margin-left:52%; }
     nav.headerNav ul li.futsal { background-image: url("../image/comm/nav_futsal.png" ); }
 
     .btn_cate {display: none;}
@@ -111,7 +112,7 @@ header.futsal ul  { background-color: #4790F8 !important;}
     header.move ul  { background-color: #FFBDB1 !important;}
     header.yoga ul  { background-color: #FFECBB !important;}
     header.pole ul  { background-color: #FFD3E3 !important;}
-    header.yudo ul  { background-color: #B1F1E9 !important;}
+    header.judo ul  { background-color: #B1F1E9 !important;}
     header.futsal ul  { background-color: #B5D3FC !important;}
 
     nav.headerNav ul li {
@@ -179,7 +180,7 @@ nav.gall ul li a:hover{
 nav.gall ul li.move    a { background-image: url("../image/comm/header_small_logo_w.png " );  background-color: #FF593C;}
 nav.gall ul li.yoga    a { background-image: url("../image/comm/nav_yoga.png" );  background-color: #FFCF55;}
 nav.gall ul li.pole    a { background-image: url("../image/comm/nav_pole.png" );  background-color: #FF90B8;}
-nav.gall ul li.yudo    a { background-image: url("../image/comm/nav_judo.png" );  background-color: #3CDDC7;}
+nav.gall ul li.judo    a { background-image: url("../image/comm/nav_judo.png" );  background-color: #3CDDC7;}
 nav.gall ul li.futsal  a { background-image: url("../image/comm/nav_futsal.png" );  background-color: #4790F8;}
 
 
@@ -252,6 +253,7 @@ article p.eng { font-size: 1.2em }
 
 .purpose article p .italic { font-style: italic}
 .purpose article p a { color:#000;  }
+.purpose article p a:hover{ color:#FF593C;  }
 
 
 
@@ -290,7 +292,7 @@ article p.eng { font-size: 1.2em }
 .staff article ul.supportlist li p.nm span:nth-child(2) { font-size: 0.9em ;  color: #7e7e7e}
 
 
-.staff article ul li p.sns { position: absolute; top:0px; right: 200px; width: 80px; }
+.staff article ul li p.sns { position: absolute; top:0px; right: 50px; width: 80px; }
 
 .govSupport { margin: 0; padding:20px; width: 100%; text-align: center;   display: inline-block; }
 .govList { margin: 0; padding:0; height:180px; text-align: center; }
@@ -304,29 +306,32 @@ article p.eng { font-size: 1.2em }
 .govList li.artson { background-image: url("../image/comm/logo_artson.png");  }
 .govList li a { display: inline-block; width: 100%; height: 100%; text-indent: -9999px; }
 
-.yogaContents { }
-.yogaContents article {
+.interviewContents { }
+.interviewContents article {
     position: relative; text-align: center;
     height:100%; width: 100%; display: inline-block;
 }
-.yogaContents h6 { font-size: 1.5em ; font-weight:700; height:80px; width:300px; padding: 50px 0 0 0 ; margin-bottom: 10px;
+.interviewContents h6 { font-size: 1.5em ; font-weight:700; height:80px; width:300px; padding: 50px 0 0 0 ; margin-bottom: 10px;
     background-repeat: no-repeat; background-size: auto 30px ; background-position: left top;
     background-image: url("../image/comm/bull_yoga.png"); vertical-align: bottom;
 }
 
-.yogaContents .yogaContentsTitle{ position:relative; clear:both; float: left; width:100%; max-width:1200px;  top:0; right: 0; display: inline-block ; }
-.yogaContents .yogaContentsTitle .author { position:absolute;top:0; right: 0;   display: inline-block ;}
-.yogaContents .yogaContentsTitle .author .sns { float: right; margin-top: 5px; display: inline-block; }
+.interviewContents .interviewContentsTitle{ position:relative; clear:both; float: left; width:100%; max-width:1200px;  top:0; right: 0; display: inline-block ; }
+.interviewContents .interviewContentsTitle .author { position:absolute;top:0; right: 0;   display: inline-block ;}
+.interviewContents .interviewContentsTitle .author .sns { float: right; margin-top: 5px; display: inline-block; }
 
-.yogaContents h6 { vertical-align:text-bottom; line-height: 1em;   }
-.yogaContents h6 span { text-decoration: none ; vertical-align:text-bottom; font-size: 0.7em; font-weight: 500; margin-left: 3px}
-.yogaContents > article > div  {  display: inline-block; margin:0 auto;}
-.yogaContents > article > div > p {   float: left;
-  clear:both; line-height: 1.8em; font-size: 1.2em; margin-bottom: 30px; letter-spacing: -0.05em ; display: inline-block }
-.yogaContents > article  p.txtindent{ margin-left: 30px; }
-.yogaContents > article > .yogaCont > p .yellow {
-    background-repeat: no-repeat; background-size: 100% ; background-position: left bottom;
+.interviewContents h6 { vertical-align:text-bottom; line-height: 1em;   }
+.interviewContents h6 span { text-decoration: none ; vertical-align:text-bottom; font-size: 0.7em; font-weight: 500; margin-left: 3px}
+.interviewContents > article > div  {  display: inline-block; margin:0 auto;}
+.interviewContents > article > div > p { float: left; max-width: 1200px;
+  clear:both; line-height: 1.8em; font-size: 1.2em; margin-bottom: 30px; letter-spacing: -0.05em ; display: inline-block ; color:#333;}
+.interviewContents > article  p.txtindent{ margin-left: 20px; }
+.interviewContents > article > .interviewCont > p .yellow {
+    background-repeat: repeat-x; background-size: auto 35% ; background-position: left bottom;
     background-image: url("../image/comm/highlight_yellow.png"); }
+.interviewContents > article > .interviewCont > p .name { font-size: 0.85em ; color: #666; margin-right: 5px}
+
+.interviewContents > article > .interviewCont > p.tit { font-weight: 600 !important;  color:#000; font-size: 1.25em }
 .yogaillust {
     padding-right:350px; padding-top:30px;
     background-repeat: no-repeat; background-size: auto 250px ; background-position: right bottom;
@@ -391,7 +396,7 @@ article p.eng { font-size: 1.2em }
     .yogaillust > span{ float: left; clear: both; line-height: 1.8em; width:60%; }
     .yogaillust > span:first-child{ width:100% !important;   }
     .yogaillust > span:last-child{ width:100% !important;   }
-    .yogaContents > article  p.txtindent{ margin-left: 0px !important; }
+    .interviewContents > article  p.txtindent{ margin-left: 0px !important; }
 
     .slide_list > li {  height: 300px;   }
     .slide_list > li img {   height: 100%; width:auto }
@@ -412,7 +417,7 @@ article p.eng { font-size: 1.2em }
     .yogaillust { padding-right:0; padding-bottom:150px !important;  }
     .yogaillust > span:first-child{ width:100% !important;   }
     .yogaillust > span:last-child{ width:100% !important;   }
-    .yogaContents > article  p.txtindent{ margin-left: 0px !important; }
+    .interviewContents > article  p.txtindent{ margin-left: 0px !important; }
 
 
     .introduce article { padding:30px 40px 50px 40px !important; }
@@ -462,7 +467,7 @@ article p.eng { font-size: 1.2em }
     }
     .introduce nav.gall ul li a {  background-size:  auto 25%  ; }
 
-    .yogaContents article { padding:0px 20px 20px 30px; }
+    .interviewContents article { padding:0px 20px 20px 30px; }
     .yogaillust { padding-right:0; padding-bottom: 150px;
         background-repeat: no-repeat; background-size: auto 150px ; background-position: bottom center }
 

@@ -1,50 +1,40 @@
 <!DOCTYPE html>
-<html lang="ko">
+<html lang="ko" xmlns="http://www.w3.org/1999/html">
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="robots" content="index, follow" />
-    <meta name="author" content="Youjin Do" />
+    <meta name="viewport" content="width=device-width,initial-scale=1"/>
+    <meta name="color-scheme" content="light only"/>
     <meta name="viewport" content="width=device-width,initial-scale=1.0,minimum-scale=1.0,maximum-scale=1.0,user-scalable=no">
-    <meta name="description" content = "뛰고, 차고, 오르고, 호흡하며 끊임없이 움직이는 여자들의 이야기
-                                        보여지고 평가받는 대상으로서의 몸이 아닌, 움직이고 기능하는 몸에 대한 이야기
-                                        그리고 요가/폴스포츠/유도/풋살을 하는 여자들의 시작과 계기, 그리고 변화에 대한 이야기를
-                                        임소연 과학기술학 박사 & 서민정 퍼스널 트레이너의 코멘터리와 함께 영상으로 담아낸 웹 영상 시리즈입니다." >
-    <meta property="og:description" content = "뛰고, 차고, 오르고, 호흡하며 끊임없이 움직이는 여자들의 이야기
-                                        보여지고 평가받는 대상으로서의 몸이 아닌, 움직이고 기능하는 몸에 대한 이야기
-                                        그리고 요가/폴스포츠/유도/풋살을 하는 여자들의 시작과 계기, 그리고 변화에 대한 이야기를
-                                        임소연 과학기술학 박사 & 서민정 퍼스널 트레이너의 코멘터리와 함께 영상으로 담아낸 웹 영상 시리즈입니다." >
-
-    <link rel="apple-touch-icon" sizes="120x120" href="/apple-touch-icon.png">
-    <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
-    <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
-    <link rel="manifest" href="/site.webmanifest">
-    <link rel="mask-icon" href="/safari-pinned-tab.svg" color="#5bbad5">
-    <meta name="msapplication-TileColor" content="#da532c">
-    <meta name="theme-color" content="#ffffff">
-
-    <link rel="stylesheet" href="./css/comm.css">
-    <link rel="stylesheet" href="./css/style.css">
+    <link rel="shortcut icon" href="/favicon.ico">
+    <link rel="stylesheet" href="../css/comm.css">
+    <link rel="stylesheet" href="../css/style.css">
+    <link rel="stylesheet" href="../css/swiper.css">
     <title>움직여!</title>
 </head>
-
-<script src="./js/jquery.js"></script>
-<script src="./js/swiper.js"></script>
-<script src="./js/player.js"></script>
-
+<script src="../js/jquery.js"></script>
+<script src="../js/swiper.js"></script>
+<script src="../js/player.js"></script>
 <script>
 
+
     /* html 최초 로드 및 이벤트 상시 대기 실시 */
-    $(window).load(function(){
+
+    $(window).on('load', function() {
         //메소드 호출
         main();
+        slider();
     });
-
 
     /* html 화면 크기 리사이즈 확인 */
     $(function(){
         $(window).resize(function(){
             main();
+            var $headerNavUl = $('header nav.headerNav ul');
+            var windowWidth = $(window).width(); //요소의 높이를 반환 S
+            if ( windowWidth > 820 ) {
+                $headerNavUl.css({"display": "block"});
+            }
         });
     });
 
@@ -72,20 +62,104 @@
         var nw = $("nav.gall ul li ").width();
         $("nav.gall ul li").css('height',nw);
 
+        var $headerNavUl = $('header nav.headerNav ul') ;
+        if (windowWidth > 767 ){
+            $headerNavUl.css({"display": "block"})
+        } else {
+            $headerNavUl.css({"display": "none"})
+        }
+
+        $('.btn_cate').on('click', function() {
+            if ( $headerNavUl.css('display') == 'none' ){
+                $headerNavUl.css({"display": "block"});
+            } else {
+                $headerNavUl.css({"display": "none"});
+            }
+        });
+
+        $('h1').on('click', function() {
+            location.replace("/letmove/index.html");
+        });
+
+    }
+
+    function slider() {
+        let swiper = undefined;
+        let slideNum = $('.slider .swiper-slide').length //슬라이드 총 개수
+        let slideInx = 0; //현재 슬라이드 index
+
+        //디바이스 체크
+        // let oldWChk = window.innerWidth > 767 ? 'pc' : 'mo';
+        let oldWChk= 'mo';
+        sliderAct();
+        $(window).on('resize', function() {
+            // let newWChk = window.innerWidth > 767 ? 'pc' : 'mo';
+            let newWChk= 'mo';
+            if (newWChk != oldWChk) {
+                oldWChk = newWChk;
+                sliderAct();
+            }
+        })
+
+        //슬라이드 실행
+        function sliderAct() {
+            //슬라이드 초기화
+            if (swiper != undefined) {
+                swiper.destroy();
+                swiper = undefined;
+            }
+
+            //slidesPerView 옵션 설정
+            let viewNum = 2 ; // oldWChk == 'pc' ? 4 : 2;
+            //loop 옵션 체크
+            let loopChk = slideNum > viewNum;
+
+            swiper = new Swiper(".slider .inner", {
+                slidesPerView: "auto",
+                initialSlide: slideInx,
+                loop: loopChk,
+                centeredSlides: true,
+                speed : 1000,
+                autoplay: { // 자동 슬라이드 설정
+                    delay: 2000, // 시간 설정
+                    disableOnInteraction: false, // false로 설정하면 스와이프 후 자동 재생이 비활성화 되지 않음
+                },
+                navigation: {
+                    nextEl: $('.slider .btn_next'),
+                    prevEl: $('.slider .btn_prev'),
+                },
+                on: {
+                    activeIndexChange: function() {
+                        slideInx = this.realIndex; //현재 슬라이드 index 갱신
+                    }
+                },
+            });
+        }
     }
 
 
-</script>
 
+</script>
 <body>
-    <header>
-        <h1 class="main">움직여!</h1>
+    <header class="pole">
+        <nav class="headerNav" id="headerNav" class="headerNav">
+            <ul>
+                <li class="move"><a href="letsmoveMain.html">움직여</a></li>
+                <li class="yoga"><a href="yogaMain.html">요가</a></li>
+                <li class="pole"><a href="poleMain.html"><strong>폴스포츠</strong></a></li>
+                <li class="judo"><a href="judoMain.html">유도</a></li>
+                <li class="futsal"><a href="futsalMain.html">풋살</a></li>
+            </ul>
+        </nav>
+        <span class="btn_cate">메뉴</span>
+        <h1><a href="javascript:;"  >움직이는 여자들의 이야기</a></h1>
     </header>
+
 
     <main id="main" class="mt60">
         <section class="trailer">
             <div class="mainTrailer" id="mainTrailer">
-                <iframe src="https://player.vimeo.com/video/874295623?autoplay=true&loop=true&muted=true"
+                <iframe src="https://player.vimeo.com/video/874473746?autoplay=true&loop=true&muted=true"
                         frameborder="0"
                         allow="autoplay; fullscreen; picture-in-picture"
                         allowfullscreen></iframe>
@@ -93,46 +167,218 @@
         </section>
     </main>
 
+    <section class="pole" id="poleMain">
 
-    <section class="introduce">
+        <div class="slider">
+            <div class="inner">
+                <ul class="swiper-wrapper slide_list">
+                    <li class="swiper-slide"><img src="../image/stillcut/MOVE_Pole_still_1.jpg" alt="" /></li>
+                    <li class="swiper-slide"><img src="../image/stillcut/MOVE_Pole_still_2.jpg" alt="" /></li>
+                    <li class="swiper-slide"><img src="../image/stillcut/MOVE_Pole_still_3.jpg" alt="" /></li>
+                    <li class="swiper-slide"><img src="../image/stillcut/MOVE_Pole_still_4.jpg" alt="" /></li>
+                    <li class="swiper-slide"><img src="../image/stillcut/MOVE_Pole_still_5.jpg" alt="" /></li>
+                    <li class="swiper-slide"><img src="../image/stillcut/MOVE_Pole_still_6.jpg" alt="" /></li>
+                </ul>
+            </div>
+        </div>
+    </section>
 
-        <nav class="gall">
-            <ul>
-                <li class="move"><a href="./page/letsmoveMain.html">움직여</a></li>
-                <li class="yoga"><a href="./page/yogaMain.html">요가</a></li>
-                <li class="pole"><a href="./page/poleMain.html">폴스포츠</a></li>
-                <li class="judo"><a href="./page/judoMain.html">유도</a></li>
-                <li class="futsal"><a href="./page/futsalMain.html">풋살</a></li>
-            </ul>
-        </nav>
-
-        <div class="line"></div>
-
+    <section class="interviewContents" id="interviewContents">
         <article>
-            <h4>움직여!</h4>
-            <p class="kor">
-                뛰고, 차고, 오르고, 호흡하며 끊임없이 움직이는 여자들의 이야기<br/>
-                보여지고 평가받는 대상으로서의 몸이 아닌 움직이고 기능하는 몸에 대한 이야기<br/>
-                요가/폴스포츠/유도/풋살을 하는 여자들의 시작과 계기, 그리고 변화에 대한 이야기를<br/>
-                임소연 과학기술학 박사&서민정 퍼스널 트레이너의 코멘터리와 함께 담아낸 웹 영상 시리즈입니다.
-            </p>
-            <p class="eng">
-                MOVE!(움직여!) is a web video series that tells the stories of women in constant motion—running, driving, climbing, and breathing.<br/>
-                It's a narrative about moving and functioning bodies, not as objects to be seen and judged, but as bodies that move and function.<br/>
-                It delves into the beginning, catalysts, and transformations of women engaged in yoga, pole sports, judo, and futsal.<br/>
-                Dr. Leem So Yeon, a Ph.D. in Science and Technology Studies, and Seo Min-jeong, a personal trainer, provide commentary<br/>
-                as we capture these stories through vivid images.
-            </p>
+            <div class="interviewCont">
+                <div class="interviewContentsTitle" >
+                    <h6>EP 02. 폴스포츠<span>_김희수님</span></h6>
+                    <div class="author">
+                        <p class="nm">작성자 : 김지영</p>
+                        <p class="sns">
+                            <a href="https://instagram.com/masvidaa" class="instagram">https://instagram.com/masvidaa</a>
+                            <a href="https://brunch.co.kr/@masvida#articles" class="youtube">https://brunch.co.kr/@masvida#articles</a>
+                        </p>
+                    </div>
+                </div>
+
+                <p>결혼, 육아, 일. 20년이 넘는 세월 동안 희수 씨의 삶은 평범하게 반복되어 왔다. <br/>
+                    49살에 폴스포츠를 알게 되기 전까지는. 아직 말갛게 어린 25살, 희수 씨는 대학을 졸업하던 해에 결혼했다. <br/>
+                    연년생으로 연달아 아이를 낳고 두 아이를 키우다 보니 8년이 훌쩍 지나갔다. <br/>
+                    아이가 초등학교에 입학하던 해에는 결혼 전 잠시 학원 수학 선생님을 했던 경력을 살려 과외 선생님이 되었다. <br/>
+                    동네에서 한 명, 두 명. 알음알음 시작했던 과외 일이 어느덧 18년 차가 되었을 무렵, 희수 씨의 삶에 새로운 전환점이 될 사건이 생긴다.<br/>
+                    <span class="yellow">폴스포츠 9년 차, 50대의 폴스포츠인 김희수 씨의 이야기는 여기서부터 비로소 시작된다.</span>
+                </p>
+
+                <p class="tit">처음 만난 세계, 세상에 이렇게 아름다운 운동이 있다니!
+                </p>
+
+                <p class="txtindent">“아이들을 돌보면서 일도 하다 보니 세월이 눈 깜짝할 새 지나가더라고요. <br/>
+                    눈떠서 식사 준비하고 수업하면서 하루 종일 눈코 뜰 새 없이 바쁘게 일했어요. <br/>
+                    그런데 아이들이 군대에 가고부터 무기력에 깊이 빠지게 됐어요. <br/>
+                    더 이상 돌봐줘야 할 사람이 없다 보니 덜컥 시간이 많이 생겼는데 그 시간이 너무 막막하게 느껴졌어요. <br/>
+                    하루 종일 소파에 늘어진 채로 시간만 보냈죠. 남편이 저를 ‘소파 공주’라고 부를 정도였어요. <br/>
+                    그런데 어느 날 설거지를 하다가 팔을 다쳐서 깁스를 하게 됐어요. 과외를 모두 접고 재활에만 집중했어요.”
+                </p>
+
+                <p>아이들과 일. 오랫동안 희수 씨 삶에서 큰 부분을 차지했던 주춧돌들이 한순간에 삶에서 빠져나가자 그 자리에 처음으로 ‘운동’이라는 돌이 조금씩 굴러들어 오기 시작했다.
+                </p>
+
+                <p class="txtindent">
+                    <span class="yellow">“제가 어렸을 때부터 아버지가 유난스러우셔서 자전거 한 번 타본 적이 없었어요.</span><br>
+                    <span class="yellow">여자아이라는 이유로 집 밖에도 못 나가게 해서 스케이트는커녕 그 흔한 수영장도 못 가봤어요.”</span>
+                </p>
+
+                <p>‘여자아이 몸에 상처가 나면 안 된다’는 것을 철칙으로 삼은 아버지 밑에서 자라면서 희수 씨는 운동을 접할 기회가 전혀 없었다.<br/>
+                    그런 희수 씨의 눈에 처음 들어온 운동이 바로 폴스포츠였다.
+                </p>
+
+                <p class="txtindent">“좀 찾을 것이 있어서 ’인어공주’를 인터넷에 검색했다가 우연히 폴댄스의 ‘폴 피쉬(pole fish)’라는 동작을 발견하게 됐어요.<br/>
+                    근데 너무 아름다운 거예요. <span class="yellow">‘인간이 이런 운동도 한다고?’</span> 그런 생각이 들었어요. <br/>
+                    그래서 폴을 배울 수 있는 학원을 싹 뒤졌어요. 2014년도였는데 당시에 폴을 배울 수 있는 곳이 전국에 몇 군데밖에 없었어요. <br/>
+                    그러다 오픈한 지 딱 한 달 된 학원을 찾은 거예요. 전화를 계속 걸었어요. ‘제가 지금 49살인데 할 수 있나요?’ 정말 귀찮을 만큼 물어본 것 같아요.”
+                </p>
+
+                <p>그렇게 전화를 걸어 같은 질문을 한 지 한 달쯤 되었을 무렵 드디어 희수 씨는 한 폴스튜디오에 등록한다. <br/>
+                    그리고 그로부터 한 달이 되었을 무렵에는 집에 폴을 설치하기에 이른다.
+                </p>
+
+                <p class="txtindent">“일주일에 두 번씩 배우러 갔는데 너무 재밌었어요. 그래서 남편에게 결혼기념일 선물로 집에 설치할 수 있는 폴을 받고 싶다고 했죠. <br/>
+                    사실 남편은 제가 한 달 정도 좀 운동하다 그냥 그만둘 거라고 생각했대요.
+                    그런데 6개월이 지나서는 아예 제가 폴 전문가반에 들어간 거죠.”
+                </p>
+
+                <p>무기력한 소파 공주는 흔적도 없이 사라졌다. 우연히 굴러들어 온 폴스포츠란 돌은 희수 씨의 일상을 완전히 바꾸었다.<br/>
+                    하도 오랫동안 집 안에만 있어서 휴대전화도 필요 없었다는 희수 씨는 폴스포츠를 하면서 휴대전화를 처음 장만했다.<br/>
+                    혼자 지도 앱을 보며 대중교통을 타고 학원에 가고, 연습하는 모습을 촬영해서 다시 보며 복습하기 위한 용도다.
+                </p>
+
+                <p class="txtindent">“부끄럽지만 원래는 제가 외출할 일이 있을 땐 남편이 늘 태워다 주곤 했어요. <br/>
+                    그런데 혼자 다닐 수 있게 되니 완전히 새로운 세상이 열리더라고요. 이제 다른 사람에게 부탁하지 않고도 어디든 갈 수 있잖아요.<br/>
+                    혼자 학원 가서 폴스포츠 연습하고 나오는 길에 커피 한 잔 마시고 오기만 해도 너무 신나더라고요.”
+                </p>
+
+                <p>폴스포츠는 김희수에게 잃어버린 줄도 모르고 있었던 이름 또한 다시 찾아주었다. “누구 엄마, 누구 사모님. <br/>
+                    결혼하고서는 제 이름으로 불린 적이 없었어요. 근데 학원에서는 동료들이 저한테 ‘희수 씨’라고 불러요. 저랑 20년 넘게 나이가 차이 나는 친구들도 저를 이름으로 부르는 거예요.<br/>
+                    <span class="yellow">‘아, 나도 내 이름이 있었지.’ </span>그게 너무 새롭더라고요. <br/>
+                    폴을 시작하고 저한테는 딸 같은 친구도 생기고 동료도 생겼어요. 인생이 이렇게도 바뀌네요.”
+
+                </p>
+
+                <p class="tit">늦깎이 학생, 50대 희망의 아이콘으로 </p>
+
+                <p>기초가 쌓이고 나니 희수 씨의 실력은 일취월장했다. <br/>
+                    자신감이 가득 솟아나던 무렵, 학원 원장 선생님의 권유 덕에 새로운 도전을 하게 된다. <br/>
+                    바로 폴스포츠 대회 출전이었다.
+                </p>
+
+                <p class="txtindent">“꼭 프로 선수가 아니더라도 나갈 수 있는 대회가 많더라고요. <br/>
+                    폴을 시작한 지 1년이 안 된 아마추어부터 그 위 단계인 세미프로, 프로까지 여러 분야로 나갈 수가 있죠. <br/>
+                    구경이나 해보자는 마음으로 부산에서 열린 대회에 아마추어로 출전했어요. 그런데 시상하는데 제 이름이 불린 거예요. <br/>
+                    18명 중에 6등까지 상을 주는데 제가 4등을 한 거죠. 상을 받고 처음엔 얼떨떨했지만, 덕분에 자신감이 생기더라고요”
+                </p>
+                <p>
+                    그다음부터는 40세 이상부터 나갈 수 있는 마스터 부문에 집중적으로 출전하기 시작했다.<br/>
+                    불과 얼마 전까지만 해도 상상도 못 한 일이 희수 씨의 삶에 계속해서 벌어졌다.
+                    <span class="yellow">마스터 아마추어, 세미 프로, 프로까지. 대회마다 시상식에서 ‘김희수’라는 세 글자가 계속 호명되었다.</span> <br/>
+                    그렇게 차근차근 대회 경력을 쌓아 나가다 보니 주변에서 희수 씨를 알아보는 사람들이 조금씩 생기기 시작했다.
+                </p>
+                <p class="txtindent">
+                    “아무래도 나이 50살이 넘은 사람이 폴스포츠를 하는 경우 자체가 워낙 흔치 않은데,<br/>
+                    40대가 주를 이루는 마스터 부문 대회에서 50살이 넘은 사람이 상을 탔다니까 관심을 많이 받은 것 같아요.”
+                </p>
+                <p>
+                    좋아하는 것에 대해서는 누구나 성실해진다.<br/>
+                    한 대회가 끝나고 나면 1년을 꼬박 다음 대회를 준비한다면서도 희수 씨에게는 지친 기색이 없다.<br/>
+                </p>
+                <p class="txtindent">
+                    “순서와 기술을 짜고 연습하고, 그 동작을 더 잘하기 위한 연습을 하면서 꼬박 1년을 보내니까 대회에 나갔을 때는 긴장을 안 하게 되더라고요. <br/>
+                    제 표정에서 그런 게 다 드러나나 봐요. <br/>
+                    프로 대회에서 계속 1등을 했어요. 이제 대회는 그만 나가도 되겠다고 생각했어요. 마지막 대회 때 제가 54살이었는데요.<br/>
+                    <span class="yellow"> 54살 먹은 사람도 이 정도로 표현하고 움직일 수 있다는 것을 </span>
+                    <span class="yellow">보여줄 수 있었다는 것만으로도 충분히 행복했거든요.</span>”
+                </p>
+                <p>
+                    희수 씨의 이야기가 방송에 소개되면서 4~50대 여성들로부터 연락을 받기 시작했다<br/>
+                    . 희수 씨를 보며 용기를 얻어 폴스포츠를 시작했다는 이야기를 들으며 희수 씨는 소박한 꿈을 일기장에 적었다. <br/>
+                    “동네마다 우후죽순 생겨나는 실내 골프장처럼 폴스포츠 학원도 동네마다 생겨서 4~50대 여자들이 다 같이 운동할 수 있으면 좋겠다고 생각했죠. <br/>
+                    제가 폴을 2014년도에 시작해서 어느덧 9년이 됐는데 이제는 동네마다 학원이 하나씩 생기고 있어요. 학원마다 4~50대분들도 꽤 계시고요.
+                </p>
+                <p class="tit">
+                    엄마, 남사스럽게 무슨 폴댄스야?
+                </p>
+                <p>
+                    폴스포츠도 어느덧 대중화의 길을 걷고 있다. 해외는 물론 국내에도 많은 대회가 개최되면서 국제폴스포츠 협회 차원에서는 올림픽 종목 등록을 위한 노력 역시 한창 진행 중이다.<br/>
+                    하지만 희수 씨가 폴을 시작한 후 10년 가까운 세월 동안 변하지 않은 것이 있다면 폴스포츠, 그리고 의상에 대한 세간의 부정적인 인식이다.
+                </p>
+                <p class="txtindent">
+                    “저는 처음부터 별다른 편견이 없었어요. 이런 폴이 스트립 댄스에 이용된다는 사실도 전혀 몰랐고요. 폴을 배우러 갔을 때 다들 짧은 팬츠에 탱크탑을 입고 하길래 저도 당연히 그렇게 입은 거죠.<br/>
+                    그런데 제가 폴스포츠를 한다고 하면 다들 하고많은 운동 중에 왜 그런 걸 하냐는 반응을 보여요. <br/>
+                    남들 다하는 골프 같은 운동을 놔두고 왜 몸이 다 드러나는 옷을 입고 하냐는 거죠. 그런데 수영장 가면 수영복 입잖아요.<br/>
+                    자전거 탈 때도 공기의 저항을 줄이기 위해 쫙 달라붙는 레깅스를 입고요. 그런 것엔 아무도 뭐라고 안 거는데 왜 폴에다가는 그러는 걸까요?“
+                <p>
+                    과학기술 연구자 임소연 박사는 사회가 여성의 몸을 대상화하는 시선을 가장 잘 보여주는 사례로 폴웨어에 대한 이러한 부정적 인식을 꼽았다.
+                </p>
+                <p class="txtindent">
+                    “남성이 하는 운동 중 씨름은 아예 상의를 입지 않아요. <br/>
+                    레슬링도 온몸의 라인이 고스란히 드러나는 꼭 붙는 의상을 입지만 아무도 문제 삼지 않아요. <br/>
+                    그런데 왜 폴웨어에 대해서는 유독 이렇게 부정적인 인식이 많을까요? 그건 여성이 입기 때문이에요.
+                    <span class="yellow"> 여성이 그 옷을 입고 하는 ‘행위’가 아니라 그 옷을 입고 있는 ‘몸 자체’를 더 의식하는 거죠. </span>”
+                </p>
+                <p>
+                    폴아트, 로우폴, 더블폴부터 힐을 신고 하는 이그조틱이라는 장르까지. 폴스포츠 안에도 각양각색의 각기 다른 종목이 있다. <br/>
+                    그중 희수 씨가 중점적으로 파고든 것은 폴아트다. <br/>
+                    유연성과 기술 수행의 정확도, 독창성까지 모두 평가받으며 각종 기술을 수행하기 위해선 피부 마찰이 필수적이고, 필연적으로 몸을 드러내는 옷을 입을 수밖에 없다.
+                </p>
+                <p class="txtindent">
+                    “정말 고수라면 양 손의 힘만으로 버틸 수도 있겠죠. 또 기술 중에는 컨택 포인트가 필요하지 않은 기술도 몇 가지 있어요. <br/>
+                    하지만 보통의 경우라면 대부분의 기술을 수행하면서 폴에서 버티기 위해서는 옆구리, 팔, 다리, 엉덩이 등 폴과 닿아서 몸을 지탱할 수 있는 여러 컨택 부위가 필요해요.<br/>
+                    몸 전체를 감싸는 옷을 입고는 기술을 수행할 수도 없을뿐더러, 그 전에 기술이 문제가 아니라 일단 바로 바닥으로 떨어져서 부상을 입게 되죠.”
+                </p>
+                <p>
+                    재밌어서 시작한 운동인데 어느새 희수 씨의 몸에는 자연스럽게 근육이 붙기 시작했다. 서민정 트레이너는 생존을 위한 근력 운동을 강조한다.
+                </p>
+                <p class="txtindent">
+                    “30대 이후부터는 숨만 쉬어도 근육이 자연적으로 소실돼요. 근육의 기능은 미적인 것이 아니라 몸을 지탱해 주고 몸을 움직이게 하는 거잖아요. <br/>
+                    몸을 움직인다는 것은 곧 살아있다는 거고요. 그래서 30대부터의 근육 운동은 생존에 가깝다고 봐야 해요.<br/>
+                    <span class="yellow">나이가 들어서도 내 활동의 반경을 계속 확장해 나가고 싶다면 근육 운동은 반드시 해야 합니다.</span>”
+                </p>
+                <p class="tit">
+                    영원한 타자, 내 몸과 친해지기 위한 평생 운동
+                </p>
+                <p>
+                    폴스포츠를 하면서 희수 씨는 나이의 경계를 자신의 삶에서 지운 것은 물론 자기 몸에 대해서도 더 많이 알게 되었다.
+                </p>
+                <p class="txtindent">
+                    “아무리 뻣뻣한 사람도 계속해서 연습하다 보면 유연해질 수 있고, 나이가 많다고 해서 못 하는 운동은 없다는 것을 더 실감하게 됐어요. <br/>
+                    운동을 하다 보니 내 햄스트링이 남들보다 유연하다는 것을 알게 돼서 거기에 맞춰 스플릿 동작을 열심히 연습했고요. <br/>
+                    또 힘이 부족하긴 하지만 균형감각은 좋다는 것을 알게 되면서 밸런스를 이용한 동작을 배우기 시작했죠.”
+                </p>
+                <p>
+                    임소연 박사는 내 몸을 인지하고 이해하는 과정으로서 평생 운동을 강조한다.
+                </p>
+                <p class="txtindent">
+                    “우리는 보통 내 몸이 내 것으로 생각하잖아요. 하지만 사실 내 몸은 우리가 평생 함께 살아야 하는 ‘타자’라고 생각해요. <br/>
+                    내 몸이라 할 지라도 내 몸을 내가 완전히 예측할 수도, 통제할 수도 없기 때문이죠. <br/>
+                    <span class="yellow">내가 평생 함께 살아야 할 타자인 몸을 끊임없이 이해하도록 노력하게 되는 과정이 바로 운동이에요.</span>
+                    일상생활에서 내 몸을 의식적으로 인지하는 것은 쉽지 않아요.
+                    운동을 하지 않는다면 갑자기 아프게 되는 등 정상 범주를 벗어날 때나 겨우 자신의 몸을 자각하게 되는데 운동을 하면 평소에 다양한 방식으로 내 몸을 인지하고 이해할 수 있게 되기 때문에 중요합니다.”
+                </p>
+                <p>희수 씨에게는 폴스포츠가 평생 운동이다. 시작할 때는 예상하지 못했지만, 이제는 안다. 자신이 이 운동을 앞으로도 계속해 나가게 될 것이란 것을.
+                </p>
+                <p class="txtindent">
+                    “아마 혼자 하는 헬스를 했다면 정말 한 달 만에 그만두지 않았을까요. <br/>
+                    나한테 맞는 운동을 운 좋 게 찾았기 때문에 이렇게 오래 할 수 있었던 것 같아요. <br/>
+                    폴스포츠는 제 몸보다도 제 정신력에 맞는 운동이라고 생각해요. 오늘 안되는 동작이 내일은 될 수 있다는 것을 경험하면 오늘 안되는 동작이 1년 뒤에 될지도 모른다는 도전 정신을 다지게 돼요. <br/>
+                    내가 직접 내 몸에 잘 맞는 운동을 찾아보고, 나 스스로가 너무나 하고 싶어서 하는 운동이 나랑 평생 갈 수 있는 운동이라고 생각해요.<br/>
+                    그게 사람마다 다 다를거고, 저에게는 그게 폴이었던 거죠.”
+                </p>
+
+            </div>
         </article>
 
     </section>
-
 
     <footer>
         <p>움직이는 여자들의 이야기 움직여!</p>
         <p>Contact  <a href="mailto:hi@youjin.do"> hi@youjin.do</a></p>
         <p>© 2023 Youjin Do All rights reserved.</p>
-        <p class="logo">footer logo</p>
+        <p class="logo"><a href="" target="_blank">vimeo link</a></p>
     </footer>
 
     <script>
@@ -1132,23 +1378,20 @@
                         });
                     },
                 };
-                onvisible.add('.gall ul li.move', {
-                    style: 'blur-in', speed: 1500, intensity: 3, delay: 0, staggerOrder: '', replay: false
-                });
-                onvisible.add('.gall ul li.yoga', {
-                    style: 'blur-in', speed: 1500, intensity: 3, delay: 200, staggerOrder: '', replay: false
-                });
-                onvisible.add('.gall ul li.pole', {
-                    style: 'blur-in', speed: 1500, intensity: 3, delay: 400, staggerOrder: '', replay: false
-                });
-                onvisible.add('.gall ul li.judo', {
-                    style: 'blur-in', speed: 1500, intensity: 3, delay: 600, staggerOrder: '', replay: false
-                });
-                onvisible.add('.gall ul li.futsal', {
-                    style: 'blur-in', speed: 1500, intensity: 3, delay: 800, staggerOrder: '', replay: false
-                });
+                //
 
-                onvisible.add('article .kor', {
+
+                // 요가
+                onvisible.add('.interviewCont h6', {
+                    style: 'fade-down',
+                    speed: 2000,
+                    intensity: 8,
+                    delay: 0,
+                    staggerOrder: '',
+                    replay: false
+                });
+                // 요가
+                onvisible.add('.interviewCont author', {
                     style: 'fade-right',
                     speed: 3000,
                     intensity: 8,
@@ -1156,7 +1399,8 @@
                     staggerOrder: '',
                     replay: false
                 });
-                onvisible.add('article .eng', {
+                // 요가
+                onvisible.add('.interviewCont p', {
                     style: 'fade-left',
                     speed: 2000,
                     intensity: 8,
@@ -1165,8 +1409,17 @@
                     replay: false
                 });
 
-                onvisible.add('article h4', {
+                onvisible.add('.interviewCont p.txtindent', {
                     style: 'fade-right',
+                    speed: 2000,
+                    intensity: 8,
+                    delay: 0,
+                    staggerOrder: '',
+                    replay: false
+                });
+
+                onvisible.add('.interviewCont p.poleillust', {
+                    style: 'fade-down',
                     speed: 2000,
                     intensity: 8,
                     delay: 0,
