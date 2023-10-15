@@ -125,7 +125,7 @@ header.futsal ul  { background-color: #4790F8 !important;}
     nav.headerNav ul li.move { display: block; margin-right:35% !important; padding:0 0 0 3% !important; }
     nav.headerNav ul li a{ font-weight: 600;
         text-indent: 0px; display:inline-block; width: 100%; height: 100%; line-height: 45px;
-        background: none ; color: #000 ; font-size: 1.1em ; text-decoration: none; text-align: center ; }
+        background: none ; color: #000 ; font-size: 1em ; text-decoration: none; text-align: center ; }
 
 
     .staff article {padding: 60px 0px 60px 50px;
