@@ -43,7 +43,7 @@ header.futsal ul  { background-color: #4790F8 !important;}
         background-repeat: no-repeat; background-size: auto 25px ; background-position: center center;
     }
 
-    nav.headerNav ul li a{  text-indent: -9999px; display:inline-block; width: 100%; height: 100%; }
+    nav.headerNav ul li a { text-indent: -9999px; display:inline-block; width: 100%; height: 100%; }
 
     nav.headerNav ul li.move   { display:none; background-image: url("../image/comm/nav_move.png" ); }
     nav.headerNav ul li.yoga   { background-image: url("../image/comm/nav_yoga.png" ); }
@@ -103,10 +103,10 @@ header.futsal ul  { background-color: #4790F8 !important;}
         background-repeat: no-repeat; background-size: 25px auto;
         background-position: center center; text-indent: -9999px ; cursor: pointer }
 
-    nav.headerNav { position: relative }
-    nav.headerNav ul {  display: none;
-        position: absolute; top: 50px !important; width: 100%;   height:50px !important;
-        background-color:#FFBDB1;   padding: 0 40px;
+    nav.headerNav { position: absolute; width: 100%;height:50px !important;   }
+    nav.headerNav ul {
+        position: absolute; top: 50px ; left: 200%; width: 100% !important;   height:50px !important;
+        background-color:#FFBDB1;   padding: 0 30px;  z-index: 0 !important;
     }
 
     header.move ul  { background-color: #FFBDB1 !important;}
