@@ -53,9 +53,7 @@ header.futsal ul  { background-color: #4790F8 !important;}
     .btn_cate {display: none;}
 
     /*스태프*/
-    .staff article {
-        padding-right:40px;
-    }
+    .staff article { padding-right:40px; }
     .staff article .supportSection { float: left; }
     .staff article ul.stafflist { width: 600px; float: left;  clear:both;  }
     .staff article ul.supportlist { width: 220px; float: left; }
@@ -128,10 +126,9 @@ header.futsal ul  { background-color: #4790F8 !important;}
         background: none ; color: #000 ; text-decoration: none; text-align: center ; }
 
 
-    .staff article {padding: 60px 0 60px 50px;
-        font-size: 0.9em; }
+    .staff article { padding: 60px 0 60px 0; font-size: 0.9em; }
     .staff article h6 { float: left ; width: 110px;  height: 50px; display: inline-block;   }
-    .staff article ul.stafflist { width: 300px;  float: left ;   }
+    .staff article ul.stafflist {  float: left; width: 300px; margin-right:30px;  }
     .staff article ul.supportlist { width: 180px; float: left ; margin-left: 20px;   }
     .staff article ul li p.sns { position: absolute; top:02px; right:0; width: 75px; }
 
@@ -151,15 +148,20 @@ header.futsal ul  { background-color: #4790F8 !important;}
 @media (max-width:414px) {
 
     nav.headerNav ul li:first-child { margin-left: 2%;   padding:0 !important; }
+    .staff article {padding: 0px 0 50px 40px;  }
     .staff article h5 { font-size: 1.1em ; margin-bottom: 30px;}
     .staff article h6 { font-size: 0.8em; margin-left:0 !important;   }
-    .staff article ul.stafflist { width: 320px;  font-size: 0.8em ; margin-top:20px  }
-    .staff article .supportSection { margin-top:50px;}
-    .staff article ul.supportlist { width: 320px; margin-left:0; margin-top:0; font-size: 0.8em }
+    .staff article ul.stafflist { width: 320px; font-size: 0.8em; margin-top:20px; margin-right: 0 !important; }
+
+    .staff article .supportSection { float: left; margin-top:50px; }
+    .staff article .supportSection h6 { clear :both; }
+    .staff article .supportSection > div { float: left;  }
+    .staff article .supportSection > .interviewDiv { float: left; width: 150px; }
+    .staff article .supportSection > .thanksDiv { float: left; width: 200px;  }
+    .staff article ul.supportlist { width:100%; margin-left:0; margin-top:0; font-size: 0.8em ; clear :both; float: left; }
     .staff article ul.stafflist li {  height:45px !important;}
     .staff article ul.supportlist li { height:45px !important;}
-    nav.headerNav ul li.move { margin-right:0 !important; padding:0 3% 0 3% !important;
-        }
+    nav.headerNav ul li.move { margin-right:0 !important; padding:0 3% 0 3% !important; }
 }
 
 .introduce { padding-bottom: 100px}
@@ -361,7 +363,7 @@ article p.eng { font-size: 1.2em }
 
 
 @media (max-width: 820px) {
-  .slide_list > li { width: calc(50% - 20px);}
+    .slide_list > li { width: calc(50% - 20px);}
     .staff article ul li p.sns {  right:0;  }
 }
 
