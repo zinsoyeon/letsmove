@@ -312,16 +312,15 @@ article p.eng { font-size: 1.2em }
 }
 .interviewContents h6 { font-size: 1.5em ; font-weight:700; height:80px; width:300px; padding: 50px 0 0 0 ; margin-bottom: 10px;
     background-repeat: no-repeat; background-size: auto 30px ; background-position: left top;
-    background-image: url("../image/comm/bull_yoga.png"); vertical-align: bottom;
-}
+    background-image: url("../image/comm/bull_yoga.png"); vertical-align:bottom; line-height: 1em;  }
+.interviewContents h6 span:first-child {}
+.interviewContents h6 span:last-child { text-decoration: none ; font-size: 0.7em; font-weight: 500; margin-left: 3px}
 
 .interviewContents .interviewContentsTitle{ position:relative; clear:both; float: left; width:100%; max-width:1200px;  top:0; right: 0; display: inline-block ; }
-.interviewContents .interviewContentsTitle .author { position:absolute;top:0; right: 0;   display: inline-block ;}
+.interviewContents .interviewContentsTitle .author { position:absolute; top:0; right: 0; display: inline-block ;}
 .interviewContents .interviewContentsTitle .author .sns { float: right; margin-top: 5px; display: inline-block; }
 .interviewContents .interviewContentsTitle .author .nm { font-size: 1em ; }
 
-.interviewContents h6 { vertical-align:text-bottom; line-height: 1em;   }
-.interviewContents h6 span { text-decoration: none ; vertical-align:text-bottom; font-size: 0.7em; font-weight: 500; margin-left: 3px}
 .interviewContents > article > div  {  display: inline-block; margin:0 auto;}
 .interviewContents > article > div > p { float: left; max-width: 1300px;
   clear:both; line-height: 1.8em; font-size: 1.2em; margin-bottom: 30px; letter-spacing: -0.05em ; display: inline-block ; color:#333;}
@@ -496,9 +495,12 @@ article p.eng { font-size: 1.2em }
     .slide_list > li img {  width: 100%; height: auto;  }
 
 
-    .interviewContents h6 { font-size: 1.3em ;   }
-    .interviewContents .interviewContentsTitle .author .nm { font-size: 0.9em;  }
-    .interviewContents > article > .interviewCont > p.tit { font-size: 1.1em !important;  }
+    .interviewContents h6 { }
+    .interviewContents h6 span:first-child { font-size: 0.9em;}
+    .interviewContents h6 span:last-child {font-size: 0.7em; }
+
+    .interviewContents .interviewContentsTitle .author .nm { font-size: 0.9em; }
+    .interviewContents > article > .interviewCont > p.tit { font-size: 1.05em !important;  }
 
 
 }

@@ -25,7 +25,7 @@ html {overflow-x: hidden; overflow-y: scroll}
     box-sizing: border-box;  text-align: left;
 }
 
-article{  margin:0 auto;  overflow-x: hidden;  }
+article {  margin:0 auto;  overflow-x: hidden;  }
 
 .line { border-top :1px solid #FF593C; margin-left:5%; width:90%; height: 2px; display: inline-block }
 
