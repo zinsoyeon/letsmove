@@ -29,12 +29,12 @@ header.futsal ul  { background-color: #4790F8 !important;}
         width: 100px; left: calc(50% - 50px);  }
 
     nav.headerNav { position: relative; height: 60px; width: 100%; z-index: 9; text-align: center ; }
-    nav.headerNav ul {  display: inline-block; width: 100%; height: 60px; margin: 0 auto;
-          max-width: 1400px; text-align: center }
+    nav.headerNav ul {  display: inline-block; width: 100%; height: 60px; margin: 0 auto; padding: 0 !important;
+        max-width: 1400px; text-align: center; }
     nav.headerNav ul li {
         float: left;
         position: relative;
-        margin: 5px 0;
+        margin: 5px 1.5%;
         display: block;
         height: 50px;  
         width: 12%;;
@@ -117,10 +117,11 @@ header.futsal ul  { background-color: #4790F8 !important;}
     nav.headerNav ul li {
         float:left ; font-size: 0.95em;
         position: relative; text-align:center !important;
-        height:45px ; padding:0 2.5% !important;  width: auto ;  display: block;
+        height:45px ; padding:0 4% !important;  width: auto ;  display: block;
         color: #000   ;  margin :0  ;
         text-indent: 0; background-image: none ;
     }
+
     nav.headerNav ul li.move { display: block; margin-right:35% !important; padding:0 0 0 3% !important; }
     nav.headerNav ul li a { font-weight: 600;
         text-indent:0; display:inline-block; width: 100%; height: 100%; line-height: 45px;
@@ -137,6 +138,7 @@ header.futsal ul  { background-color: #4790F8 !important;}
     .staff article .supportSection { float: left; margin-left:0 !important;   }
 
 }
+
 @media (max-width:620px) {
 
     nav.headerNav ul li.move { margin-right:25% !important; padding:0 0 0 3% !important; }
@@ -148,6 +150,7 @@ header.futsal ul  { background-color: #4790F8 !important;}
 
 @media (max-width:414px) {
 
+    nav.headerNav ul li:first-child { margin-left: 2%;   padding:0 !important; }
     .staff article h5 { font-size: 1.1em ; margin-bottom: 30px;}
     .staff article h6 { font-size: 0.8em; margin-left:0 !important;   }
     .staff article ul.stafflist { width: 320px;  font-size: 0.8em ; margin-top:20px  }
@@ -155,7 +158,8 @@ header.futsal ul  { background-color: #4790F8 !important;}
     .staff article ul.supportlist { width: 320px; margin-left:0; margin-top:0; font-size: 0.8em }
     .staff article ul.stafflist li {  height:45px !important;}
     .staff article ul.supportlist li { height:45px !important;}
-    nav.headerNav ul li.move { margin-right:0 !important; padding:0 3% 0 3% !important; }
+    nav.headerNav ul li.move { margin-right:0 !important; padding:0 3% 0 3% !important;
+        }
 }
 
 .introduce { padding-bottom: 100px}
@@ -287,11 +291,11 @@ article p.eng { font-size: 1.2em }
 
 .staff article ul li p.sns { position: absolute; top:0 ; right: 50px; width: 80px; }
 
-.govSupport { margin: 0; padding:20px; width: 100%; text-align: center;   display: inline-block; border: 1px solid #f0f; }
-.govList { margin: 0 auto; padding:0; height:180px; text-align: center;  border: 1px solid #ff0;}
-.govList .govLogo { clear: both; /*margin-left:calc(50% - 225px);*/text-align: center;  border: 1px solid #f00; margin: 0 auto; }
+.govSupport { margin: 0; padding:20px; width: 100%; text-align: center;   display: inline-block;  }
+.govList { margin: 0 auto; padding:0; height:180px; text-align: center; }
+.govList .govLogo { clear: both; /*margin-left:calc(50% - 225px);*/text-align: center; margin: 0 auto; }
 .govList .txt {  margin: 30px 0 0 0 ; padding:0 50px; height:50px; width: 100%; clear: both; display: inline-block; text-align: center; line-height: 1.3em }
-.govList ul { width:auto; margin: 0 auto; padding:0; display: inline-block; border: 1px solid #f00; }
+.govList ul { width:auto; margin: 0 auto; padding:0; display: inline-block; }
 .govList li { float: left; width:150px;  height: 80px; display: block;
     background-position: center; background-repeat: no-repeat; background-size: 80px auto;  }
 .govList li.mcst { background-image: url("../image/comm/logo_mcst.png");  }
