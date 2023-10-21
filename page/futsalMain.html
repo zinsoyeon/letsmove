@@ -47,14 +47,10 @@
 
         if ( windowWidth > 820 ){
             $headerNavUl.css({"left": "0"});
-            $("#vimeoTrailer").css('margin-top', '0px');
-            $("#vimeoTrailer").css('margin-bottom', '0px');
             $("#vimeoTrailer iframe").css('height', windowHeight-60);
             $("#vimeoTrailer iframe").css('width', windowWidth);
         } else {
             $headerNavUl.css({"left": "-200%"});
-            $("#vimeoTrailer").css('margin-top', '100px');
-            $("#vimeoTrailer").css('margin-bottom', '50px');
             $("#vimeoTrailer iframe").css('width', windowWidth);
             $("#vimeoTrailer iframe").css('height', windowWidth/16*9);
         }
@@ -150,7 +146,7 @@
     </header>
 
 
-    <main id="main" class="mt60">
+    <main id="main" class="main">
         <section class="trailer">
             <div class="vimeoTrailer" id="vimeoTrailer">
                 <iframe src="https://player.vimeo.com/video/874491479?autoplay=true&loop=true&muted=true"
@@ -323,7 +319,7 @@
         <p>움직이는 여자들의 이야기 <strong>움직여!</strong></p>
         <p>Contact  <a href="mailto:hi@youjin.do"> hi@youjin.do</a></p>
         <p>© 2023 Youjin Do All rights reserved.</p>
-        <p class="logo"><a href="" target="_blank">vimeo link</a></p>
+        <!--<p class="logo"><a href="" target="_blank">vimeo link</a></p>-->
     </footer>
 
     <script>
@@ -1329,7 +1325,7 @@
                 // 요가
                 onvisible.add('.interviewCont h6', {
                     style: 'fade-down',
-                    speed: 2000,
+                    speed: 1000,
                     intensity: 8,
                     delay: 0,
                     staggerOrder: '',
@@ -1338,7 +1334,7 @@
                 // 요가
                 onvisible.add('.interviewCont author', {
                     style: 'fade-right',
-                    speed: 3000,
+                    speed: 1000,
                     intensity: 8,
                     delay: 0,
                     staggerOrder: '',
@@ -1347,7 +1343,7 @@
                 // 요가
                 onvisible.add('.interviewCont p', {
                     style: 'fade-left',
-                    speed: 2000,
+                    speed: 1000,
                     intensity: 8,
                     delay: 0,
                     staggerOrder: '',
@@ -1356,7 +1352,7 @@
 
                 onvisible.add('.interviewCont p.txtindent', {
                     style: 'fade-right',
-                    speed: 2000,
+                    speed: 1000,
                     intensity: 8,
                     delay: 0,
                     staggerOrder: '',
@@ -1365,7 +1361,7 @@
 
                 onvisible.add('.interviewCont p.futsalillust', {
                     style: 'fade-down',
-                    speed: 2000,
+                    speed: 1000,
                     intensity: 8,
                     delay: 0,
                     staggerOrder: '',

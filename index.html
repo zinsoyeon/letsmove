@@ -57,15 +57,10 @@
 
         if ( windowWidth > 820 ){
             $headerNavUl.css({"display": "block"})
-            $("#vimeoTrailer").css('margin-top', '0px');
-            $("#vimeoTrailer").css('margin-bottom', '0px');
             $("#vimeoTrailer iframe").css('height', windowHeight-60);
             $("#vimeoTrailer iframe").css('width', windowWidth);
         } else {
             $headerNavUl.css({"display": "none"})
-
-            $("#vimeoTrailer").css('margin-top', '100px');
-            $("#vimeoTrailer").css('margin-bottom', '50px');
             $("#vimeoTrailer iframe").css('width', windowWidth);
             $("#vimeoTrailer iframe").css('height', windowWidth/16*9);
         }
@@ -81,10 +76,10 @@
 
 <body>
     <header>
-        <h1 class="main">움직여!</h1>
+        <h1 class="mainTit">움직여!</h1>
     </header>
 
-    <main id="main" class="mt60">
+    <main id="main" class="main">
         <section class="trailer">
             <div class="vimeoTrailer" id="vimeoTrailer">
                 <iframe src="https://player.vimeo.com/video/874295623?autoplay=true&loop=true&muted=true"
@@ -1152,7 +1147,7 @@
 
                 onvisible.add('article .kor', {
                     style: 'fade-right',
-                    speed: 3000,
+                    speed: 1000,
                     intensity: 8,
                     delay: 0,
                     staggerOrder: '',
@@ -1160,7 +1155,7 @@
                 });
                 onvisible.add('article .eng', {
                     style: 'fade-left',
-                    speed: 2000,
+                    speed: 1000,
                     intensity: 8,
                     delay: 0,
                     staggerOrder: '',
@@ -1169,7 +1164,7 @@
 
                 onvisible.add('article h4', {
                     style: 'fade-right',
-                    speed: 2000,
+                    speed: 1000,
                     intensity: 8,
                     delay: 0,
                     staggerOrder: '',

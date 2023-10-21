@@ -25,7 +25,7 @@ header.futsal ul  { background-color: #4790F8 !important;}
         text-indent: -9999px; font-size: 1em; cursor: pointer; z-index: 9999;
     }
 
-    header h1.main {  background-image: url("../image/comm/header_small_logo_w.png"); background-size: 100% auto;
+    header h1.mainTit {  background-image: url("../image/comm/header_small_logo_w.png"); background-size: 100% auto;
         width: 100px; left: calc(50% - 50px);  }
 
     nav.headerNav { position: relative; height: 60px; width: 100%; z-index: 9; text-align: center ; }
@@ -185,6 +185,7 @@ nav.gall ul li.futsal  a { background-image: url("../image/comm/nav_futsal.png" 
 
 
 main { margin:0 ; padding:0 ; }
+.main { margin-top: 50px;}
 .vimeoTrailer { position:relative; height:100%; margin:0 ; padding:0 ; display:inline-block; width: 100%; }
 .vimeoTrailer iframe {margin:0}
 
@@ -286,12 +287,12 @@ article p.eng { font-size: 1.2em }
 
 .staff article ul li p.sns { position: absolute; top:0 ; right: 50px; width: 80px; }
 
-.govSupport { margin: 0; padding:20px; width: 100%; text-align: center;   display: inline-block; }
-.govList { margin: 0; padding:0; height:180px; text-align: center; }
-.govList .govLogo { clear: both; margin-left:calc(50% - 225px); }
+.govSupport { margin: 0; padding:20px; width: 100%; text-align: center;   display: inline-block; border: 1px solid #f0f; }
+.govList { margin: 0 auto; padding:0; height:180px; text-align: center;  border: 1px solid #ff0;}
+.govList .govLogo { clear: both; /*margin-left:calc(50% - 225px);*/text-align: center;  border: 1px solid #f00; margin: 0 auto; }
 .govList .txt {  margin: 30px 0 0 0 ; padding:0 50px; height:50px; width: 100%; clear: both; display: inline-block; text-align: center; line-height: 1.3em }
-.govList ul { width:auto; padding:0; display: inline-block;  }
-.govList li { float: left; width:150px;  height: 80px;   display: block;
+.govList ul { width:auto; margin: 0 auto; padding:0; display: inline-block; border: 1px solid #f00; }
+.govList li { float: left; width:150px;  height: 80px; display: block;
     background-position: center; background-repeat: no-repeat; background-size: 80px auto;  }
 .govList li.mcst { background-image: url("../image/comm/logo_mcst.png");  }
 .govList li.arko { background-image: url("../image/comm/logo_arko.png");  }
@@ -311,19 +312,21 @@ article p.eng { font-size: 1.2em }
 .interviewContents .interviewContentsTitle{ position:relative; clear:both; float: left; width:100%; max-width:1200px;  top:0; right: 0; display: inline-block ; }
 .interviewContents .interviewContentsTitle .author { position:absolute;top:0; right: 0;   display: inline-block ;}
 .interviewContents .interviewContentsTitle .author .sns { float: right; margin-top: 5px; display: inline-block; }
+.interviewContents .interviewContentsTitle .author .nm { font-size: 1em ; }
 
 .interviewContents h6 { vertical-align:text-bottom; line-height: 1em;   }
 .interviewContents h6 span { text-decoration: none ; vertical-align:text-bottom; font-size: 0.7em; font-weight: 500; margin-left: 3px}
 .interviewContents > article > div  {  display: inline-block; margin:0 auto;}
 .interviewContents > article > div > p { float: left; max-width: 1300px;
   clear:both; line-height: 1.8em; font-size: 1.2em; margin-bottom: 30px; letter-spacing: -0.05em ; display: inline-block ; color:#333;}
-.interviewContents > article  p.txtindent{ margin-left: 20px; }
+.interviewContents > article > .interviewCont >  p.txtindent{ margin-left: 20px; }
+.interviewContents > article > .interviewCont > p.tit { font-weight: 600 !important;  color:#000; font-size: 1.25em }
+
 .interviewContents > article > .interviewCont > p .yellow {
     background-repeat: repeat-x; background-size: 100% 35% ; background-position: left bottom;
     background-image: url("../image/comm/highlight_yellow.png"); }
 .interviewContents > article > .interviewCont > p .name { font-size: 0.85em ; color: #666; margin-right: 5px}
 
-.interviewContents > article > .interviewCont > p.tit { font-weight: 600 !important;  color:#000; font-size: 1.25em }
 .yogaillust {
     padding-right:350px; padding-top:30px;margin-bottom: 0;
     background-repeat: no-repeat; background-size: auto 100% ; background-position: right bottom;
@@ -411,6 +414,9 @@ article p.eng { font-size: 1.2em }
     .yogaillust > span:last-child{ width:100% !important;   }
     .interviewContents > article  p.txtindent{ margin-left:0 !important; }
 
+    .interviewContents > article > .interviewCont > p.tit { font-weight: 600 !important;  color:#000; font-size: 1.05em }
+    .interviewContents > article > div > p { float: left; max-width: 1300px;
+        clear:both; line-height: 1.4em; font-size: 0.9em; margin-bottom: 30px; letter-spacing: -0.05em ; display: inline-block ; color:#333;}
 
     .introduce article { padding:30px 40px 50px 40px !important; }
     .introduce nav.gall {padding: 30px 35px;  text-align: center;}
@@ -429,6 +435,14 @@ article p.eng { font-size: 1.2em }
 
     .purpose article { padding:50px !important; }
 
+
+    .govSupport { }
+    .govList {   }
+    /*.govList .govLogo { clear: both; margin:0 auto;  border: 1px solid #000 ; }*/
+    .govList .txt { font-size: 0.9em; line-height: 1.3em }
+    .govList ul {  }
+    .govList li {  width:90px; height: 50px; background-size: 50px auto;  }
+
 }
 
 
@@ -443,8 +457,7 @@ article p.eng { font-size: 1.2em }
         margin-bottom: 15px;
     }
 
-
-    .letsmove article { padding:100px 10px 50px 30px;}
+    .letsmove article { padding:50px 10px 0px 30px;}
 
     .letsmove article p.kor { line-height: 1.5em; margin-bottom: 10px; font-size: 0.9em; letter-spacing: -0.1em ;  }
     .letsmove article p.eng { line-height: 1.5em;letter-spacing: -0.05em ; font-size: 0.9em;  }
@@ -469,10 +482,17 @@ article p.eng { font-size: 1.2em }
     .yogaillust > span:last-child{ width:100% !important;   }
 
     .purpose article { padding:30px !important; }
-    .purpose article h5 {  font-size: 1.3em;}
-    .purpose article p { font-size:1em; line-height: 1.6em; margin-bottom: 10px; letter-spacing: -0.05em }
+    .purpose article h5 {  font-size: 1.1em;}
+    .purpose article p { font-size:0.9em; line-height: 1.6em; margin-bottom: 10px; letter-spacing: -0.05em }
 
     .slide_list > li {  height: 200px; width: calc(75% - 20px);  }
     .slide_list > li img {  width: 100%; height: auto;  }
+
+
+    .interviewContents h6 { font-size: 1.3em ;   }
+    .interviewContents .interviewContentsTitle .author .nm { font-size: 0.9em;  }
+    .interviewContents > article > .interviewCont > p.tit { font-size: 1.1em !important;  }
+
+
 }
 
