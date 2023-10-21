@@ -27,13 +27,15 @@ html {overflow-x: hidden; overflow-y: scroll}
 
 article { margin:0 auto; overflow-x: hidden; }
 
-.line { border-top :1px solid #FF593C; margin-left:5%; width:90%; height: 2px; display: inline-block }
+.line { border-top :2px solid #FF593C; margin-left:5%; margin-top: 20px;  width:90%; height: 2px; display: inline-block }
 
-.sns a { width: 18px; height: 18px ; margin:0 0 0 3px; float: left; display: inline-block; overflow: hidden; text-indent: -9999px ;
+.sns a { width: 18px; height: 18px ; margin:0 0 0 8px; float: left; display: inline-block; overflow: hidden; text-indent: -9999px ;
     background-repeat: no-repeat; background-size: 100% auto; background-position: center; border: 1px solid #ccc; }
 .sns .youtube   { background-image: url("../image/comm/btn_youtube.png" ); border: none !important; }
 .sns .instagram { background-image: url("../image/comm/btn_insta.png" ); border: none !important; }
 .sns .facebook  { background-image: url("../image/comm/btn_facebook.png" ); border: none !important; }
+.sns .brunch  { background-image: url("../image/comm/btn_brunch.png" ); border: none !important; }
+.sns .website  { background-image: url("../image/comm/btn_website.png" ); border: none !important; }
 
 .blind { position: absolute; top: 0; left: 0; display: inline-block; width: 100%; height: 100%;
          background-repeat: no-repeat; background-size: 100% ; background-position: center ;

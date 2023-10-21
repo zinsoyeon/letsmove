@@ -53,12 +53,8 @@ header.futsal ul  { background-color: #4790F8 !important;}
     .btn_cate {display: none;}
 
     /*스태프*/
-    .staff article { padding-right:40px; }
-    .staff article .supportSection { float: left; }
-    .staff article ul.stafflist { width: 600px; float: left;  clear:both;  }
-    .staff article ul.supportlist { width: 220px; float: left; }
-    .staff article h6 { width: 150px; height: 80px; float: left;   line-height: 1em }
-    .staff article h6 { width: 150px; height: 80px; float: left;   line-height: 1em }
+    .staff article ul.stafflist li p.nm { position: relative; float: left; width: 300px !important; margin-left:20px   }
+
 
 }
 
@@ -128,11 +124,14 @@ header.futsal ul  { background-color: #4790F8 !important;}
 
     .staff article { padding: 60px 0 60px 0; font-size: 0.9em; }
     .staff article h6 { float: left ; width: 110px;  height: 50px; display: inline-block;   }
-    .staff article ul.stafflist {  float: left; width: 300px; margin-right:30px;  }
-    .staff article ul.supportlist { width: 180px; float: left ; margin-left: 20px;   }
+    .staff article ul.stafflist {  float: left;   margin-right:30px;  }
+    .staff article ul.supportlist { width: 100%; float: left ;   }
     .staff article ul li p.sns { position: absolute; top:02px; right:0; width: 75px; }
 
     .staff article .supportSection { float: left; margin-left:0 !important;   }
+    .staff article .supportSection > .interviewDiv {  width: 130px; }
+    .staff article .supportSection > .thanksDiv { width: 250px; }
+
 
 }
 
@@ -147,21 +146,25 @@ header.futsal ul  { background-color: #4790F8 !important;}
 
 @media (max-width:414px) {
 
-    nav.headerNav ul li:first-child { margin-left: 2%;   padding:0 !important; }
-    .staff article {padding: 0px 0 50px 40px;  }
-    .staff article h5 { font-size: 1.1em ; margin-bottom: 30px;}
-    .staff article h6 { font-size: 0.8em; margin-left:0 !important;   }
-    .staff article ul.stafflist { width: 320px; font-size: 0.8em; margin-top:20px; margin-right: 0 !important; }
-
-    .staff article .supportSection { float: left; margin-top:50px; }
-    .staff article .supportSection h6 { clear :both; }
-    .staff article .supportSection > div { float: left;  }
-    .staff article .supportSection > .interviewDiv { float: left; width: 140px; }
-    .staff article .supportSection > .thanksDiv { float: left; width: 180px;  }
-    .staff article ul.supportlist { width:100%; margin-left:0; margin-top:0; font-size: 0.8em ; clear :both; float: left; }
-    .staff article ul.stafflist li {  height:45px !important;}
-    .staff article ul.supportlist li { height:45px !important;}
+    nav.headerNav ul li:first-child { margin-left: 2%; padding:0 !important; }
     nav.headerNav ul li.move { margin-right:0 !important; padding:0 3% 0 3% !important; }
+
+    .staff article {padding:20px;  }
+    .staff article h5 { font-size: 1.1em ; margin-bottom: 30px;}
+    .staff article h6 { font-size: 0.8em; margin-left:0 !important; clear:none !important;}
+
+    .staff article .supportSection { float: left;  width: 100%; }
+    .staff article .supportSection h6 { float: left; clear:none !important; width: 130px;  }
+    .staff article .supportSection > div { float: left; margin-top:30px;  }
+    .staff article .supportSection > .interviewDiv { clear:none !important;  width: 100% !important;   }
+    .staff article .supportSection > .thanksDiv { clear:none !important;   width: 100% !important;   }
+    .staff article ul.supportlist { width:200px; margin-left:0; margin-top:0; font-size: 0.8em ; clear:none !important;float: left; }
+    .staff article ul.supportlist li { height:45px !important;}
+
+    .staff article ul.stafflist { width: 100%; font-size: 0.8em; margin-top:20px; margin-right: 0 !important; }
+    .staff article ul.stafflist li {  height:45px !important;}
+    .staff article ul.stafflist li .role { width: 130px !important; }
+    .staff article ul.stafflist li .nm { width: 200px !important; }
 }
 
 .introduce { padding-bottom: 100px}
@@ -170,12 +173,14 @@ header.futsal ul  { background-color: #4790F8 !important;}
 }
 .introduce nav.gall ul { width: 100%; display: inline-block;  overflow: hidden;}
 .introduce nav.gall li {
-    float:left; font-size: 1em;  display: block; height: 100px; width: 20%; padding:10px;
+    float:left; font-size: 1em;  display: block; height: 100px; width: 18%; padding:10px;
+    margin:1%;
     text-align: center; overflow: hidden;
+    background-repeat: no-repeat; background-size: auto 20% ; background-position: center center;
 }
 .introduce nav.gall ul li a {
     text-align:center;  display: block; width: 100%; height: 100%; text-indent: -9999px;
-    background-repeat: no-repeat; background-size: auto 20% ; background-position: center center;
+    background-repeat: no-repeat; background-size: auto 35px ; background-position: center bottom 20px;
     transition:0.5s all;
 }
 
@@ -183,11 +188,20 @@ nav.gall ul li a:hover{
     transform: scale(1.1);
 }
 
-nav.gall ul li.move    a { background-image: url("../image/comm/header_small_logo_w.png " );  background-color: #FF593C;}
-nav.gall ul li.yoga    a { background-image: url("../image/comm/nav_yoga.png" );  background-color: #FFCF55;}
-nav.gall ul li.pole    a { background-image: url("../image/comm/nav_pole.png" );  background-color: #FF90B8;}
-nav.gall ul li.judo    a { background-image: url("../image/comm/nav_judo.png" );  background-color: #3CDDC7;}
-nav.gall ul li.futsal  a { background-image: url("../image/comm/nav_futsal.png" );  background-color: #4790F8;}
+nav.gall ul li:hover{
+    transform: scale(1.1);
+}
+
+nav.gall ul li.move    { background-image: url("../image/comm/header_small_logo_w.png " );  background-color: #D9D9D9;}
+nav.gall ul li.yoga    { background-image: url("../image/comm/cont_yoga_illust_01.png" ); background-size: auto 100% ; background-color: #D9D9D9;}
+nav.gall ul li.pole    { background-image: url("../image/comm/cont_pole_illust_01.png" ); background-size: auto 100% ; background-color: #D9D9D9;}
+nav.gall ul li.judo    { background-image: url("../image/comm/cont_yudo_illust_01.png" );  background-color: #D9D9D9;}
+nav.gall ul li.futsal  { background-image: url("../image/comm/cont_futsal_illust_01.png" );  background-color: #D9D9D9;}
+/*nav.gall ul li.move    a { background-image: url("../image/comm/header_small_logo_w.png " );  }*/
+nav.gall ul li.yoga    a { background-image: url("../image/comm/nav_yoga.png" );  }
+nav.gall ul li.pole    a { background-image: url("../image/comm/nav_pole.png" );  }
+nav.gall ul li.judo    a { background-image: url("../image/comm/nav_judo.png" );  }
+nav.gall ul li.futsal  a { background-image: url("../image/comm/nav_futsal.png" );  }
 
 
 main { margin:0 ; padding:0 ; }
@@ -227,13 +241,25 @@ main { margin:0 ; padding:0 ; }
 
 /*움직여 상세 페이지*/
 .letsmove { text-align: center; }
-.letsmove article { display: inline-block; padding: 180px 100px 0 300px }
+.letsmove article { display: inline-block; padding: 60px 100px 0 200px; }
 .letsmove article div { display: inline-block;  }
+.letsmove ul { margin-top:30px;  }
+.letsmove ul li { margin-bottom:10px; padding-left:15px;
+    background-image: url("../image/comm/bull_dot.png" ) ;
+    background-repeat: no-repeat;
+    background-size: 5px auto;
+    background-position: left center; }
+
+.letsmove ul li a { text-decoration: none; color:#000; font-weight: 600 }
+.letsmove ul li a:hover{ color:#FF593C;  }
+
+.introduce nav.gall ul li { margin-bottom:10px;  }
+
 .letsmove article h4 {
     height:80px; width:250px;
     background-image: url("../image/comm/main_tit.png" ) ;
     background-repeat: no-repeat;
-    background-size:  50% auto;
+    background-size:  60% auto;
     background-position: left center;
     text-indent: -9999px;
     margin-bottom: 15px;
@@ -242,7 +268,7 @@ main { margin:0 ; padding:0 ; }
 .letsmove article p.eng { line-height: 1.6em; letter-spacing: 0 ;  }
 
 
-article p.kor { font-size: 1.6em }
+article p.kor { font-size: 1.5em }
 article p.eng { font-size: 1.2em }
 
 .purpose article {padding:50px 200px}
@@ -258,31 +284,41 @@ article p.eng { font-size: 1.2em }
 
 
 .staff { text-align: center; margin-top:50px}
-.staff article { margin:0 auto; height:100%; display: inline-block;     }
+.staff article { margin:0 auto; height:100%; display: inline-block; }
 
-.staff article h5 { font-size: 1.3em ;  font-weight:700; height:80px; width:300px; padding: 50px 0 0 0 ; margin-bottom: 10px;
+.staff article h5 { font-size: 1.3em ;  font-weight:700; height:80px; width:300px; padding: 50px 0 0 0 ; margin-bottom: 30px;
     background-repeat: no-repeat; background-size: auto 30px ; background-position: left top;
     background-image: url("../image/comm/bull_punch.png");
 }
 
-.staff article h6 { display: inline-block; }
+.staff article h6 { float: left;clear: none; display: inline-block; /* border: 1px solid #000;  */ width:120px;  }
 .staff article h6 strong { clear: both; width:100%; display:inline-block; font-size: 1em ; color: #000000; font-weight:700; }
 .staff article h6 span { clear: both; width:100%; display:inline-block; font-size: 0.8em ; color: #7e7e7e;  font-weight:500; }
 
-.staff article ul.stafflist li { position:relative; height:60px}
+.staff article ul.stafflist {float: left; clear: none;  }
+.staff article .supportSection  { float: left;clear: none; /* border: 1px solid #000;  */}
+.staff article .supportSection > div { float: left; display: inline-block }
+.staff article .supportSection > .interviewDiv {  width: 270px;float: left ; /* border: 1px solid #000;  */}
+.staff article .supportSection > .thanksDiv { width:450px; float: left ; /* border: 1px solid #000;  */}
+
+.staff article .supportSection > .interviewDiv > ul { width:130px; float: left ; /* border: 1px solid #000;  */}
+.staff article .supportSection > .thanksDiv > ul { width:320px; float: left ; /* border: 1px solid #000;  */}
+
+.staff article ul.stafflist li { position:relative; height:80px}
 
 .staff article ul.stafflist li p.role span {clear: both ; display: inline-block; width: 100%;  }
 .staff article ul.stafflist li p.role span:nth-child(1) { font-size: 1em ; color: #000000; font-weight:700 }
 .staff article ul.stafflist li p.role span:nth-child(2) { font-size: 0.9em ; color: #7e7e7e}
-.staff article ul.stafflist li p.role { float: left;  width: 45%; }
+.staff article ul.stafflist li p.role { float: left; width: 160px; }
 
-.staff article ul.stafflist li p.nm { float: right;  width: 55%; }
+.staff article ul.stafflist li p.nm { position: relative; float: left; width: 200px;  }
 .staff article ul.stafflist li p.nm span {clear: both ; display: inline-block; width: 100%;  }
 .staff article ul.stafflist li p.nm span:nth-child(1) { font-size: 1em ; color: #000000;  font-weight:600 }
 .staff article ul.stafflist li p.nm span:nth-child(2) { font-size: 0.9em ;  color: #7e7e7e}
 
 
-.staff article ul.supportlist li { position:relative; height: 60px }
+.staff article ul.supportlist {float: left; clear: none;  }
+.staff article ul.supportlist li {  position:relative; height: 80px }
 .staff article ul.supportlist li p {font-size: 1em; line-height: 1em }
 
 .staff article ul.supportlist li p.nm { float: left;  width: 100%; }
@@ -291,7 +327,10 @@ article p.eng { font-size: 1.2em }
 .staff article ul.supportlist li p.nm span:nth-child(2) { font-size: 0.9em ;  color: #7e7e7e}
 
 
-.staff article ul li p.sns { position: absolute; top:-3px; right: 50px; width:auto; max-width: 80px;}
+
+
+
+.staff article ul li span.sns { width:auto; max-width: 80px;}
 
 .govSupport { margin: 0; padding:20px; width: 100%; text-align: center;   display: inline-block;  }
 .govList { margin: 0 auto; padding:0; height:180px; text-align: center; }
@@ -314,7 +353,7 @@ article p.eng { font-size: 1.2em }
     background-repeat: no-repeat; background-size: auto 30px ; background-position: left top;
     background-image: url("../image/comm/bull_yoga.png"); vertical-align:bottom; line-height: 1em;  }
 
-.interviewContents .interviewContentsTitle{ position:relative; clear:both; float: left; width:100%; max-width:1200px;  top:0; right: 0; display: inline-block ; }
+.interviewContents .interviewContentsTitle{ position:relative; clear:both; float: left; width:100%; max-width:880px; display: inline-block ; }
 .interviewContents .interviewContentsTitle .author { position:absolute; top:0; right: 0; display: inline-block ;}
 .interviewContents .interviewContentsTitle .author .sns { float: right; margin-top: 5px; display: inline-block; }
 .interviewContents .interviewContentsTitle .author .nm { font-size: 1em ; }
@@ -324,22 +363,59 @@ article p.eng { font-size: 1.2em }
 .interviewContents .interviewContentsTitle h6 span:last-child { font-size: 0.7em; font-weight: 500; margin-left: 3px; }
 
 .interviewContents > article > div  {  display: inline-block; margin:0 auto;}
-.interviewContents > article > div > p { float: left; max-width: 1300px;
-  clear:both; line-height: 1.8em; font-size: 1.2em; margin-bottom: 30px; letter-spacing: -0.05em ; display: inline-block ; color:#333;}
-.interviewContents > article > .interviewCont >  p.txtindent{ margin-left: 20px; }
+.interviewContents > article > div > p { float: left; max-width: 880px;
+  clear:both; line-height: 1.5em; font-size: 1.05em; margin-bottom: 20px; letter-spacing: -0.05em ; display: inline-block ; color:#333;}
+.interviewContents > article > .interviewCont > p.txtindent{ margin-left: 20px; }
 .interviewContents > article > .interviewCont > p.tit { font-weight: 600 !important;  color:#000; font-size: 1.25em }
 
-.interviewContents > article > .interviewCont > p .yellow {
-    background-repeat: repeat-x; background-size: 100% 35% ; background-position: left bottom;
-    background-image: url("../image/comm/highlight_yellow.png"); }
+.interviewContents > article > .interviewCont > p .highlight {
+    background-repeat: repeat-x; background-size: 100% 35% ; background-position: left bottom;}
+.interviewContents > article > .interviewCont > p .yellow { background-image: url("../image/comm/highlight_yellow.png"); }
+.interviewContents > article > .interviewCont > p .pink { background-image: url("../image/comm/highlight_pink.png"); }
 .interviewContents > article > .interviewCont > p .name { font-size: 0.85em ; color: #666; margin-right: 5px}
 
-.yogaillust {
-    padding-right:350px; padding-top:30px;margin-bottom: 0;
-    background-repeat: no-repeat; background-size: auto 100% ; background-position: right bottom;
-    background-image: url("../image/comm/yogaIllust.png");
+.yogaillust01 {
+    margin-top:-100px;
+    padding-right:120px; padding-top:340px; margin-bottom: 0;
+    background-repeat: no-repeat; background-size: auto 400px ; background-position: right top;
+    background-image: url("../image/comm/cont_yoga_illust_01.png");
+}
+.yogaillust02 {
+    width:90%;
+    margin-top:-60px;
+    padding-right:120px; padding-top:280px; margin-bottom: 0;
+    background-repeat: no-repeat; background-size: auto 300px ; background-position: right top;
+    background-image: url("../image/comm/cont_yoga_illust_02.png");
+}
+.yogaillust03 {
+    width: 100%; height:400px;
+    background-repeat: no-repeat; background-size: auto 350px; background-position: left bottom;
+    background-image: url("../image/comm/cont_yoga_illust_03.png");
 }
 
+
+.poleillust01 {
+    width: 100%; height: 450px;
+    margin-top:-430px; margin-bottom: 0;
+    background-repeat: no-repeat; background-size: auto 450px ; background-position: right -50px top 50px;
+    background-image: url("../image/comm/cont_pole_illust_01.png");
+}
+
+.poleillust02 {
+    width: 100%; height: 500px;
+    padding-right:300px; padding-bottom: 400px;
+    background-repeat: no-repeat; background-size: auto 480px; background-position: right -50px top;
+    background-image: url("../image/comm/cont_pole_illust_02.png");
+}
+
+.poleillust03 {
+    width: 100%; height: 550px;
+    margin-top:-350px; margin-left:-70px; margin-bottom: 0;
+    background-repeat: no-repeat; background-size: auto 500px ; background-position: left 0 top 50px;
+    background-image: url("../image/comm/cont_pole_illust_03.png");
+}
+
+.interviewContents > article > div > p.txtright { padding-left: 300px; max-width: 950px;}
 
 /* 슬라이드 */
 .slider { margin: 50px auto 0;font-size: 0;text-align: center; }
@@ -393,11 +469,8 @@ article p.eng { font-size: 1.2em }
     .introduce nav.gall ul { }
     .introduce nav.gall ul li { padding:8px;  }
 
-    .yogaillust { padding-right:0; padding-bottom: 170px;
-        background-repeat: no-repeat; background-size: auto 180px; background-position: bottom right;}
-    .yogaillust > span{ float: left; clear: both; line-height: 1.8em; width:60%; }
-    .yogaillust > span:first-child{ width:100% !important;   }
-    .yogaillust > span:last-child{ width:100% !important;   }
+    .yogaillust01 { padding-right:0; padding-bottom: 0 !important;  padding-top:300px; margin-top:0px;
+                background-size: auto 320px; background-position: top center  !important; }
     .interviewContents > article  p.txtindent{ margin-left:0 !important; }
 
     .slide_list > li {  height: 300px;   }
@@ -414,16 +487,12 @@ article p.eng { font-size: 1.2em }
 
     .main { margin-top: 50px !important; }
     article{ padding: 100px 50px 60px 50px; }
-    .letsmove article { padding: 120px 40px 100px 40px;  }
+    .letsmove article { padding: 60px 40px 100px 40px;  }
 
-    .yogaillust > span{ width:100% !important;  }
-    .yogaillust { padding-right:0; padding-bottom:150px !important;  }
-    .yogaillust > span:first-child{ width:100% !important;   }
-    .yogaillust > span:last-child{ width:100% !important;   }
     .interviewContents > article  p.txtindent{ margin-left:0 !important; }
 
     .interviewContents > article > .interviewCont > p.tit { font-weight: 600 !important;  color:#000; font-size: 1.05em }
-    .interviewContents > article > div > p { float: left; max-width: 1300px;
+    .interviewContents > article > div > p { float: left;
         clear:both; line-height: 1.5em; font-size: 0.9em; margin-bottom: 20px; letter-spacing: -0.05em ; display: inline-block ; color:#333;}
 
     .introduce article { padding:30px 40px 50px 40px !important; }
@@ -442,6 +511,44 @@ article p.eng { font-size: 1.2em }
     .introduce nav.gall ul li a {  background-size:  auto 22%  ; }
 
     .purpose article { padding:50px !important; }
+
+    .staff article .supportSection > .interviewDiv {  width: 130px;  clear: both }
+    .staff article .supportSection > .thanksDiv { width: 250px;  clear: both}
+
+    .staff article .supportSection > .interviewDiv {width: 100%;}
+    .staff article .supportSection > .interviewDiv > h6 { float: left !important;  clear: none !important; }
+    .staff article .supportSection > .interviewDiv > ul { float: left !important; clear: none !important; width: 200px }
+    .staff article .supportSection > .thanksDiv {width: 100%;}
+    .staff article .supportSection > .thanksDiv > h6 { float: left !important;  clear: none !important; }
+    .staff article .supportSection > .thanksDiv > ul { float: left !important; clear: none !important; width: 200px }
+
+
+    .yogaillust01 { padding-top:200px !important; margin-top: -60px;
+        background-repeat: no-repeat; background-size: auto 220px ; background-position: right -35px top 0px !important;
+    }
+    .yogaillust02 {
+        background-repeat: no-repeat; background-size: auto 250px  ; background-position: center bottom 20px;
+    }
+    .yogaillust03 {  height:250px;
+        background-repeat: no-repeat; background-size:  350px auto;  background-position: center top;
+    }
+
+
+    .poleillust01 { height: 400px;
+        margin-top:-430px;
+        background-repeat: no-repeat; background-size: auto 280px; background-position: bottom right;
+    }
+
+    .poleillust02 { padding-right:200px; padding-bottom: 150px !important; height: auto !important;
+        background-repeat: no-repeat; background-size: auto 250px; background-position: top right;
+    }
+
+    .poleillust03 {
+        margin-top:-560px; margin-left:-0px;
+        background-repeat: no-repeat; background-size: auto 250px ; background-position: bottom left;
+    }
+
+    .interviewContents > article > div > p.txtright { padding-left: 200px; max-width: 950px;}
 
 
     .govSupport { }
@@ -465,7 +572,7 @@ article p.eng { font-size: 1.2em }
         margin-bottom: 15px;
     }
 
-    .letsmove article { padding:50px 10px 0px 30px;}
+    .letsmove article { padding:50px 0 0 30px;}
 
     .letsmove article p.kor { line-height: 1.5em; margin-bottom: 10px; font-size: 0.9em; letter-spacing: -0.1em ;  }
     .letsmove article p.eng { line-height: 1.5em;letter-spacing: -0.05em ; font-size: 0.9em;  }
@@ -475,16 +582,14 @@ article p.eng { font-size: 1.2em }
     .introduce nav.gall { padding: 30px 20px 0 20px;  text-align: center;}
 
     .introduce nav.gall ul li {
-        float:left; font-size: 1em;  display: block; height: 100px; width: 33%; padding:10px;
+        float:left; font-size: 1em;  display: block; height: 100px; width: 31%; padding:10px;
         text-align: center; overflow: hidden;
     }
 
-    .introduce nav.gall ul li:nth-child(4) {margin-left: 16%}
+    .introduce nav.gall ul li:nth-child(4) { margin-left: 16% }
     .introduce nav.gall ul li a {  background-size:  auto 25%  ; }
 
     .interviewContents article { padding:0 20px 20px 30px; }
-    .yogaillust { padding-right:0; padding-bottom: 150px;
-        background-repeat: no-repeat; background-size: auto 150px ; background-position: bottom center }
 
     .yogaillust > span:first-child{ width:100% !important;   }
     .yogaillust > span:last-child{ width:100% !important;   }
@@ -506,5 +611,39 @@ article p.eng { font-size: 1.2em }
     .interviewContents > article > .interviewCont > p.tit { font-size: 0.95em !important;  }
 
 
+
+    .yogaillust01 { margin-top: -40px !important;
+        padding-right: 0 !important; padding-top:190px !important; margin-bottom: 0;
+        background-repeat: no-repeat; background-size: auto 190px  !important;
+        background-position: right -15px top 0px !important;
+    }
+    .yogaillust02 { height: auto !important;
+        padding-right: 0 !important; padding-top: 200px !important;  margin-bottom: 20px;
+        background-repeat: no-repeat; background-size: auto 180px  ; background-position: center top 10px;
+    }
+    .yogaillust03 {
+        width: 100%; height:300px;
+        background-repeat: no-repeat; background-size:  280px auto;  background-position: center top;
+    }
+
+
+    .poleillust01 {
+        height: 300px !important; margin-top:0px; margin-bottom: 0;
+        background-repeat: no-repeat; background-size: auto 300px; background-position: center;
+    }
+
+    .poleillust02 {
+        width: 100%; height: auto !important;  padding-right:0; padding-bottom: 250px !important;
+        background-repeat: no-repeat; background-size: auto 250px; background-position: center bottom;
+    }
+
+    .poleillust03 {
+        width: 100%; height: 300px;
+        margin-top:0; margin-left:0; margin-bottom: 0;
+        background-repeat: no-repeat; background-size: auto 300px ; background-position: center center;
+    }
+
+
+    p.txtright { padding-left: 0px !important; width: 100% !important;  }
 }
 
