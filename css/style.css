@@ -156,8 +156,8 @@ header.futsal ul  { background-color: #4790F8 !important;}
     .staff article .supportSection { float: left; margin-top:50px; }
     .staff article .supportSection h6 { clear :both; }
     .staff article .supportSection > div { float: left;  }
-    .staff article .supportSection > .interviewDiv { float: left; width: 150px; }
-    .staff article .supportSection > .thanksDiv { float: left; width: 200px;  }
+    .staff article .supportSection > .interviewDiv { float: left; width: 140px; }
+    .staff article .supportSection > .thanksDiv { float: left; width: 180px;  }
     .staff article ul.supportlist { width:100%; margin-left:0; margin-top:0; font-size: 0.8em ; clear :both; float: left; }
     .staff article ul.stafflist li {  height:45px !important;}
     .staff article ul.supportlist li { height:45px !important;}
@@ -291,7 +291,7 @@ article p.eng { font-size: 1.2em }
 .staff article ul.supportlist li p.nm span:nth-child(2) { font-size: 0.9em ;  color: #7e7e7e}
 
 
-.staff article ul li p.sns { position: absolute; top:0 ; right: 50px; width: 80px; }
+.staff article ul li p.sns { position: absolute; top:-3px; right: 50px; width:auto; max-width: 80px;}
 
 .govSupport { margin: 0; padding:20px; width: 100%; text-align: center;   display: inline-block;  }
 .govList { margin: 0 auto; padding:0; height:180px; text-align: center; }
@@ -313,13 +313,15 @@ article p.eng { font-size: 1.2em }
 .interviewContents h6 { font-size: 1.5em ; font-weight:700; height:80px; width:300px; padding: 50px 0 0 0 ; margin-bottom: 10px;
     background-repeat: no-repeat; background-size: auto 30px ; background-position: left top;
     background-image: url("../image/comm/bull_yoga.png"); vertical-align:bottom; line-height: 1em;  }
-.interviewContents h6 span:first-child {}
-.interviewContents h6 span:last-child { text-decoration: none ; font-size: 0.7em; font-weight: 500; margin-left: 3px}
 
 .interviewContents .interviewContentsTitle{ position:relative; clear:both; float: left; width:100%; max-width:1200px;  top:0; right: 0; display: inline-block ; }
 .interviewContents .interviewContentsTitle .author { position:absolute; top:0; right: 0; display: inline-block ;}
 .interviewContents .interviewContentsTitle .author .sns { float: right; margin-top: 5px; display: inline-block; }
 .interviewContents .interviewContentsTitle .author .nm { font-size: 1em ; }
+
+.interviewContents .interviewContentsTitle h6 span { float: left; height:22px; line-height: 22px;  vertical-align: text-bottom;    }
+.interviewContents .interviewContentsTitle h6 span:first-child {font-size: 1em; }
+.interviewContents .interviewContentsTitle h6 span:last-child { font-size: 0.7em; font-weight: 500; margin-left: 3px; }
 
 .interviewContents > article > div  {  display: inline-block; margin:0 auto;}
 .interviewContents > article > div > p { float: left; max-width: 1300px;
@@ -363,7 +365,7 @@ article p.eng { font-size: 1.2em }
 
 @media (max-width: 820px) {
     .slide_list > li { width: calc(50% - 20px);}
-    .staff article ul li p.sns {  right:0;  }
+    .staff article ul li p.sns { top: -5px; right: 15px;  }
 }
 
 
@@ -374,7 +376,7 @@ article p.eng { font-size: 1.2em }
 }
 
 @media (max-width: 1500px) {
-    article{ padding: 100px 50px 60px 50px; }
+    article{ padding: 60px 50px 60px 50px; }
     article p.kor { font-size: 1.3em }
     article p.eng { font-size: 1.1em }
 }
@@ -494,13 +496,14 @@ article p.eng { font-size: 1.2em }
     .slide_list > li {  height: 200px; width: calc(75% - 20px);  }
     .slide_list > li img {  width: 100%; height: auto;  }
 
+    .interviewContents h6 span:first-child { font-size: 0.85em !important;  ;}
+    .interviewContents h6 span:last-child {font-size: 0.6em  !important;  }
 
-    .interviewContents h6 { }
-    .interviewContents h6 span:first-child { font-size: 0.9em;}
-    .interviewContents h6 span:last-child {font-size: 0.7em; }
-
-    .interviewContents .interviewContentsTitle .author .nm { font-size: 0.9em; }
-    .interviewContents > article > .interviewCont > p.tit { font-size: 1.05em !important;  }
+    .interviewContents .interviewContentsTitle .author .nm { font-size: 0.8em; }
+    .interviewContents .interviewContentsTitle h6 span { height:20px; line-height: 20px;   }
+    .interviewContents .interviewContentsTitle h6 span:first-child { font-size: 0.85em;  }
+    .interviewContents .interviewContentsTitle h6 span:last-child { font-size: 0.6em; }
+    .interviewContents > article > .interviewCont > p.tit { font-size: 0.95em !important;  }
 
 
 }
