@@ -351,7 +351,7 @@ article p.eng { font-size: 1.2em }
     position: relative; text-align: center;
     height:100%; width: 100%; display: inline-block; margin-bottom: 100px;
 }
-.interviewContents h6 { font-size: 1.5em ; font-weight:700; height:80px; width:300px; padding: 50px 0 0 0 ; margin-bottom: 10px;
+.interviewContents h6 { font-size: 1.4em ; font-weight:700; height:80px; width:300px; padding: 50px 0 0 0 ; margin-bottom: 10px;
     background-repeat: no-repeat; background-size: auto 30px ; background-position: left top;
     background-image: url("../image/comm/bull_yoga.png"); vertical-align:bottom; line-height: 1em;  }
 
@@ -362,8 +362,8 @@ article p.eng { font-size: 1.2em }
 
 .interviewContents .interviewContentsTitle{ position:relative; clear:both; float: left; width:100%; max-width:880px; display: inline-block ; }
 .interviewContents .interviewContentsTitle .author { position:absolute; top:40px; right: 0; display: inline-block ; }
-.interviewContents .interviewContentsTitle .author .sns {  display: inline-block;   }
-.interviewContents .interviewContentsTitle .author .nm { font-size: 1em ;margin-right: 5px; }
+.interviewContents .interviewContentsTitle .author .sns {  float: left; display: inline-block; height:20px;   }
+.interviewContents .interviewContentsTitle .author .nm {  float: left;  font-size: 1em ; line-height:20px; height:20px; margin-right: 5px; }
 
 .interviewContents .interviewContentsTitle h6 span { float: left; height:22px; line-height: 22px;  vertical-align: text-bottom;    }
 .interviewContents .interviewContentsTitle h6 span:first-child {font-size: 1em; }
@@ -383,8 +383,8 @@ article p.eng { font-size: 1.2em }
 .interviewContents > article > .interviewCont p .pink { background-image: url("../image/comm/highlight_pink.png"); }
 .interviewContents > article > .interviewCont p .green { background-image: url("../image/comm/highlight_green.png"); }
 .interviewContents > article > .interviewCont p .blue { background-image: url("../image/comm/highlight_blue.png"); }
-.interviewContents > article > .interviewCont p.txtindent2{ padding-left:60px; position: relative }
-.interviewContents > article > .interviewCont p.txtindent2 .name { position: absolute; top: 4px; left:20px;
+.interviewContents > article > .interviewCont p.txtindent2 { padding-left:60px; position: relative }
+.interviewContents > article > .interviewCont p.txtindent2 .name { position: absolute; top: 4px; left:15px;
     color: #000;   display: inline-block; height:50px; width: 30px; font-weight: 600;}
 .interviewContents > article > .interviewCont > div.illust { float: left; clear:both; display: inline-block; margin:0 auto;
    }
@@ -518,7 +518,7 @@ article p.eng { font-size: 1.2em }
 
     .introduce article { padding: 30px 80px 50px 100px !important;  text-align: center;   }
     .introduce nav.gall { padding: 0 80px;  text-align: center;}
-    .introduce nav.gall ul { padding:10px 0; }
+    .introduce nav.gall ul { padding:20px 0; }
     .introduce nav.gall ul li {  }
 
     .yogaillust01 { padding-right:0; padding-bottom: 0 !important;  padding-top:300px; margin-top:0px;
@@ -579,7 +579,7 @@ article p.eng { font-size: 1.2em }
 
 
     .yogaillust01 { padding-top:200px !important; margin-top: -60px;
-        background-repeat: no-repeat; background-size: auto 220px ; background-position: right -35px top 0px !important;
+        background-repeat: no-repeat; background-size: auto 220px ; background-position: right -35px top 0 !important;
     }
     .yogaillust02 {
         background-repeat: no-repeat; background-size: auto 250px  ; background-position: center bottom 20px;
@@ -603,8 +603,7 @@ article p.eng { font-size: 1.2em }
         background-repeat: no-repeat; background-size: auto 250px ; background-position: bottom left;
     }
 
-
-    .judoillust02 { width: 100%; padding-top: 0px; display: inline-block;
+    .judoillust02 { width: 100%; padding-top: 0; display: inline-block;
         padding-left:200px;
         background-repeat: no-repeat; background-size: auto 400px ; background-position: left bottom;
         background-image: url("../image/comm/cont_judo_illust_02.png");
@@ -654,6 +653,7 @@ article p.eng { font-size: 1.2em }
 
     .interviewContents article { padding:0 20px 20px 30px; }
     .interviewContents > article  p.txtindent{ margin-left:0 !important; }
+    .interviewContents > article  p.txtindent2 { margin-left:0 !important; }
     .yogaillust > span:first-child{ width:100% !important;   }
     .yogaillust > span:last-child{ width:100% !important;   }
 
@@ -663,22 +663,25 @@ article p.eng { font-size: 1.2em }
 
     .slide_list > li {  height: 200px; width: calc(75% - 20px);  }
     .slide_list > li img {  width: 100%; height: auto;  }
-
-    .interviewContents h6 span:first-child { font-size: 0.85em !important;  ;}
+{}
+    .interviewContents h6 span:first-child { font-size: 0.85em !important; }
     .interviewContents h6 span:last-child {font-size: 0.6em  !important;  }
 
-    .interviewContents .interviewContentsTitle .author .nm { font-size: 0.8em; }
+    .interviewContents .interviewContentsTitle { margin-bottom: 20px}
+    .interviewContents .interviewContentsTitle .author { position:absolute; top:30px; right: 0; width:120px;display: inline-block ; }
+    .interviewContents .interviewContentsTitle .author .sns { margin-left:45px;}
+    .interviewContents .interviewContentsTitle .author .nm { font-size: 0.8em; margin-bottom: 0 !important;}
+    .interviewContents .interviewContentsTitle h6 { background-size: auto 20px ; padding: 30px 0 0 0 ;}
     .interviewContents .interviewContentsTitle h6 span { height:20px; line-height: 20px;   }
-    .interviewContents .interviewContentsTitle h6 span:first-child { font-size: 0.85em;  }
-    .interviewContents .interviewContentsTitle h6 span:last-child { font-size: 0.6em; }
+    .interviewContents .interviewContentsTitle h6 span:first-child { clear: both; font-size: 0.85em;  }
+    .interviewContents .interviewContentsTitle h6 span:last-child { clear: both;font-size: 0.6em; padding-left: 70px }
     .interviewContents > article > .interviewCont > p.tit { font-size: 0.95em !important;  }
-
 
 
     .yogaillust01 { margin-top: -40px !important;
         padding-right: 0 !important; padding-top:190px !important; margin-bottom: 0;
         background-repeat: no-repeat; background-size: auto 190px  !important;
-        background-position: center top 0px !important;
+        background-position: center top 0 !important;
     }
     .yogaillust02 { height: auto !important;
         padding-right: 0 !important; padding-top: 200px !important;  margin-bottom: 20px;
@@ -709,7 +712,36 @@ article p.eng { font-size: 1.2em }
     .judoillust01 { padding-top: 300px;  height: 400px;
         background-size: auto 300px ;background-position: center top !important;
     }
+    .judoillust02 { padding-top: 385px; padding-left: 0;
+        background-size: auto 370px;background-position: center top !important;
+    }
 
-    p.txtright { padding-left: 0px !important; width: 100% !important;  }
+
+    .futsalillust01 {
+        width: 100%; padding-top: 340px; display: inline-block; height: auto;
+        background-repeat: no-repeat; background-size: auto 330px ; background-position: top center ;
+        background-image: url("../image/comm/cont_futsal_illust_01.png");
+    }
+
+    .futsalillust02 {
+        width: 100%; padding-top: 340px; display: inline-block; height: auto; margin-left:0;
+        padding-left:0;
+        background-repeat: no-repeat; background-size: auto 350px ;background-position: top center ;
+        background-image: url("../image/comm/cont_futsal_illust_02.png");
+    }
+
+    .futsalillust03 {
+        width: 100%;  padding-top: 350px; height: auto; display: inline-block;
+        padding-right:0;
+        background-repeat: no-repeat; background-size: auto 330px ; background-position: top center ;
+        background-image: url("../image/comm/cont_futsal_illust_03.png");
+    }
+
+    .interviewContents > article > .interviewCont p.txtindent2 .name { top: 4px; left:0 ; }
+    .interviewContents > article > .interviewCont p.txtindent2 { padding-left:45px !important; }
+
+    p.txtright { padding-left:0 !important; width: 100% !important;  }
+
+
 }
 
