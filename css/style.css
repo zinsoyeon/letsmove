@@ -530,14 +530,12 @@ article p.eng { font-size: 1.2em }
 
     .interviewContents > article  p.txtindent{  }
 
-    .slide_list > li {  height: 300px;   }
-    .slide_list > li img {   height: 100%; width:auto }
+    .slide_list > li {  height: 400px;  width: calc(75% - 20px); }
+    .slide_list > li img {  width:auto; height: 100%; }
 
     article p.kor { font-size: 1.1em }
     article p.eng { font-size: 0.8em }
 
-    .slide_list > li {  height: 250px; width: calc(75% - 20px);  }
-    .slide_list > li img {width: 100%; height: auto;  }
 }
 
 @media (max-width: 1024px) {
