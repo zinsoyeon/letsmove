@@ -54,12 +54,15 @@
 
         var $headerNavUl = $('header nav.headerNav ul');
 
-        if ( windowWidth > 820 ){
+        if ( windowWidth > 820 ) {
             $headerNavUl.css({"left": "0"});
+        } else {
+            $headerNavUl.css({"left": "-200%"});
+        }
+        if ( windowWidth > 1024 ){
             $("#vimeoTrailer iframe").css('height', windowHeight-60);
             $("#vimeoTrailer iframe").css('width', windowWidth);
         } else {
-            $headerNavUl.css({"left": "-200%"});
             $("#vimeoTrailer iframe").css('width', windowWidth);
             $("#vimeoTrailer iframe").css('height', windowWidth/16*9);
         }

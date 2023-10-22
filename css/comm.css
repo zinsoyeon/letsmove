@@ -1,3 +1,9 @@
+@-ms-viewport{width:device-width;}
+@-o-viewport{width:device-width;}
+@-moz-viewport{width:device-width;}
+@-webkit-viewport{width:device-width;}
+@viewport{width:device-width;}
+
 @font-face { /* 애플산돌고딕 폰트 적용 */
     font-family: "SDGothic";
     src: url("../font/AppleSDGothicNeoL.ttf") format("truetype");
