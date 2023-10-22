@@ -27,7 +27,7 @@ html {overflow-x: hidden; overflow-y: scroll}
 
 article { margin:0 auto; overflow-x: hidden; }
 
-.line { border-top :2px solid #FF593C; margin-left:5%; margin-top: 20px;  width:90%; height: 2px; display: inline-block }
+.line { border-top :2px solid #FF593C; margin-left:5%;   width:90%; height: 2px; display: inline-block }
 
 .sns a { width: 18px; height: 18px ; margin:0 0 0 8px; float: left; display: inline-block; overflow: hidden; text-indent: -9999px ;
     background-repeat: no-repeat; background-size: 100% auto; background-position: center; border: 1px solid #ccc; }
