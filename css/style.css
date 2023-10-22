@@ -60,8 +60,7 @@ header.futsal ul  { background-color: #4790F8 !important;}
 
 @media (max-width: 1024px) {
 
-    header { position: fixed; top: 0; left: 0; height: 50px; width: 100%;
-        z-index: 800; }
+    header { position: fixed; top: 0; left: 0; height: 50px; width: 100%; z-index: 800; }
 
     header h1 {
         /*width:260px; left: calc(50% - 130px) ;*/
@@ -116,7 +115,7 @@ header.futsal ul  { background-color: #4790F8 !important;}
         text-indent: 0; background-image: none ;
     }
 
-    nav.headerNav ul li.move { display: block; margin-right:45% !important; padding:0 0 0 3% !important; }
+    nav.headerNav ul li.move { display: block; margin-right:50% !important; padding:0 0 0 3% !important; }
     nav.headerNav ul li a { font-weight: 600;
         text-indent:0; display:inline-block; width: 100%; height: 100%; line-height: 45px;
         background: none ; color: #000 ; text-decoration: none; text-align: center ; }
@@ -133,13 +132,18 @@ header.futsal ul  { background-color: #4790F8 !important;}
     .staff article .supportSection > .thanksDiv { width: 250px; }
 
 }
+@media (max-width:1024px) and (min-width:800px)  {
+    nav.headerNav ul li.move { margin-right:50% !important;   }
 
+}
+@media (max-width:801px) and (min-width:621px)  {
+    nav.headerNav ul li.move { margin-right:45% !important;   }
+
+}
 @media (max-width:620px) {
-
     nav.headerNav ul li.move { margin-right:25% !important; padding:0 0 0 3% !important; }
 }
 @media (max-width:560px) {
-
     nav.headerNav ul li.move { margin-right:20% !important; padding:0 0 0 3% !important; }
 }
 
@@ -665,14 +669,22 @@ article p.eng { font-size: 1.2em }
     .interviewContents h6 span:first-child { font-size: 0.85em !important; }
     .interviewContents h6 span:last-child {font-size: 0.6em  !important;  }
 
-    .interviewContents .interviewContentsTitle { margin-bottom: 20px}
-    .interviewContents .interviewContentsTitle .author { position:absolute; top:30px; right: 0; width:120px;display: inline-block ; }
-    .interviewContents .interviewContentsTitle .author .sns { margin-left:45px;}
-    .interviewContents .interviewContentsTitle .author .nm { font-size: 0.8em; margin-bottom: 0 !important;}
+    .interviewContents .interviewContentsTitle { margin-bottom: 20px }
+    /*.interviewContents .interviewContentsTitle .author { position:absolute; top:30px; right: 0; width:120px;display: inline-block ; }*/
+    /*.interviewContents .interviewContentsTitle .author .sns { margin-left:45px;}*/
+    /*.interviewContents .interviewContentsTitle .author .nm { font-size: 0.8em; margin-bottom: 0 !important;}*/
+
+
+    .interviewContents .interviewContentsTitle .author {top:30px; width: 150px; height:40px; }
+    .interviewContents .interviewContentsTitle .author .sns { position: absolute; top:20px; right:0 ; height:20px;  }
+    .interviewContents .interviewContentsTitle .author .nm { position: absolute; top:0;   right:0 ;   height:20px;
+        font-size: 0.8em; margin-bottom: 0 !important }
+
+
     .interviewContents .interviewContentsTitle h6 { background-size: auto 20px ; padding: 30px 0 0 0 ;}
     .interviewContents .interviewContentsTitle h6 span { height:20px; line-height: 20px;   }
     .interviewContents .interviewContentsTitle h6 span:first-child { clear: both; font-size: 0.85em;  }
-    .interviewContents .interviewContentsTitle h6 span:last-child { clear: both;font-size: 0.6em; padding-left: 70px }
+    .interviewContents .interviewContentsTitle h6 span:last-child { clear: both;font-size: 0.6em; padding-top: 5px; padding-left: 70px }
     .interviewContents > article > .interviewCont > p.tit { font-size: 0.95em !important;  }
 
 
