@@ -116,7 +116,7 @@ header.futsal ul  { background-color: #4790F8 !important;}
         text-indent: 0; background-image: none ;
     }
 
-    nav.headerNav ul li.move { display: block; margin-right:35% !important; padding:0 0 0 3% !important; }
+    nav.headerNav ul li.move { display: block; margin-right:45% !important; padding:0 0 0 3% !important; }
     nav.headerNav ul li a { font-weight: 600;
         text-indent:0; display:inline-block; width: 100%; height: 100%; line-height: 45px;
         background: none ; color: #000 ; text-decoration: none; text-align: center ; }
@@ -145,7 +145,16 @@ header.futsal ul  { background-color: #4790F8 !important;}
 
 @media (max-width:414px) {
 
-    nav.headerNav ul li:first-child { margin-left: 2%; padding:0 !important; }
+
+
+    nav.headerNav ul { padding:0 !important;  }
+    nav.headerNav ul li { width:18%;  margin-right:0% !important; }
+
+    nav.headerNav ul li:first-child { margin-left: 5%;  width:18%; }
+    nav.headerNav ul li:nth-child(2) {  width:16%; }
+    nav.headerNav ul li:nth-child(3) {  width:21%;  }
+    nav.headerNav ul li:nth-child(4) {  width:17%;  }
+    nav.headerNav ul li:last-child { width:17%; }
     nav.headerNav ul li.move { margin-right:0 !important; padding:0 3% 0 3% !important; }
 
     .staff article {padding:20px;  }
