@@ -375,7 +375,7 @@ article p.eng { font-size: 1.2em }
 
 
 .interviewContents > article > div p { float: left; max-width: 880px;
-  clear:both; line-height: 1.5em; font-size: 1.05em; margin-bottom: 20px; letter-spacing: -0.05em ; display: inline-block ; color:#333;}
+  clear:both; line-height: 1.6em; font-size: 1.1em; margin-bottom: 20px; letter-spacing: -0.05em ; display: inline-block ; color:#333;}
 
 .interviewContents > article > .interviewCont {  max-width:880px;  display: inline-block}
 .interviewContents > article > .interviewCont p.txtindent{ margin-left: 20px; }
@@ -552,7 +552,7 @@ article p.eng { font-size: 1.2em }
 
     .interviewContents > article > .interviewCont p.tit { font-weight: 600 !important;  color:#000; font-size: 1.05em }
     .interviewContents > article > div p { float: left;
-        clear:both; line-height: 1.5em; font-size: 0.9em; margin-bottom: 20px; letter-spacing: -0.05em ; display: inline-block ; color:#333;}
+        clear:both; line-height: 1.6em; font-size: 1em; margin-bottom: 20px; letter-spacing: -0.05em ; display: inline-block ; color:#333;}
 
     .introduce article { padding:30px 40px 50px 40px !important; }
     .introduce nav.gall { padding: 10px 35px;  text-align: center; }
