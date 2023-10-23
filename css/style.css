@@ -463,7 +463,6 @@ article p.eng { font-size: 1.2em }
     background-image: url("../image/comm/cont_futsal_illust_03.png");
 }
 
-
 .neg_mt50{ margin-top: -50px}
 .neg_mt60{ margin-top: -60px}
 .neg_mt80{ margin-top: -80px}
@@ -473,7 +472,7 @@ article p.eng { font-size: 1.2em }
 .slider { margin: 50px auto 0;font-size: 0;text-align: center; }
 .slider .inner {overflow: hidden;width: 100%;margin: 0 auto;}
 .slide_list > li {position: relative; width: calc(50% - 20px); margin:0 10px;
-     font-size: 20px;line-height: 150px;color: #000;text-align: center; overflow: hidden ;    }
+     font-size: 20px; line-height: 150px; color: #000;text-align: center; overflow: hidden ;    }
 .slide_list > li img { width: 100%; height:auto }
 
 /* 영역별 밝기 설정 */
@@ -637,6 +636,8 @@ article p.eng { font-size: 1.2em }
     .letsmove article p.eng { line-height: 1.5em;letter-spacing: -0.05em ; font-size: 0.9em;  }
 
 
+    .slider { margin: 10px auto 0;  }
+
     .introduce article { padding:30px; }
     .introduce nav.gall { padding: 0 50px 0 50px;  text-align: center;}
 
@@ -682,7 +683,7 @@ article p.eng { font-size: 1.2em }
     .interviewContents .interviewContentsTitle h6 span { height:20px; line-height: 20px;   }
     .interviewContents .interviewContentsTitle h6 span:first-child { clear: both; font-size: 0.85em;  }
     .interviewContents .interviewContentsTitle h6 span:last-child { clear: both;font-size: 0.6em; padding-top: 5px; padding-left: 50px }
-    .interviewContents > article > .interviewCont > p.tit { font-size: 1em !important;  }
+    .interviewContents > article > .interviewCont > p.tit { font-size: 1.1em !important;  }
 
 
     .yogaillust01 { margin-top: -40px !important;
