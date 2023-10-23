@@ -686,9 +686,9 @@ article p.eng { font-size: 1.2em }
 
 
     .yogaillust01 { margin-top: -40px !important;
-        padding-right: 0 !important; padding-top:190px !important; margin-bottom: 0;
+        padding-right: 0 !important; padding-top:200px !important; margin-bottom: 0;
         background-repeat: no-repeat; background-size: auto 190px  !important;
-        background-position: center top 0 !important;
+        background-position: center top 10px !important;
     }
     .yogaillust02 { height: auto !important;
         padding-right: 0 !important; padding-top: 200px !important;  margin-bottom: 20px;
