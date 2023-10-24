@@ -255,25 +255,16 @@ main { margin:0 ; padding:0 ; }
     z-index: 10;
 }
 
-.trailer .yogagirl { display: none;
-    position: absolute; bottom:5%; right: 5%; height: 500px; width: 500px;
-    background-image: url("../image/comm/mainyoga.png" ) ;
-    background-repeat: no-repeat;
-    background-size:  100% auto;
-    background-position: left center;
-    text-indent: -9999px;
-    z-index: 10;
-}
 
 
-    .introduce article { padding-top:50px; padding-left:250px; }
+.introduce article { padding-top:50px; padding-left:250px; }
 .introduce article h4 {
     font-size: 1.5em; font-weight:700; height:80px; width:300px; padding: 50px 0 0 0 ; margin-bottom: 10px;
     background-repeat: no-repeat; background-size: auto 30px ; background-position: left top;
     background-image: url("../image/comm/bull_punch.png");
 }
 .introduce article p.kor { line-height: 1.8em; margin-bottom: 20px;  letter-spacing: -0.05em ; font-size: 1.3em}
-.introduce article p.eng { line-height: 1.6em; letter-spacing: 0 ; font-size: 1em}
+.introduce article p.eng { line-height: 1.7em; letter-spacing: 0 ; font-size: 1.1em}
 
 
 /*움직여 상세 페이지*/

@@ -114,7 +114,7 @@
                 임소연 과학기술학 박사&서민정 퍼스널 트레이너의 코멘터리와 함께 담아낸 웹 영상 시리즈입니다.
             </p>
             <p class="eng">
-                MOVE!(움직여!) is a web video series that tells the stories of women in constant motion—running, driving, climbing, and breathing.<br>
+                <strong>MOVE!(움직여!)</strong> is a web video series that tells the stories of women in constant motion—running, driving, climbing, and breathing.<br>
                 It's a narrative about moving and functioning bodies, not as objects to be seen and judged, but as bodies that move and function.<br>
                 It delves into the beginning, catalysts, and transformations of women engaged in yoga, pole sports, judo, and futsal.<br>
                 Dr. Leem So Yeon, a Ph.D. in Science and Technology Studies, and Seo Min-jeong, a personal trainer, provide commentary<br>
@@ -1130,6 +1130,14 @@
                 };
 
 
+                onvisible.add('article h4', {
+                    style: 'fade-right',
+                    speed: 1000,
+                    intensity: 1,
+                    delay: 0,
+                    staggerOrder: '',
+                    replay: false
+                });
 
                 onvisible.add('article .kor', {
                     style: 'fade-right',
@@ -1148,14 +1156,6 @@
                     replay: false
                 });
 
-                onvisible.add('article h4', {
-                    style: 'fade-right',
-                    speed: 1000,
-                    intensity: 8,
-                    delay: 0,
-                    staggerOrder: '',
-                    replay: false
-                });
             }
         )();
 
