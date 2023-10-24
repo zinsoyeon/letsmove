@@ -220,13 +220,13 @@ header.futsal ul  { background-color: #4790F8 !important;}
     text-align: center; overflow: hidden;
     background-repeat: no-repeat; background-size: auto 20% ; background-position: center center;
     border-radius: 100%;
+    transition:0.5s all;
 }
 .introduce nav.gall ul li a {
     text-align:center;  display: block; width: 100%; height: 100%; text-indent: -9999px;
-    background-repeat: no-repeat; background-size: auto 28px ;
-    transition:0.5s all;
+    background-repeat: no-repeat; background-size: auto 40px ;
 }
-/*nav.gall ul li:hover { transform: scale(1.1); }*/
+nav.gall ul li:hover { transform: scale(1.05); }
 
 nav.gall ul li.move    { background-image: url("../image/comm/header_small_logo_w.png " );  background-color: #FF593C;}
 nav.gall ul li.yoga    { background-image: url("../image/comm/gall_cont_yoga.png" ); background-size: auto 80% ; background-color: #FFCF55;}
@@ -558,10 +558,10 @@ article p.eng { font-size: 1.2em }
     .introduce nav.gall { padding: 0 80px;  text-align: center;}
     .introduce nav.gall ul { padding:20px 0; }
     .introduce nav.gall ul li a { display: block; opacity: 0.6; background-size:auto 12px ; }
-    nav.gall ul li.yoga    a { background-image: url("../image/comm/gall_txt_yoga.png" ); background-position: 50% 80%; }
-    nav.gall ul li.pole    a { background-image: url("../image/comm/gall_txt_pole.png" ); background-position: 90% 55% ; }
-    nav.gall ul li.judo    a { background-image: url("../image/comm/gall_txt_judo.png" ); background-position: 85% 60% ; }
-    nav.gall ul li.futsal  a { background-image: url("../image/comm/gall_txt_futsal.png" ); background-position: 70% 70% ; }
+    .introduce nav.gall ul li.yoga    a { background-image: url("../image/comm/gall_txt_yoga.png" ); background-position: 50% 80%; }
+    .introduce nav.gall ul li.pole    a { background-image: url("../image/comm/gall_txt_pole.png" ); background-position: 90% 55% ; }
+    .introduce nav.gall ul li.judo    a { background-image: url("../image/comm/gall_txt_judo.png" ); background-position: 85% 60% ; }
+    .introduce nav.gall ul li.futsal  a { background-image: url("../image/comm/gall_txt_futsal.png" ); background-position: 70% 70% ; }
 
     .introduce nav.gall ul li a:hover {  opacity:1 ; }
     .yogaillust01 { padding-right:0; padding-bottom: 0 !important;  padding-top:300px; margin-top:0px;
