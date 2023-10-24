@@ -16,10 +16,10 @@ header.futsal ul  { background-color: #4790F8 !important;}
 
 @media (min-width: 1025px) {
 
-    header { position: fixed; top: 0; left: 0; height: 60px; width: 100%;
+    header { position: fixed; top: 0; left: 0; height: 70px; width: 100%;
          z-index: 800; background-color: #FF593C; }
 
-    header h1 {  position: absolute; top: 0; left: calc(50% - 150px); margin:0 auto; display: block; height: 60px; width: 300px;
+    header h1 {  position: absolute; top: 0; left: calc(50% - 200px); margin:0 auto; display: block; height: 70px; width: 400px;
         background-image: url("../image/comm/header_large_logo_w.png");
         background-repeat: no-repeat; background-size: 100% auto; background-position: center center;
         text-indent: -9999px; font-size: 1em; cursor: pointer; z-index: 9999;
@@ -29,26 +29,51 @@ header.futsal ul  { background-color: #4790F8 !important;}
         width: 100px; left: calc(50% - 50px);  }
 
     nav.headerNav { position: relative; height: 60px; width: 100%; z-index: 9; text-align: center ; }
-    nav.headerNav ul {  display: inline-block; width: 100%; height: 60px; margin: 0 auto; padding: 0 !important;
+    nav.headerNav ul {  display: inline-block; width: 100%; height: 70px; margin: 0 auto; padding: 0 !important;
         max-width: 1400px; text-align: center; }
     nav.headerNav ul li {
         float: left;
         position: relative;
-        margin: 5px 0;
+        margin: 10px 0;
         display: block;
         height: 50px;
         width: 12%;
-        color: #000; font-size: 1em; text-align: center;
-        background-repeat: no-repeat; background-size: auto 25px ; background-position: center center;
+        color: #000; font-size: 1em; text-align: center; /*border: 1px solid #f00;*/
+        background-repeat: no-repeat; background-size: auto 30px ; background-position: center center;
     }
 
     nav.headerNav ul li a { text-indent: -9999px; display:inline-block; width: 100%; height: 100%; }
 
-    nav.headerNav ul li.move   { display:none; background-image: url("../image/comm/nav_move.png" ); }
+    nav.headerNav ul li.move   { display:none; background-image: url("../image/comm/nav_move.png" ); ;}
     nav.headerNav ul li.yoga   { background-image: url("../image/comm/nav_yoga.png" ); }
     nav.headerNav ul li.pole   { background-image: url("../image/comm/nav_pole.png" );  }
     nav.headerNav ul li.judo   { background-image: url("../image/comm/nav_judo.png" ); margin-left:52%; }
     nav.headerNav ul li.futsal { background-image: url("../image/comm/nav_futsal.png" ); }
+
+
+    header.sub .headerNav ul { width: 100%; margin: 0 auto; max-width: 1500px; }
+    header.sub .headerNav ul li { width: 120px; float: left; margin-left: 0 ; display:inline-block; background-size: auto 33px; }
+    header.sub h1 { background-size:auto 33px; }
+    header.sub .headerNav ul li.move { margin-left: 3%; width: 150px;  }
+
+    header.pole h1 {  background-image: url("../image/comm/nav_pole_on.png"); }
+    header.pole .headerNav ul li.pole { display:none; }
+    header.pole .headerNav ul li.move { margin-left: 3%; width: 150px;  }
+    header.pole .headerNav ul li.yoga { margin-left: calc(97% - 550px); }
+
+    header.yoga h1 {  background-image: url("../image/comm/nav_yoga_on.png"); }
+    header.yoga .headerNav ul li.yoga { display:none; }
+    header.yoga .headerNav ul li.pole { margin-left: calc(97% - 550px); width: 160px; }
+
+    header.judo h1 {  background-image: url("../image/comm/nav_yoga_on.png"); }
+    header.judo .headerNav ul li.judo { display:none; }
+    header.judo .headerNav ul li.pole { width: 160px; }
+    header.judo .headerNav ul li.yoga { margin-left: calc(97% - 550px);  }
+
+    header.futsal h1 {  background-image: url("../image/comm/nav_futsal_on.png"); }
+    header.futsal .headerNav ul li.futsal { display:none; }
+    header.futsal .headerNav ul li.pole {width: 160px; }
+    header.futsal .headerNav ul li.yoga { margin-left: calc(97% - 550px);   }
 
     .btn_cate {display: none;}
 
@@ -161,7 +186,7 @@ header.futsal ul  { background-color: #4790F8 !important;}
     nav.headerNav ul li:last-child { width:17%; }
     nav.headerNav ul li.move { margin-right:0 !important; padding:0 3% 0 3% !important; }
 
-    .staff article {padding:20px 20px 20px 40px  }
+    .staff article { padding:0 20px 20px 40px  }
     .staff article h5 { font-size: 1.1em ; margin-bottom: 30px;}
     .staff article h6 { font-size: 0.8em; margin-left:0 !important; clear:none !important;}
 
@@ -173,10 +198,15 @@ header.futsal ul  { background-color: #4790F8 !important;}
     .staff article ul.supportlist { width:200px; margin-left:0; margin-top:0; font-size: 0.8em ; clear:none !important;float: left; }
     .staff article ul.supportlist li { height:45px !important;}
 
-    .staff article ul.stafflist { width: 100%; font-size: 0.8em; margin-top:20px; margin-right: 0 !important; }
+    .staff article ul.stafflist { width: 100%; font-size: 0.8em; margin-top:0px; margin-right: 0 !important; }
     .staff article ul.stafflist li {  height:45px !important;}
     .staff article ul.stafflist li .role {  width: 130px !important; }
     .staff article ul.stafflist li .nm { width: 160px !important; }
+
+    .staff article ul.stafflist li.li_sns {  height:65px ;}
+    .staff article ul.stafflist li.li_sns p.nm {  height:65px ;position: relative;   }
+    .staff article ul.stafflist li.li_sns p.nm .sns { margin-left: 0; position: absolute; bottom: 15px; left: 0; }
+    .staff article ul.stafflist li.li_sns p.nm .sns a { margin-left: 0; margin-right: 3px; ; }
 }
 
 .introduce { padding-bottom: 100px ; }
@@ -235,7 +265,8 @@ main { margin:0 ; padding:0 ; }
     z-index: 10;
 }
 
-.introduce article { padding-top:50px; padding-left:250px; }
+
+    .introduce article { padding-top:50px; padding-left:250px; }
 .introduce article h4 {
     font-size: 1.5em; font-weight:700; height:80px; width:300px; padding: 50px 0 0 0 ; margin-bottom: 10px;
     background-repeat: no-repeat; background-size: auto 30px ; background-position: left top;
@@ -247,7 +278,7 @@ main { margin:0 ; padding:0 ; }
 
 /*움직여 상세 페이지*/
 .letsmove { text-align: center; }
-.letsmove article { display: inline-block; padding: 160px 100px 0 200px; }
+.letsmove article { display: inline-block; padding: 160px 100px 20px 200px; }
 .letsmove article div { display: inline-block;  }
 .letsmove ul { margin-top:30px;  }
 .letsmove ul li { margin-bottom:10px; padding-left:15px;
@@ -351,7 +382,7 @@ article p.eng { font-size: 1.2em }
     position: relative; text-align: center;
     height:100%; width: 100%; display: inline-block; margin-bottom: 100px;
 }
-.interviewContents h6 { font-size: 1.4em ; font-weight:700; height:80px; width:300px; padding: 50px 0 0 0 ; margin-bottom: 10px;
+.interviewContents h6 { font-size: 1.6em ; font-weight:700; height:90px; width:300px; padding: 50px 0 0 0 ; margin-bottom: 10px;
     background-repeat: no-repeat; background-size: auto 30px ; background-position: left top;
     background-image: url("../image/comm/bull_yoga.png"); vertical-align:bottom; line-height: 1em;  }
 
@@ -371,7 +402,7 @@ article p.eng { font-size: 1.2em }
 
 
 .interviewContents > article > div p { float: left; max-width: 880px;
-  clear:both; line-height: 1.6em; font-size: 1.1em; margin-bottom: 20px; letter-spacing: -0.05em ; display: inline-block ; color:#333;}
+  clear:both; line-height: 1.6em; font-size: 1.2em; margin-bottom: 20px; letter-spacing: -0.05em ; display: inline-block ; color:#333;}
 
 .interviewContents > article > .interviewCont {  max-width:880px;  display: inline-block}
 .interviewContents > article > .interviewCont p.txtindent{ margin-left: 20px; }
@@ -433,13 +464,13 @@ article p.eng { font-size: 1.2em }
 
 .judoillust01 {
     width: 100%; padding-top: 230px; display: inline-block; height: 320px;
-    background-repeat: no-repeat; background-size: auto 320px ; background-position: 450px bottom ;
+    background-repeat: no-repeat; background-size: auto 320px ; background-position: 450px bottom  ;
     background-image: url("../image/comm/cont_judo_illust_01.png");
 }
 
 .judoillust02 { width: 100%; padding-top: 100px; display: inline-block;
     padding-left:250px;
-    background-repeat: no-repeat; background-size: auto 450px ; background-position: left bottom;
+    background-repeat: no-repeat; background-size: auto 500px ; background-position: left bottom 10px;
     background-image: url("../image/comm/cont_judo_illust_02.png");
 }
 
@@ -469,7 +500,7 @@ article p.eng { font-size: 1.2em }
 .interviewContents > article > div > p.txtright { padding-left: 300px; max-width: 950px;}
 
 /* 슬라이드 */
-.slider { margin: 50px auto 0;font-size: 0;text-align: center; }
+.slider { position: relative; margin: 50px auto 0;font-size: 0;text-align: center; }
 .slider .inner {overflow: hidden;width: 100%;margin: 0 auto;}
 .slide_list > li {position: relative; width: calc(50% - 20px); margin:0 10px;
      font-size: 20px; line-height: 150px; color: #000;text-align: center; overflow: hidden ;    }
@@ -489,10 +520,18 @@ article p.eng { font-size: 1.2em }
 .slide_list > li.swiper-slide-duplicate-next:after,
 .slide_list > li.swiper-slide-duplicate-prev:after {opacity: 1;}
 
+.slider .btn { position:absolute; top:0;  display: inline-block;width:25% ;height: 100%;
+    text-indent: -9999em;cursor: pointer;
+    z-index: 10;}
+.slider .btn.btn_prev {left:0;   }
+.slider .btn.btn_next {right:0 ;  }
+
 
 @media (max-width: 1024px) {
     .slide_list > li { width: calc(50% - 20px);}
     .staff article ul li p.sns { top: -5px; right: 15px;  }
+
+    .slider .btn { display: none;}
 }
 
 
@@ -518,8 +557,13 @@ article p.eng { font-size: 1.2em }
     .introduce article { padding: 30px 80px 50px 100px !important;  text-align: center;   }
     .introduce nav.gall { padding: 0 80px;  text-align: center;}
     .introduce nav.gall ul { padding:20px 0; }
-    .introduce nav.gall ul li {  }
+    .introduce nav.gall ul li a { display: block; opacity: 0.6; background-size:auto 12px ; }
+    nav.gall ul li.yoga    a { background-image: url("../image/comm/gall_txt_yoga.png" ); background-position: 50% 80%; }
+    nav.gall ul li.pole    a { background-image: url("../image/comm/gall_txt_pole.png" ); background-position: 90% 55% ; }
+    nav.gall ul li.judo    a { background-image: url("../image/comm/gall_txt_judo.png" ); background-position: 85% 60% ; }
+    nav.gall ul li.futsal  a { background-image: url("../image/comm/gall_txt_futsal.png" ); background-position: 70% 70% ; }
 
+    .introduce nav.gall ul li a:hover {  opacity:1 ; }
     .yogaillust01 { padding-right:0; padding-bottom: 0 !important;  padding-top:300px; margin-top:0px;
                 background-size: auto 320px; background-position: top center  !important; }
 
@@ -552,7 +596,7 @@ article p.eng { font-size: 1.2em }
     .introduce article { padding:30px 40px 50px 40px !important; }
     .introduce nav.gall { padding: 10px 35px;  text-align: center; }
     .introduce article h4 {
-        font-size: 1.5em; font-weight:700; height:80px; width:300px; padding: 50px 0 0 0 ; margin-bottom: 10px;
+        font-size: 1.5em !important; font-weight:700; height:80px; width:300px; padding: 50px 0 0 0 ; margin-bottom: 10px;
         background-repeat: no-repeat; background-size: auto 30px ; background-position: left top;
         background-image: url("../image/comm/bull_punch.png");
     }
@@ -562,7 +606,7 @@ article p.eng { font-size: 1.2em }
     .introduce nav.gall { position: relative;  width: 100%; text-align: center; }
     .introduce nav.gall { width: 100%;  }
 
-    .purpose article { padding:50px !important; }
+    .purpose article { padding:50px 50px 150px 50px !important; }
 
     .staff article .supportSection > .interviewDiv {  width: 130px;  clear: both }
     .staff article .supportSection > .thanksDiv { width: 250px;  clear: both}
@@ -623,14 +667,12 @@ article p.eng { font-size: 1.2em }
 @media (max-width:414px) {
 
     .letsmove article h4 {
-        height:50px; width:150px;
+        height:50px; width:150px; margin-bottom: 15px;
         background-image: url("../image/comm/main_tit.png" ) ;
-        background-size:  50% auto;
-        background-position: left bottom;
-        margin-bottom: 15px;
+        background-size:  50% auto; background-position: left bottom;
     }
 
-    .letsmove article { padding:50px 0 0 30px;}
+    .letsmove article { padding:50px 20px 0 30px;}
 
     .letsmove article p.kor { line-height: 1.5em; margin-bottom: 10px; font-size: 0.9em; letter-spacing: -0.1em ;  }
     .letsmove article p.eng { line-height: 1.5em;letter-spacing: -0.05em ; font-size: 0.9em;  }
@@ -656,13 +698,13 @@ article p.eng { font-size: 1.2em }
     .yogaillust > span:first-child{ width:100% !important;   }
     .yogaillust > span:last-child{ width:100% !important;   }
 
-    .purpose article { padding:30px !important; }
+    .purpose article { padding:30px 30px 100px 30px !important; }
     .purpose article h5 {  font-size: 1.1em;}
     .purpose article p { font-size:0.9em; line-height: 1.6em; margin-bottom: 10px; letter-spacing: -0.05em }
 
     .slide_list > li {  height: 200px; width: calc(75% - 20px);  }
     .slide_list > li img {  width: 100%; height: auto;  }
-{}
+
     .interviewContents h6 span:first-child { font-size: 0.85em !important; }
     .interviewContents h6 span:last-child {font-size: 0.6em  !important;  }
 
@@ -755,4 +797,3 @@ article p.eng { font-size: 1.2em }
 
 
 }
-
