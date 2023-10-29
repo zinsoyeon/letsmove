@@ -1176,7 +1176,7 @@
             replay: false
         });
 
-        onvisible.add('.interviewCont p.poleillust03', {
+        onvisible.add('.interviewCont .poleillust03', {
             style: 'fade-down',
             speed: 1000,
             intensity: 8,

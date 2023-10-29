@@ -269,9 +269,9 @@ main { margin:0 ; padding:0 ; }
 .letsmove article p.eng { line-height: 1.6em; font-size: 1.1em; letter-spacing: 0 ;  }
 
 .purpose article {padding:50px 30px;  max-width: 1310px; }
-.purpose article h5 { font-weight: 500; font-size: 1.7em; line-height: 1.8em; margin-bottom: 10px;}
+.purpose article h5 { font-weight: 500; font-size: 1.3em; line-height: 1.8em; margin-bottom: 10px;}
 .purpose article h5 strong { font-weight:700; color:#FF593C;  letter-spacing: -0.05em; margin-right:5px}
-.purpose article p { font-size:1.0em; line-height: 1.8em; margin-bottom: 20px; letter-spacing: -0.05em }
+.purpose article p { font-size:1.1em; line-height: 1.8em; margin-bottom: 20px; letter-spacing: -0.05em }
 
 .purpose article p .italic { font-style: italic}
 .purpose article p a { color:#000;  }
@@ -419,11 +419,13 @@ main { margin:0 ; padding:0 ; }
 }
 
 .poleillust03 {
-    width: 100%; height: 550px;
-    margin-top:-350px; margin-left:-70px; margin-bottom: 0;
+    width: calc(100% + 80px);  margin-left:-80px; min-height: 600px; display: inline-block; margin-bottom: 0;
     background-repeat: no-repeat; background-size: auto 500px ; background-position: left 0 top 50px;
     background-image: url("../image/comm/cont_pole_illust_03.png");
 }
+.poleillust03 p { margin-left: 350px  }
+.poleillust03 p.txtindent { margin-left: 370px !important; }
+
 
 
 .judoillust01 {
@@ -463,7 +465,6 @@ main { margin:0 ; padding:0 ; }
 .neg_mt60{ margin-top: -60px}
 .neg_mt80{ margin-top: -80px}
 .neg_mt150{ margin-top: -150px}
-.interviewContents > article > div > p.txtright { padding-left: 300px; max-width: 950px;}
 
 /* 슬라이드 */
 .slider { position: relative; margin: 50px auto 0;font-size: 0;text-align: center; }
@@ -596,10 +597,12 @@ main { margin:0 ; padding:0 ; }
         background-repeat: no-repeat; background-size: auto 250px; background-position: top right;
     }
 
-    .poleillust03 {
-        margin-top:-560px; margin-left:-0px;
-        background-repeat: no-repeat; background-size: auto 250px ; background-position: bottom left;
+    .poleillust03 { margin-left:-0px;
+        width: calc(100% + 0px);
+        background-repeat: no-repeat; background-size:  250px auto   ; background-position: top 100px left;
     }
+    .poleillust03 p:nth-child(1) { margin-left: 0; }
+    .poleillust03 p:nth-child(2) { margin-left:270px !important; }
 
     .judoillust02 { width: 100%; padding-top: 0; display: inline-block;
         padding-left:0px;
@@ -795,7 +798,7 @@ main { margin:0 ; padding:0 ; }
         background-size: auto 25px; background-position: left bottom;
     }
 
-    .letsmove article p.kor { margin-bottom: 10px; line-height: 1.6em;  font-size: 1.0em; letter-spacing: -0.05em ;  }
+    .letsmove article p.kor { margin-bottom: 10px; line-height: 1.7em;  font-size: 1.0em; letter-spacing: -0.05em ;  }
     .letsmove article p.eng { line-height: 1.5em;  font-size: 0.95em; margin-top:25px  }
 
 
@@ -823,7 +826,7 @@ main { margin:0 ; padding:0 ; }
 
     .purpose article { padding:30px 30px 30px 30px !important; }
     .purpose article h5 { font-size: 1.2em;}
-    .purpose article p { line-height: 1.7em;  font-size: 1.05em; letter-spacing: -0.05em ;  margin-bottom: 10px;  }
+    .purpose article p { line-height: 1.7em;  font-size: 1.00em; letter-spacing: -0.05em ;  margin-bottom: 10px;  }
 
     .slide_list > li {  height: 200px; width: calc(75% - 20px);  }
     .slide_list > li img {  width: 100%; height: auto;  }
@@ -868,10 +871,11 @@ main { margin:0 ; padding:0 ; }
     }
 
     .poleillust03 {
-        width: 100%; height: 300px;
+        width: 100%; height: 900px; padding-bottom: 300px;
         margin-top:0; margin-left:0; margin-bottom: 0;
-        background-repeat: no-repeat; background-size: auto 300px ; background-position: center center;
+        background-repeat: no-repeat; background-size: auto 300px ; background-position: center bottom;
     }
+    .poleillust03 p{ margin-left: 0!important;  }
 
     .judoillust01 { padding-top: 300px;  height: 440px;
         background-size: auto 300px ;background-position: center top !important;
