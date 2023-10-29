@@ -65,7 +65,7 @@ header.futsal ul  { background-color: #4790F8 !important;}
     header.yoga .headerNav ul li.yoga { display:none; }
     header.yoga .headerNav ul li.pole { margin-left: calc(97% - 550px); width: 160px; }
 
-    header.judo h1 {  background-image: url("../image/comm/nav_yoga_on.png"); }
+    header.judo h1 {  background-image: url("../image/comm/nav_judo_on.png"); }
     header.judo .headerNav ul li.judo { display:none; }
     header.judo .headerNav ul li.pole { width: 160px; }
     header.judo .headerNav ul li.yoga { margin-left: calc(97% - 550px);  }
@@ -116,7 +116,7 @@ header.futsal ul  { background-color: #4790F8 !important;}
     }
     header.pole h1 {  background-image: url("../image/comm/nav_pole_on.png"); background-size: auto 26px; }
     header.yoga h1 {  background-image: url("../image/comm/nav_yoga_on.png"); background-size: auto 26px; }
-    header.judo h1 {  background-image: url("../image/comm/nav_yoga_on.png"); background-size: auto 26px; }
+    header.judo h1 {  background-image: url("../image/comm/nav_judo_on.png"); background-size: auto 26px; }
     header.futsal h1 {  background-image: url("../image/comm/nav_futsal_on.png");  background-size: auto 26px; }
 
     header .btn_cate { position: absolute; top:0;
@@ -379,7 +379,7 @@ main { margin:0 ; padding:0 ; }
 .interviewContents > article > .interviewCont p .green { background-image: url("../image/comm/highlight_green.png"); }
 .interviewContents > article > .interviewCont p .blue { background-image: url("../image/comm/highlight_blue.png"); }
 .interviewContents > article > .interviewCont p.txtindent2 { padding-left:60px; position: relative }
-.interviewContents > article > .interviewCont p.txtindent2 .name { position: absolute; top: 4px; left:15px;
+.interviewContents > article > .interviewCont p.txtindent2 .name { position: absolute; top: 7px; left:15px;
     color: #000;   display: inline-block; height:50px; width: 30px; font-weight: 600;}
 .interviewContents > article > .interviewCont > div.illust { float: left; clear:both; display: inline-block; margin:0 auto;
    }
@@ -439,15 +439,16 @@ main { margin:0 ; padding:0 ; }
 }
 
 .futsalillust01 {
-    width: 100%; padding-top: 180px; display: inline-block; height: 340px;
-    background-repeat: no-repeat; background-size: auto 330px ; background-position: right  bottom ;
+    width: 100%; padding-top: 180px; display: inline-block;
+    background-repeat: no-repeat; background-size: auto 450px ; background-position: right -23px top ;
     background-image: url("../image/comm/cont_futsal_illust_01.png");
 }
+
 
 .futsalillust02 {
     width: 100%;   margin-left:-50px; padding-top: 80px; display: inline-block;
     padding-left:260px;
-    background-repeat: no-repeat; background-size: auto 350px ; background-position: left top;
+    background-repeat: no-repeat; background-size: auto 400px ; background-position: left top;
     background-image: url("../image/comm/cont_futsal_illust_02.png");
 }
 
@@ -461,6 +462,7 @@ main { margin:0 ; padding:0 ; }
 .neg_mt50{ margin-top: -50px}
 .neg_mt60{ margin-top: -60px}
 .neg_mt80{ margin-top: -80px}
+.neg_mt150{ margin-top: -150px}
 .interviewContents > article > div > p.txtright { padding-left: 300px; max-width: 950px;}
 
 /* 슬라이드 */
@@ -505,8 +507,8 @@ main { margin:0 ; padding:0 ; }
     .yogaillust01 { padding-right:0; padding-bottom: 0 !important;  padding-top:300px; margin-top:0px;
                 background-size: auto 320px; background-position: top center  !important; }
 
-    .judoillust01 { padding-top: 180px;  height: 300px;
-        background-size: auto 250px ; background-position: right bottom ;
+    .judoillust01 { padding-top: 140px;  height: 245px;
+        background-size: auto 250px ; background-position: right -23px bottom ;
     }
 
     .slide_list > li {  height: 400px;  width: calc(75% - 20px); }
@@ -550,7 +552,8 @@ main { margin:0 ; padding:0 ; }
     .letsmove article p.eng { font-size: 1em }
 
     /*.interviewContents > article  p.txtindent{ margin-left:0 !important; }*/
-
+    .interviewContents > article > .interviewCont {max-width: 800px; }
+    .interviewContents article { padding:30px 30px 50px 50px ; }
     .interviewContents > article > .interviewCont p.tit { font-weight: 600 !important;  color:#000; /*font-size: 1.05em */ }
     .interviewContents > article > div p { float: left;
         clear:both; margin-bottom: 20px; letter-spacing: -0.05em ; display: inline-block ; color:#333;}
@@ -574,7 +577,7 @@ main { margin:0 ; padding:0 ; }
     /*.staff article .supportSection > .thanksDiv { width: 250px;  clear: both; float: left;}*/
 
     .yogaillust01 { padding-top:200px !important; margin-top: -60px;
-        background-repeat: no-repeat; background-size: auto 220px ; background-position: right -35px top 0 !important;
+        background-repeat: no-repeat; background-size: auto 220px ; background-position: right 0 top 0 !important;
     }
     .yogaillust02 {
         background-repeat: no-repeat; background-size: auto 250px  ; background-position: center bottom 20px;
@@ -604,6 +607,24 @@ main { margin:0 ; padding:0 ; }
         background-image: none;
     }
 
+
+    .futsalillust02 {
+        width: 100%;   margin-left:-50px !important; padding-top: 80px; display: inline-block;
+        padding-left:250px;
+        background-repeat: no-repeat; background-size: auto 400px ; background-position: left top;
+        background-image: url("../image/comm/cont_futsal_illust_02.png");
+    }
+
+
+
+   .futsalillust03 {
+        width: calc(100% + 30px);  padding-top: 50px; display: inline-block;
+        padding-right:170px;
+        background-repeat: no-repeat; background-size: auto 330px ; background-position: right -50px top;
+        background-image: url("../image/comm/cont_futsal_illust_03.png");
+    }
+    .futsalillust03 p:nth-child(2) { padding-right:60px;}
+
     .interviewContents > article > div > p.txtright { padding-left: 200px; max-width: 950px;}
 
 
@@ -612,6 +633,29 @@ main { margin:0 ; padding:0 ; }
 
 }
 
+
+@media (max-width:862px) and (min-width:415px)  {
+
+    .futsalillust02 {
+        width: 100%;  display: inline-block; height: auto; margin-left:-30px ;
+        padding-left:0; padding-top: 20px;
+        background-repeat: no-repeat; background-size: auto 310px ;background-position: top left ;
+        background-image: url("../image/comm/cont_futsal_illust_02.png");
+    }
+    .futsalillust02 p:first-child {margin-left: 250px;}
+    .futsalillust02 p:nth-child(2) {margin-left: 230px;}
+    .futsalillust02 p:nth-child(3) {margin-left: 30px;}
+    .futsalillust02 p:nth-child(4) {margin-left: 50px;}
+
+
+    .futsalillust01 {
+        width: 100%;   display: inline-block; background-size: auto 330px ;
+    }
+    .neg_mt150{ margin-top: -150px !important; ;}
+
+    .futsalillust01 p:nth-child(2) {margin-right: 80px;}
+
+}
 
 @media (max-width: 1300px) {
 
@@ -821,10 +865,12 @@ main { margin:0 ; padding:0 ; }
         background-image: url("../image/comm/cont_futsal_illust_01.png");
     }
 
+    .neg_mt150{ margin-top: -0px}
+
     .futsalillust02 {
-        width: 100%; padding-top: 340px; display: inline-block; height: auto; margin-left:0;
+        width: 100%; padding-top: 340px; display: inline-block; height: auto; margin-left:0 !important;
         padding-left:0;
-        background-repeat: no-repeat; background-size: auto 350px ;background-position: top center ;
+        background-repeat: no-repeat; background-size: auto 330px ;background-position: top center ;
         background-image: url("../image/comm/cont_futsal_illust_02.png");
     }
 
@@ -834,6 +880,8 @@ main { margin:0 ; padding:0 ; }
         background-repeat: no-repeat; background-size: auto 330px ; background-position: top center ;
         background-image: url("../image/comm/cont_futsal_illust_03.png");
     }
+
+    .futsalillust03 p:nth-child(2) { padding-right:0px;}
 
     .interviewContents > article > div p { float: left;
         clear:both; margin-bottom: 20px; letter-spacing: -0.05em ; display: inline-block ; color:#333;}
