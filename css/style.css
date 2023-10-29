@@ -243,7 +243,7 @@ main { margin:0 ; padding:0 ; }
 
 /*움직여 상세 페이지*/
 .letsmove { text-align: center;  }
-.letsmove article { display: inline-block; padding:100px 30px 100px 30px; max-width: 1240px;  }
+.letsmove article { display: inline-block; padding:100px 30px 100px 30px; max-width: 1310px;  }
 .letsmove ul { margin-top:30px; font-size: 1em;  }
 .letsmove ul li { margin-bottom:10px; padding-left:15px;
     background-image: url("../image/comm/bull_dot.png" ) ;
@@ -268,10 +268,10 @@ main { margin:0 ; padding:0 ; }
 .letsmove article p.kor { line-height: 1.6em; font-size: 1.2em; margin-bottom: 20px; letter-spacing: -0.05em ;  }
 .letsmove article p.eng { line-height: 1.6em; font-size: 1.1em; letter-spacing: 0 ;  }
 
-.purpose article {padding:50px 200px}
+.purpose article {padding:50px 30px;  max-width: 1310px; }
 .purpose article h5 { font-weight: 500; font-size: 1.7em; line-height: 1.8em; margin-bottom: 10px;}
 .purpose article h5 strong { font-weight:700; color:#FF593C;  letter-spacing: -0.05em; margin-right:5px}
-.purpose article p { font-size:1.3em; line-height: 1.8em; margin-bottom: 20px; letter-spacing: -0.05em }
+.purpose article p { font-size:1.0em; line-height: 1.8em; margin-bottom: 20px; letter-spacing: -0.05em }
 
 .purpose article p .italic { font-style: italic}
 .purpose article p a { color:#000;  }
@@ -285,10 +285,10 @@ main { margin:0 ; padding:0 ; }
     background-image: url("../image/comm/bull_punch.png");
 }
 
-.staff article { margin:0 auto; height:100%; justify-content:center; display:flex; flex-flow:row wrap; }
-.staff article h6 { float: left;clear: none; display: inline-block;   width:120px; line-height: 18px;  }
-.staff article h6 strong { clear: both; width:100%; display:inline-block; font-size: 1.1em ; color: #000000; font-weight:700; }
-.staff article h6 span { clear: both; width:100%; display:inline-block; font-size: 0.9em ; color: #7e7e7e;  font-weight:500; }
+.staff article { margin:0 auto; height:100%; justify-content:center; display:flex; flex-flow:row wrap;  font-size: 1.0em ;}
+.staff article h6 { float: left;clear: none; display: inline-block;   width:120px; line-height: 18px;    }
+.staff article h6 strong { clear: both; width:100%; display:inline-block; font-size: 0.9em ; line-height: 25px;  color: #000000; font-weight:700; }
+.staff article h6 span { clear: both; width:100%; display:inline-block;  font-size: 0.8em ;  line-height: 25px;  color: #7e7e7e;  font-weight:500; }
 
 .staff article .supportSection  {  justify-content:center;  display: inline-block ;  }
 /*.staff article .supportSection > div { float: left; display: inline-block }*/
@@ -299,28 +299,28 @@ main { margin:0 ; padding:0 ; }
 .staff article .supportSection > .thanksDiv h6 { width: 140px}
 .staff article .supportSection > .thanksDiv > ul { width:300px;float: left ;  }
 
-.staff article ul.stafflist li { position:relative; height:80px; line-height: 18px;}
+.staff article ul.stafflist li { position:relative; height:80px; line-height: 18px; font-size: 1.0em }
 
 .staff article ul.stafflist li p.role span {clear: both ; display: inline-block; width: 100%;  }
-.staff article ul.stafflist li p.role span:nth-child(1) { font-size: 1.1em ; color: #000000; font-weight:700; line-height: 25px; }
-.staff article ul.stafflist li p.role span:nth-child(2) { font-size: 1em ; color: #7e7e7e; line-height: 25px; }
+.staff article ul.stafflist li p.role span:nth-child(1) { font-size: 0.9em ; color: #000000; font-weight:700; line-height: 25px; }
+.staff article ul.stafflist li p.role span:nth-child(2) {   font-size: 0.8em  ; color: #7e7e7e; line-height: 25px;  }
 .staff article ul.stafflist li p.role { float: left; width: 180px; }
 
 .staff article ul.stafflist li p.nm { position: relative; float: left; width: 300px;  }
 .staff article ul.stafflist li p.nm span {clear: both ; display: inline-block; width: 100%;  vertical-align: top;  }
-.staff article ul.stafflist li p.nm span:nth-child(1) { font-size: 1.1em ; color: #000000;  font-weight:600; line-height: 25px; }
-.staff article ul.stafflist li p.nm span:nth-child(2) { font-size: 1em ;  color: #7e7e7e; line-height: 25px;}
+.staff article ul.stafflist li p.nm span:nth-child(1) { font-size: 0.9em ; color: #000000;  font-weight:600; line-height: 25px; }
+.staff article ul.stafflist li p.nm span:nth-child(2) { font-size: 0.8em  ; color: #7e7e7e; line-height: 25px; }
 
 
 .staff article ul.supportlist {float: left; clear: none;  }
 .staff article ul.supportlist li {  position:relative; height: 80px }
-.staff article ul.supportlist li p {font-size: 1em; line-height: 1em }
+.staff article ul.supportlist li p {  line-height: 1em }
 
 .staff article ul.supportlist li p.nm { float: left;  width: 100%;  }
 
 .staff article ul.supportlist li p.nm span {clear: both ; display: inline-block; width: 100%;line-height: 18px;   }
-.staff article ul.supportlist li p.nm span:nth-child(1) { font-size: 1.1em;  color: #000000;  font-weight:600 }
-.staff article ul.supportlist li p.nm span:nth-child(2) { font-size: 1.0em ;  color: #7e7e7e}
+.staff article ul.supportlist li p.nm span:nth-child(1) { font-size: 0.9em;  color: #000000;  font-weight:600 }
+.staff article ul.supportlist li p.nm span:nth-child(2) {  font-size: 0.8em  ;color: #7e7e7e ; }
 
 
 
@@ -329,8 +329,8 @@ main { margin:0 ; padding:0 ; }
 
 .govSupport { margin: 0; padding:20px; width: 100%; text-align: center;   display: inline-block;  }
 .govList { margin: 0 auto; padding:0; height:180px; text-align: center; }
-.govList .govLogo { clear: both; /*margin-left:calc(50% - 225px);*/text-align: center; margin: 0 auto; }
-.govList .txt {  margin: 30px 0 0 0 ; padding:0 50px; height:50px; width: 100%; clear: both; display: inline-block; text-align: center; line-height: 1.3em }
+.govList .govLogo { clear: both;  text-align: center; margin: 0 auto; }
+.govList .txt {  margin: 30px 0 0 0 ;  height:50px; width: 100%; max-width: 1200px; clear: both; display: inline-block; text-align: center; line-height: 1.0em }
 .govList ul { width:auto; margin: 0 auto; padding:0; display: inline-block; }
 .govList li { float: left; width:150px;  height: 80px; display: block;
     background-position: center; background-repeat: no-repeat; background-size: 80px auto;  }
@@ -427,8 +427,8 @@ main { margin:0 ; padding:0 ; }
 
 
 .judoillust01 {
-    width: 100%; padding-top: 230px; display: inline-block; height: 320px;
-    background-repeat: no-repeat; background-size: auto 320px ; background-position: 450px bottom  ;
+    width: 100%; padding-top: 230px; display: inline-block; height: 350px;
+    background-repeat: no-repeat; background-size: auto 320px ; background-position: 570px bottom  ;
     background-image: url("../image/comm/cont_judo_illust_01.png");
 }
 
@@ -505,32 +505,13 @@ main { margin:0 ; padding:0 ; }
     .yogaillust01 { padding-right:0; padding-bottom: 0 !important;  padding-top:300px; margin-top:0px;
                 background-size: auto 320px; background-position: top center  !important; }
 
-    .judoillust01 { padding-top: 180px;  height: 260px;
+    .judoillust01 { padding-top: 180px;  height: 300px;
         background-size: auto 250px ; background-position: right bottom ;
     }
 
     .slide_list > li {  height: 400px;  width: calc(75% - 20px); }
     .slide_list > li img {  width:auto; height: 100%; }
 
-    .staff h5 { margin-left:20px; }
-    .staff h6 { width:160px !important;}
-
-
-    .staff article {padding: 0 20px}
-    .staff article ul.stafflist { }
-    .staff article ul.stafflist { justify-content:center; }
-    .staff article ul.stafflist li { position:relative; height:80px; line-height: 18px;}
-    .staff article ul.stafflist li span { }
-    .staff article ul.stafflist li p.role { float: left; width: 180px; }
-    .staff article ul.stafflist li p.nm { position: relative; float: left; width: 300px;  }
-
-    .staff article .supportSection { width: 50% }
-    .staff article .supportSection > .interviewDiv { width: 100%;  }
-    .staff article .supportSection > .thanksDiv { float: left ; width: 100%  }
-
-    .staff article .supportSection > .thanksDiv h6 { width: 140px }
-    .staff article .supportSection > .thanksDiv > ul { width: calc(100% - 160px); }
-    .staff article .supportSection > .interviewDiv > ul { width: calc(100% - 160px); }
 
 }
 
@@ -562,14 +543,17 @@ main { margin:0 ; padding:0 ; }
     .letsmove  { margin-top:60px; }
     .letsmove article { padding:0px 40px 60px 40px;}
 
+    /*.letsmove article p.kor { font-size: 1.1em }*/
+    /*.letsmove article p.eng { font-size: 0.95em }*/
+
     .letsmove article p.kor { font-size: 1.1em }
-    .letsmove article p.eng { font-size: 0.95em }
+    .letsmove article p.eng { font-size: 1em }
 
     /*.interviewContents > article  p.txtindent{ margin-left:0 !important; }*/
 
     .interviewContents > article > .interviewCont p.tit { font-weight: 600 !important;  color:#000; /*font-size: 1.05em */ }
     .interviewContents > article > div p { float: left;
-        clear:both; /*line-height: 1.6em; font-size: 1em;*/ margin-bottom: 20px; letter-spacing: -0.05em ; display: inline-block ; color:#333;}
+        clear:both; margin-bottom: 20px; letter-spacing: -0.05em ; display: inline-block ; color:#333;}
 
     .introduce article { padding:30px 40px 50px 40px !important;   }
     .introduce nav.gall { padding: 10px 35px;  text-align: center; }
@@ -615,25 +599,51 @@ main { margin:0 ; padding:0 ; }
     }
 
     .judoillust02 { width: 100%; padding-top: 0; display: inline-block;
-        padding-left:200px;
+        padding-left:0px;
         background-repeat: no-repeat; background-size: auto 400px ; background-position: left bottom;
-        background-image: url("../image/comm/cont_judo_illust_02.png");
+        background-image: none;
     }
 
     .interviewContents > article > div > p.txtright { padding-left: 200px; max-width: 950px;}
 
 
-    .govList .txt { font-size: 0.9em; line-height: 1.3em }
+    .govList .txt { font-size: 0.9em; line-height: 1.5em }
     .govList li {  width:90px; height: 50px; background-size: 50px auto;  }
 
 }
 
 
+@media (max-width: 1300px) {
+
+    .staff h5 { margin-left:40px; }
+
+    .staff article {padding: 0 40px; }
+    .staff article ul.stafflist {width: 500px }
+    .staff article ul.stafflist { justify-content:center; }
+    .staff article ul.stafflist li { position:relative; height:80px; line-height: 18px;}
+    .staff article ul.stafflist li span { }
+    .staff article ul.stafflist li p.role { float: left; width: 180px; }
+    .staff article ul.stafflist li p.nm { position: relative; float: left; width: 300px;  }
+
+    .staff article .supportSection { width: calc(100% - 500px); }
+    .staff article .supportSection > .interviewDiv { width: 100%;  }
+    .staff article .supportSection > .thanksDiv { float: left ; width: 100%  }
+
+    .staff article .supportSection > .interviewDiv h6 ,
+    .staff article .supportSection > .thanksDiv h6 { width: 160px }
+    .staff article .supportSection > .thanksDiv > ul { width: calc(100% - 160px); }
+    .staff article .supportSection > .interviewDiv > ul { width: calc(100% - 160px); }
+
+}
+
 @media (max-width: 1024px) {
+    .staff h5 { margin-left:50px; }
+
     .staff {margin-top: 10px; padding: 0 0px}
-    .staff article { padding: 0 0  0 30px; width:100%;  justify-content:left; display:flex; flex-flow:row wrap;}
-    .staff article .stafflist { width: calc(100% - 500px);  }
-    .staff article .supportSection {  float: left; clear: both; width:  500px; }
+    .staff article { padding: 0 0  0 50px; width:100%;  justify-content:left; display:flex; flex-flow:row wrap;}
+    .staff article .stafflist {  float: left; width: 480px!important;   }
+    .staff article .supportSection {  float: left; clear: none;  width: calc(100% - 480px);  }
+    .staff article ul.stafflist li { position:relative; height:60px !important; line-height: 18px;}
 
     .staff article h6 { width: 150px !important;    height: 50px; display: inline-block;   float: left !important;  clear: none !important; margin-bottom: 30px;  }
     .staff article .supportSection > .thanksDiv,
@@ -644,15 +654,12 @@ main { margin:0 ; padding:0 ; }
     .staff article ul.supportlist { width: 100%; float: left ; margin-right:0px !important; ;  }
     .staff article ul li p.sns { position: absolute; right:0; width: 75px; }
     .staff article .supportSection { float: left; margin-left:0 !important;   }
-
-
-
 }
 
 
 @media (max-width:862px) and (min-width:415px)  {
     .staff {margin-top: 10px; padding: 0 20px}
-    .staff h5 { margin-left: 30px; }
+    .staff h5 { margin-left: 40px; }
     .staff article { justify-content: left; }
     .staff article ul.stafflist { width: 100% ; }
     .staff article ul.stafflist li { height: 100px ; min-height:80px; }
@@ -669,12 +676,11 @@ main { margin:0 ; padding:0 ; }
 
 @media (max-width:414px) {
 
-    .staff article { padding: 0 0px  20px  20px;  justify-content:left !important; display:flex; flex-flow:row wrap;}
-    .staff {margin-top: 20px; padding: 0}
-    .staff article { padding:0 20px 20px 20px; font-size: 0.8em; line-height: 0.8em  }
-    .staff h5 { font-size: 1.1em ; margin-bottom: 30px; margin-top:0px }
-    .staff article h6 { font-size: 0.8em; margin-left:0 !important; clear:none !important;}
+    .staff article { padding: 0 0px  20px  20px;  justify-content:left !important; display:flex; flex-flow:row wrap; font-size: 0.9em }
 
+    .staff h5 {   margin-left: 20px; margin-bottom: 30px; margin-top:0px }
+    .staff article h6 {  margin-left:0 !important; clear:none !important; width: 100px;}
+    .staff article .supportSection h6 { float: left; clear:none !important; width: 130px !important;  }
 
     .staff article ul.stafflist { width: 100%; margin-top:0; margin-right: 0 !important; }
     .staff article ul.stafflist li { width: 100%; height:60px !important; overflow: hidden  }
@@ -687,13 +693,12 @@ main { margin:0 ; padding:0 ; }
     .staff article ul.stafflist li.li_sns p.nm .sns a { margin-left: 0; margin-right: 3px; }
 
 
-    .staff article ul.stafflist li p.role span:nth-child(1) { font-size: 1.0em ; color: #000000; font-weight:700; line-height:20px }
-    .staff article ul.stafflist li p.role span:nth-child(2) { font-size: 0.9em ; color: #7e7e7e; line-height:18px ; }
-    .staff article ul.stafflist li p.nm span:nth-child(1) { font-size: 1.0em ; color: #000000;  font-weight:600; line-height:20px  }
-    .staff article ul.stafflist li p.nm span:nth-child(2) { font-size: 0.9em ;  color: #7e7e7e; line-height: 18px }
+    .staff article ul.stafflist li p.role span:nth-child(1) { color: #000000; font-weight:700; line-height:20px }
+    .staff article ul.stafflist li p.role span:nth-child(2) {  color: #7e7e7e; line-height:18px ; }
+    .staff article ul.stafflist li p.nm span:nth-child(1) { olor: #000000;  font-weight:600; line-height:20px  }
+    .staff article ul.stafflist li p.nm span:nth-child(2) {   color: #7e7e7e; line-height: 18px }
 
     .staff article .supportSection { float: left;  width: 100%; }
-    .staff article .supportSection h6 { float: left; clear:none !important; width: 130px;  }
     .staff article .supportSection > div { float: left; margin-top:30px;  }
     .staff article .supportSection > .interviewDiv { clear:none !important;  width: 100% !important;   }
     .staff article .supportSection > .thanksDiv { clear:none !important;   width: 100% !important;   }
@@ -701,13 +706,13 @@ main { margin:0 ; padding:0 ; }
     .staff article ul.supportlist li { height:100%; margin-bottom: 5px; display: inline-block; width: 100%; }
 
 
+
     .staff article .supportSection .interviewDiv,
     .staff article .supportSection .thanksDiv { width: 100%; display: inline-block }
-    .staff article .supportSection h6 { font-size: 0.95em;width:130px !important; }
     .staff article .supportSection .interviewDiv ul,
     .staff article .supportSection .thanksDiv ul { float: left!important;   width: calc(100% - 130px) ;  clear: none !important ;}
-    .staff article ul.supportlist li p.nm span:nth-child(1) { font-size: 1.0em;  color: #000000;  font-weight:600 }
-    .staff article ul.supportlist li p.nm span:nth-child(2) { font-size: 0.9em ;  color: #7e7e7e}
+    .staff article ul.supportlist li p.nm span:nth-child(1) { color: #000000;  font-weight:600 }
+    .staff article ul.supportlist li p.nm span:nth-child(2) {    color: #7e7e7e}
 
 }
 
@@ -728,7 +733,7 @@ main { margin:0 ; padding:0 ; }
 
     .slider { margin: 10px auto 0;  }
 
-    .introduce article { padding:10px 10px 10px 25px; }
+    .introduce article { padding:10px 10px 10px 25px;  }
     .introduce nav.gall { padding: 0 50px 0 50px;  text-align: center;}
 
     .introduce nav.gall ul li {
@@ -800,11 +805,13 @@ main { margin:0 ; padding:0 ; }
         background-repeat: no-repeat; background-size: auto 300px ; background-position: center center;
     }
 
-    .judoillust01 { padding-top: 300px;  height: 400px;
+    .judoillust01 { padding-top: 300px;  height: 440px;
         background-size: auto 300px ;background-position: center top !important;
     }
+
     .judoillust02 { padding-top: 385px; padding-left: 0;
-        background-size: auto 370px;background-position: center top !important;
+        background-size: auto 370px; background-position: center top !important;
+        background-image: url("../image/comm/cont_judo_illust_02.png");
     }
 
 

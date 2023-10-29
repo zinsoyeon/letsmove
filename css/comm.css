@@ -82,9 +82,7 @@ footer p.logo{
 @media (max-width: 820px) {
     footer { font-size: 1em; padding:40px 0 40px 0; }
     footer p {  line-height: 16px; height: 16px;}
-
     .sns a { width: 16px !important;  height: 16px !important; background-size: 16px auto;  }
-
     .line2 { margin-bottom:25px; margin-top: 25px;}
 
 }
