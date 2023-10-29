@@ -113,6 +113,10 @@ header.futsal ul  { background-color: #4790F8 !important;}
         width: 100px;
         left: calc(50% - 50px);
     }
+    header.pole h1 {  background-image: url("../image/comm/nav_pole_on.png"); background-size: auto 26px; }
+    header.yoga h1 {  background-image: url("../image/comm/nav_yoga_on.png"); background-size: auto 26px; }
+    header.judo h1 {  background-image: url("../image/comm/nav_yoga_on.png"); background-size: auto 26px; }
+    header.futsal h1 {  background-image: url("../image/comm/nav_futsal_on.png");  background-size: auto 26px; }
 
     header .btn_cate { position: absolute; top:0;
         left: 10px; width: 50px; height: 50px;
@@ -146,12 +150,13 @@ header.futsal ul  { background-color: #4790F8 !important;}
         background: none ; color: #000 ; text-decoration: none; text-align: center ; }
 
 
-    .staff article { padding: 60px 0 60px 0; font-size: 0.9em; }
+    .staff article { padding: 0; font-size: 0.9em; justify-content: center; }
     .staff article h6 { float: left ; width: 110px;  height: 50px; display: inline-block;   }
-    .staff article ul.stafflist {  float: left;   margin-right:30px;  }
+    /*.staff article ul.stafflist {  float: left;   margin-right:30px;  }*/
     .staff article ul.supportlist { width: 100%; float: left ;   }
     .staff article ul li p.sns { position: absolute; right:0; width: 75px; }
 
+    .staff article ul.stafflist {  justify-content:center;   margin-right:30px;  }
     .staff article .supportSection { float: left; margin-left:0 !important;   }
     .staff article .supportSection > .interviewDiv {  width: 130px; }
     .staff article .supportSection > .thanksDiv { width: 250px; }
@@ -199,11 +204,11 @@ header.futsal ul  { background-color: #4790F8 !important;}
     .staff article ul.supportlist li { height:45px !important;}
 
     .staff article ul.stafflist { width: 100%; font-size: 0.8em; margin-top:0px; margin-right: 0 !important; }
-    .staff article ul.stafflist li {  height:45px !important;}
+    .staff article ul.stafflist li {  height:45px !important;  }
     .staff article ul.stafflist li .role {  width: 130px !important; }
     .staff article ul.stafflist li .nm { width: 160px !important; }
 
-    .staff article ul.stafflist li.li_sns {  height:65px ;}
+    .staff article ul.stafflist li.li_sns {  height:65px !important; }
     .staff article ul.stafflist li.li_sns p.nm {  height:65px ;position: relative;   }
     .staff article ul.stafflist li.li_sns p.nm .sns { margin-left: 0; position: absolute; bottom: 15px; left: 0; }
     .staff article ul.stafflist li.li_sns p.nm .sns a { margin-left: 0; margin-right: 3px; ; }
@@ -242,8 +247,8 @@ nav.gall ul li.futsal  a:hover { background-image: url("../image/comm/gall_txt_f
 
 main { margin:0 ; padding:0 ; }
 .main { margin-top: 60px;}
-.vimeoTrailer { position:relative; height:100%; margin:0 ; padding:0 ; display:inline-block; width: 100%; }
-.vimeoTrailer iframe {margin:0}
+.vimeoTrailer { position:relative; height:100%;  padding:0 ; display:inline-block; width: 100%; }
+.vimeoTrailer iframe {margin:0 ; }
 
 .trailer .yogatext {display: none;
     position: absolute; bottom:10%; left: 5%; height: 200px; width: 200px;
@@ -268,8 +273,8 @@ main { margin:0 ; padding:0 ; }
 
 
 /*움직여 상세 페이지*/
-.letsmove { text-align: center; }
-.letsmove article { display: inline-block; padding: 160px 100px 20px 200px; }
+.letsmove { text-align: center; margin-top: 100px; }
+.letsmove article { display: inline-block;   }
 .letsmove article div { display: inline-block;  }
 .letsmove ul { margin-top:30px;  }
 .letsmove ul li { margin-bottom:10px; padding-left:15px;
@@ -321,14 +326,14 @@ article p.eng { font-size: 1.2em }
 .staff article h6 strong { clear: both; width:100%; display:inline-block; font-size: 1em ; color: #000000; font-weight:700; }
 .staff article h6 span { clear: both; width:100%; display:inline-block; font-size: 0.8em ; color: #7e7e7e;  font-weight:500; }
 
-.staff article ul.stafflist {float: left; clear: none;  }
-.staff article .supportSection  { float: left;clear: none;  }
+.staff article ul.stafflist {float: left; justify-content:center; clear: none;   }
+.staff article .supportSection  { float: left; justify-content:center;clear: none;  }
 .staff article .supportSection > div { float: left; display: inline-block }
 .staff article .supportSection > .interviewDiv {  width: 270px;float: left ;  }
-.staff article .supportSection > .thanksDiv { width:450px; float: left ;  }
+.staff article .supportSection > .thanksDiv { width:360px; float: left ;  }
 
 .staff article .supportSection > .interviewDiv > ul { width:130px; float: left ;  }
-.staff article .supportSection > .thanksDiv > ul { width:320px; float: left ;  }
+.staff article .supportSection > .thanksDiv > ul { width:230px; float: left ;  }
 
 .staff article ul.stafflist li { position:relative; height:80px; line-height: 18px;}
 
@@ -368,10 +373,10 @@ article p.eng { font-size: 1.2em }
 .govList li.artson { background-image: url("../image/comm/logo_artson.png");  }
 .govList li a { display: inline-block; width: 100%; height: 100%; text-indent: -9999px; }
 
-.interviewContents { }
+.interviewContents {margin-top: 30px; }
 .interviewContents article {
     position: relative; text-align: center;
-    height:100%; width: 100%; display: inline-block; margin-bottom: 100px;
+    height:100%; width: 100%; display: inline-block; margin-bottom: 50px;
 }
 .interviewContents h6 { font-size: 1.6em ; font-weight:700; height:90px; width:300px; padding: 50px 0 0 0 ; margin-bottom: 10px;
     background-repeat: no-repeat; background-size: auto 30px ; background-position: left top;
@@ -393,9 +398,10 @@ article p.eng { font-size: 1.2em }
 
 
 .interviewContents > article > div p { float: left; max-width: 880px;
-  clear:both; line-height: 1.6em; font-size: 1.2em; margin-bottom: 20px; letter-spacing: -0.05em ; display: inline-block ; color:#333;}
+  clear:both; /*line-height: 1.6em; font-size: 1.2em; */ margin-bottom: 20px; letter-spacing: -0.05em ; display: inline-block ; color:#333;}
 
-.interviewContents > article > .interviewCont {  max-width:880px;  display: inline-block}
+.interviewContents > article > .interviewCont {  max-width:880px;  display: inline-block ; }
+.interviewContents > article > .interviewCont p {font-size: 1.1em; line-height: 1.8em;}
 .interviewContents > article > .interviewCont p.txtindent{ margin-left: 20px; }
 .interviewContents > article > .interviewCont p.tit { font-weight: 600 !important;  color:#000; font-size: 1.25em }
 
@@ -517,33 +523,7 @@ article p.eng { font-size: 1.2em }
 .slider .btn.btn_prev {left:0;   }
 .slider .btn.btn_next {right:0 ;  }
 
-
-@media (max-width: 1024px) {
-    .slide_list > li { width: calc(50% - 20px);}
-    .staff article ul li p.sns { top: -5px; right: 15px;  }
-
-    .slider .btn { display: none;}
-}
-
-
-
-@media (max-width: 1800px) {
-    article p.kor { font-size: 1.5em }
-    article p.eng { font-size: 1.2em }
-}
-
-@media (max-width: 1500px) {
-    article{ padding: 60px 50px 60px 50px; }
-    article p.kor { font-size: 1.3em }
-    article p.eng { font-size: 1.1em }
-}
-
 @media (max-width: 1300px) {
-
-    article{ padding: 100px 50px 60px 50px; }
-
-    .letsmove article { padding: 120px 100px 120px 100px;  }
-
 
     .introduce article { padding: 30px 80px 50px 100px !important;  text-align: center;   }
     .introduce nav.gall { padding: 0 80px;  text-align: center;}
@@ -562,29 +542,47 @@ article p.eng { font-size: 1.2em }
         background-size: auto 250px ; background-position: right bottom ;
     }
 
-    .interviewContents > article  p.txtindent{  }
-
     .slide_list > li {  height: 400px;  width: calc(75% - 20px); }
     .slide_list > li img {  width:auto; height: 100%; }
 
-    article p.kor { font-size: 1.1em }
-    article p.eng { font-size: 0.8em }
+}
+
+@media (max-width: 1120px) {
+
+    .letsmove  { margin-top:60px; }
+
+    .letsmove article h4 {
+        height:60px;  margin-bottom: 10px; background-size: auto 30px; }
+
+    .letsmove article { padding:0px 30px; }
+
+    .letsmove article p.kor { font-size: 1.2em }
+    .letsmove article p.eng { font-size: 0.9em }
 
 }
 
 @media (max-width: 1024px) {
 
+    .slide_list > li { width: calc(50% - 20px);}
+    .staff article ul li p.sns { top: -5px; right: 15px;  }
+
+    .slider .btn { display: none;}
+
     .main { margin-top: 50px !important; }
-    article{ padding: 100px 50px 60px 50px; }
-    .letsmove article { padding: 60px 40px 100px 40px;  }
+
+    .letsmove  { margin-top:60px; }
+    .letsmove article { padding:0px 30px; }
+
+    .letsmove article p.kor { font-size: 1.1em }
+    .letsmove article p.eng { font-size: 0.8em }
 
     /*.interviewContents > article  p.txtindent{ margin-left:0 !important; }*/
 
-    .interviewContents > article > .interviewCont p.tit { font-weight: 600 !important;  color:#000; font-size: 1.05em }
+    .interviewContents > article > .interviewCont p.tit { font-weight: 600 !important;  color:#000; /*font-size: 1.05em */ }
     .interviewContents > article > div p { float: left;
-        clear:both; line-height: 1.6em; font-size: 1em; margin-bottom: 20px; letter-spacing: -0.05em ; display: inline-block ; color:#333;}
+        clear:both; /*line-height: 1.6em; font-size: 1em;*/ margin-bottom: 20px; letter-spacing: -0.05em ; display: inline-block ; color:#333;}
 
-    .introduce article { padding:30px 40px 50px 40px !important; }
+    .introduce article { padding:30px 40px 50px 40px !important;   }
     .introduce nav.gall { padding: 10px 35px;  text-align: center; }
     .introduce article h4 {
         font-size: 1.5em !important; font-weight:700; height:80px; width:300px; padding: 50px 0 0 0 ; margin-bottom: 10px;
@@ -597,7 +595,7 @@ article p.eng { font-size: 1.2em }
     .introduce nav.gall { position: relative;  width: 100%; text-align: center; }
     .introduce nav.gall { width: 100%;  }
 
-    .purpose article { padding:50px 50px 150px 50px !important; }
+    .purpose article { padding:50px 50px 50px 50px !important;  }
 
     .staff article .supportSection > .interviewDiv {  width: 130px;  clear: both }
     .staff article .supportSection > .thanksDiv { width: 250px;  clear: both}
@@ -657,13 +655,14 @@ article p.eng { font-size: 1.2em }
 
 @media (max-width:414px) {
 
-    .letsmove article h4 {
+    .letsmove {margin-top:50px;}
+    .letsmove article { padding:0px 10px 10px 25px; }
+
+    .letsmove article h4 { font-size: 0.95em;
         height:50px; width:150px; margin-bottom: 15px;
         background-image: url("../image/comm/main_tit.png" ) ;
         background-size:  50% auto; background-position: left bottom;
     }
-
-    .letsmove article { padding:50px 20px 0 30px;}
 
     .letsmove article p.kor { line-height: 1.5em; margin-bottom: 10px; font-size: 0.9em; letter-spacing: -0.1em ;  }
     .letsmove article p.eng { line-height: 1.5em;letter-spacing: -0.05em ; font-size: 0.9em;  }
@@ -671,7 +670,7 @@ article p.eng { font-size: 1.2em }
 
     .slider { margin: 10px auto 0;  }
 
-    .introduce article { padding:30px; }
+    .introduce article { padding:10px 10px 10px 25px; }
     .introduce nav.gall { padding: 0 50px 0 50px;  text-align: center;}
 
     .introduce nav.gall ul li {
@@ -689,7 +688,9 @@ article p.eng { font-size: 1.2em }
     .yogaillust > span:first-child{ width:100% !important;   }
     .yogaillust > span:last-child{ width:100% !important;   }
 
-    .purpose article { padding:30px 30px 100px 30px !important; }
+    .interviewContents > article > .interviewCont p {font-size: 1.0em; line-height: 1.7em;}
+
+    .purpose article { padding:30px 30px 30px 30px !important; }
     .purpose article h5 {  font-size: 1.1em;}
     .purpose article p { font-size:0.9em; line-height: 1.6em; margin-bottom: 10px; letter-spacing: -0.05em }
 
@@ -716,7 +717,7 @@ article p.eng { font-size: 1.2em }
     .interviewContents .interviewContentsTitle h6 span { height:20px; line-height: 20px;   }
     .interviewContents .interviewContentsTitle h6 span:first-child { clear: both; font-size: 0.85em;  }
     .interviewContents .interviewContentsTitle h6 span:last-child { clear: both;font-size: 0.6em; padding-top: 5px; padding-left: 50px }
-    .interviewContents > article > .interviewCont > p.tit { font-size: 1.1em !important;  }
+    /*.interviewContents > article > .interviewCont > p.tit { font-size: 1.1em !important;  }*/
 
 
     .yogaillust01 { margin-top: -40px !important;
@@ -779,7 +780,7 @@ article p.eng { font-size: 1.2em }
     }
 
     .interviewContents > article > div p { float: left;
-        clear:both; line-height: 1.65em; font-size: 1em; margin-bottom: 20px; letter-spacing: -0.05em ; display: inline-block ; color:#333;}
+        clear:both; margin-bottom: 20px; letter-spacing: -0.05em ; display: inline-block ; color:#333;}
 
     .interviewContents > article > .interviewCont p.txtindent2 .name { top: 4px; left:0 ; }
     .interviewContents > article > .interviewCont p.txtindent2 { padding-left:45px !important; }

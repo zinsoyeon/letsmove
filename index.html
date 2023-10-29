@@ -55,15 +55,9 @@
 
         var $headerNavUl = $('header nav.headerNav ul');
 
-        if ( windowWidth > 1024 ){
-            $headerNavUl.css({"display": "block"})
-            $("#vimeoTrailer iframe").css('height', windowHeight-60);
-            $("#vimeoTrailer iframe").css('width', windowWidth);
-        } else {
-            $headerNavUl.css({"display": "none"})
-            $("#vimeoTrailer iframe").css('width', windowWidth);
-            $("#vimeoTrailer iframe").css('height', windowWidth/16*9);
-        }
+
+        $("#vimeoTrailer iframe").css('width', windowWidth);
+        $("#vimeoTrailer iframe").css('height', windowWidth/16*9);
 
         var $gallList = $('nav.gall ul li');
         var nw = $gallList.width();
@@ -108,10 +102,10 @@
         <article>
             <h4>움직여!</h4>
             <p class="kor">
-                뛰고, 차고, 오르고, 호흡하며 끊임없이 움직이는 여자들의 이야기<br>
+                <span class="highlightyellow">뛰고, 차고, 오르고, 호흡하며 끊임없이 움직이는 여자들의 이야기</span> <br>
                 보여지고 평가받는 대상으로서의 몸이 아닌 움직이고 기능하는 몸에 대한 이야기<br>
                 요가/폴스포츠/유도/풋살을 하는 여자들의 시작과 계기, 그리고 변화에 대한 이야기를<br>
-                임소연 과학기술학 박사&서민정 퍼스널 트레이너의 코멘터리와 함께 담아낸 웹 영상 시리즈입니다.
+                임소연 과학기술학 박사&서민정 퍼스널 트레이너의 코멘터리와 함께 담아낸  <span class="highlightyellow short">웹 영상 시리즈</span>입니다.
             </p>
             <p class="eng">
                 <strong>MOVE!(움직여!)</strong> is a web video series that tells the stories of women in constant motion—running, driving, climbing, and breathing.<br>

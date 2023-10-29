@@ -71,9 +71,16 @@ footer p.logo{
     text-indent: -9999px;
 }
 
+.highlightyellow {
+    background-repeat: repeat-x; background-size: 100% 35% ; background-position: left bottom;
+    background-image: url("../image/comm/highlight_yellow.png"); }
+
+.highlightyellow.short{
+    background-repeat: repeat-x; background-size: 100% 35% ; background-position: left bottom -2px;
+    background-image: url("../image/comm/highlight_yellow.png"); }
 
 @media (max-width: 820px) {
-    footer { font-size: 1em; padding:40px 0 40px 0; margin-top: 60px; }
+    footer { font-size: 1em; padding:40px 0 40px 0; }
     footer p {  line-height: 16px; height: 16px;}
 
     .sns a { width: 16px !important;  height: 16px !important; background-size: 16px auto;  }
