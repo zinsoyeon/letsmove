@@ -405,9 +405,8 @@ main { margin:0 ; padding:0 ; }
 
 
 .poleillust01 {
-    width: 100%; height: 500px;
-    margin-top:-480px; margin-bottom: 0;
-    background-repeat: no-repeat; background-size: auto 350px ; background-position: right 50px bottom;
+    width: 100%;   margin-bottom: 0;   display: inline-block;
+    background-repeat: no-repeat; background-size: auto 450px ; background-position: right bottom 10px;
     background-image: url("../image/comm/cont_pole_illust_01.png");
 }
 
@@ -588,12 +587,11 @@ main { margin:0 ; padding:0 ; }
     }
 
 
-    .poleillust01 { height: 400px;
-        margin-top:-430px;
-        background-repeat: no-repeat; background-size: auto 280px; background-position: bottom right;
+    .poleillust01 {
+        background-repeat: no-repeat; background-size: auto 350px; background-position: bottom right;
     }
 
-    .poleillust02 { padding-right:200px; padding-bottom: 150px !important; height: auto !important;
+    .poleillust02 { padding-right:200px; padding-bottom: 50px !important; height: auto !important;
         background-repeat: no-repeat; background-size: auto 250px; background-position: top right;
     }
 
@@ -606,7 +604,7 @@ main { margin:0 ; padding:0 ; }
 
     .judoillust02 { width: 100%; padding-top: 0; display: inline-block;
         padding-left:0px;
-        background-repeat: no-repeat; background-size: auto 400px ; background-position: left top 50px;
+        background-repeat: no-repeat; background-size: auto 400px ; background-position: left top 0px;
         /*background-image: none;*/
     }
 
@@ -677,6 +675,8 @@ main { margin:0 ; padding:0 ; }
     .neg_mt150{ margin-top: -150px !important; ;}
 
     .futsalillust01 p:nth-child(2) {margin-right: 80px;}
+
+    .poleillust01 p:nth-child(3) { margin-right: 180px;  background-position: right bottom }
 
 }
 
@@ -850,8 +850,8 @@ main { margin:0 ; padding:0 ; }
         background-repeat: no-repeat; background-size: auto 190px  !important;
         background-position: center top 10px !important;
     }
-    .yogaillust02 { height: auto !important;
-        padding-right: 0 !important; padding-top: 200px !important;  margin-bottom: 20px;
+    .yogaillust02 {
+        height: auto !important; padding-right: 0 !important; padding-top: 200px !important;  margin-bottom: 20px;
         background-repeat: no-repeat; background-size: auto 180px  ; background-position: center top 30px;
     }
     .yogaillust03 {
@@ -861,9 +861,11 @@ main { margin:0 ; padding:0 ; }
 
 
     .poleillust01 {
-        height: 300px !important; margin-top:0px; margin-bottom: 0;
-        background-repeat: no-repeat; background-size: auto 300px; background-position: center;
+        margin-top:0; margin-bottom: 0; padding-bottom: 300px;
+        background-repeat: no-repeat; background-size: auto 300px; background-position: center bottom;
     }
+
+    .poleillust01 p { margin-right:0!important;}
 
     .poleillust02 {
         width: 100%; height: auto !important;  padding-right:0; padding-bottom: 250px !important;
@@ -871,13 +873,13 @@ main { margin:0 ; padding:0 ; }
     }
 
     .poleillust03 {
-        width: 100%; height: 900px; padding-bottom: 300px;
+        width: 100%; height: auto; padding-bottom: 300px;
         margin-top:0; margin-left:0; margin-bottom: 0;
         background-repeat: no-repeat; background-size: auto 300px ; background-position: center bottom;
     }
     .poleillust03 p{ margin-left: 0!important;  }
 
-    .judoillust01 { padding-top: 300px;  height: 440px;
+    .judoillust01 { padding-top: 300px;  height: 420px;
         background-size: auto 300px ;background-position: center top !important;
     }
 
@@ -885,6 +887,7 @@ main { margin:0 ; padding:0 ; }
         background-size: auto 370px; background-position: center top !important;
         background-image: url("../image/comm/cont_judo_illust_02.png");
     }
+    .judoillust02 p { padding-left:0!important; }
 
 
     .futsalillust01 {
