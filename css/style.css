@@ -432,7 +432,7 @@ main { margin:0 ; padding:0 ; }
     background-image: url("../image/comm/cont_judo_illust_01.png");
 }
 
-.judoillust02 { width: 100%; padding-top: 100px; display: inline-block;
+.judoillust02 { width: 100%; padding-top: 50px; display: inline-block;
     padding-left:250px;
     background-repeat: no-repeat; background-size: auto 500px ; background-position: left bottom 10px;
     background-image: url("../image/comm/cont_judo_illust_02.png");
@@ -604,8 +604,13 @@ main { margin:0 ; padding:0 ; }
     .judoillust02 { width: 100%; padding-top: 0; display: inline-block;
         padding-left:0px;
         background-repeat: no-repeat; background-size: auto 400px ; background-position: left bottom;
-        background-image: none;
+        /*background-image: none;*/
     }
+
+    .judoillust02 p:nth-child(1) { padding-left:200px;}
+    .judoillust02 p:nth-child(2) { padding-left:200px;}
+    .judoillust02 p:nth-child(3) { padding-left:200px;}
+    .judoillust02 p:nth-child(4) { padding-left:170px;}
 
 
     .futsalillust02 {
@@ -647,6 +652,22 @@ main { margin:0 ; padding:0 ; }
     .futsalillust02 p:nth-child(3) {margin-left: 30px;}
     .futsalillust02 p:nth-child(4) {margin-left: 50px;}
 
+    .judoillust02 { width: 100%; padding-top: 0; display: inline-block;
+        padding-left:0px;
+        background-repeat: no-repeat; background-size: auto 370px ; background-position: left top;
+        /*background-image: none;*/
+    }
+
+    .judoillust02 p:nth-child(1) { padding-left:180px;}
+    .judoillust02 p:nth-child(2) { padding-left:180px;}
+    .judoillust02 p:nth-child(3) {  padding-left:180px;}
+    .judoillust02 p:nth-child(4) { padding-left:0px;}
+
+
+    .judoillust01 { padding-top: 110px;  height: 245px;
+    }
+    .judoillust01 p:nth-child(1) { padding-right:250px;}
+    .judoillust01 p:nth-child(2) { padding-right:250px;}
 
     .futsalillust01 {
         width: 100%;   display: inline-block; background-size: auto 330px ;
