@@ -276,7 +276,7 @@ main { margin:0 ; padding:0 ; }
 .letsmove { text-align: center; margin-top: 100px; }
 .letsmove article { display: inline-block;   }
 .letsmove article div { display: inline-block;  }
-.letsmove ul { margin-top:30px;  }
+.letsmove ul { margin-top:30px; font-size: 1em;  }
 .letsmove ul li { margin-bottom:10px; padding-left:15px;
     background-image: url("../image/comm/bull_dot.png" ) ;
     background-repeat: no-repeat;
@@ -400,7 +400,8 @@ article p.eng { font-size: 1.2em }
 .interviewContents > article > div p { float: left; max-width: 880px;
   clear:both; /*line-height: 1.6em; font-size: 1.2em; */ margin-bottom: 20px; letter-spacing: -0.05em ; display: inline-block ; color:#333;}
 
-.interviewContents > article > .interviewCont {  max-width:880px;  display: inline-block ; }
+.interviewContents article { padding:50px; }
+.interviewContents > article > .interviewCont {   max-width:880px;  display: inline-block ; }
 .interviewContents > article > .interviewCont p {font-size: 1.1em; line-height: 1.8em;}
 .interviewContents > article > .interviewCont p.txtindent{ margin-left: 20px; }
 .interviewContents > article > .interviewCont p.tit { font-weight: 600 !important;  color:#000; font-size: 1.25em }
@@ -554,14 +555,15 @@ article p.eng { font-size: 1.2em }
     .letsmove article h4 {
         height:60px;  margin-bottom: 10px; background-size: auto 30px; }
 
-    .letsmove article { padding:0px 30px; }
-
     .letsmove article p.kor { font-size: 1.2em }
     .letsmove article p.eng { font-size: 0.9em }
 
 }
 
 @media (max-width: 1024px) {
+
+    .slide_list > li {  height: 200px; width: calc(75% - 20px);  }
+    .slide_list > li img {  width: 100%; height: auto;  }
 
     .slide_list > li { width: calc(50% - 20px);}
     .staff article ul li p.sns { top: -5px; right: 15px;  }
@@ -571,7 +573,7 @@ article p.eng { font-size: 1.2em }
     .main { margin-top: 50px !important; }
 
     .letsmove  { margin-top:60px; }
-    .letsmove article { padding:0px 30px; }
+    .letsmove article { padding:0px 30px 20px 30px; }
 
     .letsmove article p.kor { font-size: 1.1em }
     .letsmove article p.eng { font-size: 0.8em }
@@ -656,16 +658,16 @@ article p.eng { font-size: 1.2em }
 @media (max-width:414px) {
 
     .letsmove {margin-top:50px;}
-    .letsmove article { padding:0px 10px 10px 25px; }
+    .letsmove article { padding:0px 10px 30px 25px; }
 
-    .letsmove article h4 { font-size: 0.95em;
-        height:50px; width:150px; margin-bottom: 15px;
+    .letsmove article h4 {
+        height:50px; width:150px; margin-bottom: 25px;
         background-image: url("../image/comm/main_tit.png" ) ;
-        background-size:  50% auto; background-position: left bottom;
+        background-size: auto 30px; background-position: left bottom;
     }
 
-    .letsmove article p.kor { line-height: 1.5em; margin-bottom: 10px; font-size: 0.9em; letter-spacing: -0.1em ;  }
-    .letsmove article p.eng { line-height: 1.5em;letter-spacing: -0.05em ; font-size: 0.9em;  }
+    .letsmove article p.kor { margin-bottom: 10px; line-height: 1.7em;  font-size: 1.05em; letter-spacing: -0.05em ;  }
+    .letsmove article p.eng { line-height: 1.7em;  font-size: 1.0em; margin-top:25px  }
 
 
     .slider { margin: 10px auto 0;  }
@@ -683,16 +685,17 @@ article p.eng { font-size: 1.2em }
     /*.introduce nav.gall ul li a {  background-size:  auto 25%  ; }*/
 
     .interviewContents article { padding:0 20px 20px 30px; }
-    .interviewContents > article  p.txtindent{ margin-left:0 !important; }
+        .interviewContents > article  p.txtindent{ margin-left:0 !important; }
     .interviewContents > article  p.txtindent2 { margin-left:0 !important; }
+    .interviewContents > article > .interviewCont p.tit { font-weight: 600 !important;  color:#000; font-size: 1.1em }
     .yogaillust > span:first-child{ width:100% !important;   }
     .yogaillust > span:last-child{ width:100% !important;   }
 
     .interviewContents > article > .interviewCont p {font-size: 1.0em; line-height: 1.7em;}
 
     .purpose article { padding:30px 30px 30px 30px !important; }
-    .purpose article h5 {  font-size: 1.1em;}
-    .purpose article p { font-size:0.9em; line-height: 1.6em; margin-bottom: 10px; letter-spacing: -0.05em }
+    .purpose article h5 {  font-size: 1.2em;}
+    .purpose article p { line-height: 1.7em;  font-size: 1.05em; letter-spacing: -0.05em ;  margin-bottom: 10px;  }
 
     .slide_list > li {  height: 200px; width: calc(75% - 20px);  }
     .slide_list > li img {  width: 100%; height: auto;  }
