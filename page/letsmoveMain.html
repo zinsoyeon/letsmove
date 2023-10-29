@@ -53,9 +53,8 @@
         if ( windowWidth > 1024 ){
             $headerNavUl.css({"left": "0"});
             $("#vimeoTrailer iframe").css('height', windowHeight-60);
-            // $("#vimeoTrailer iframe").css('width', windowWidth);
-             $("#letsmoveMain").css('width', windowWidth);
-            // $("#letsmoveMain").css('height', windowHeight-60);
+            $("#letsmoveMain").css('width', windowWidth);
+            $(".staff h5").css('margin-left', posx);
         } else {
             $headerNavUl.css({"left": "-200%"});
              $("#letsmoveMain").css('width', windowWidth);
@@ -184,7 +183,7 @@
 
     </section>
 
-    <main >
+    <main>
         <section class="trailer">
             <div class="vimeoTrailer" id="vimeoTrailer">
                 <iframe src="https://player.vimeo.com/video/877848405?autoplay=true&loop=true&muted=true&controls=true"
@@ -247,8 +246,8 @@
 
     <section class="staff">
 
+        <h5>움직여! 프로젝트 제작진</h5>
         <article>
-            <h5>움직여! 프로젝트 제작진</h5>
             <ul class="stafflist">
                 <li class="li_sns">
                     <p class="role">
@@ -401,7 +400,6 @@
                 </li>
 
             </ul>
-
             <div class="supportSection">
 
                 <div class="interviewDiv">
