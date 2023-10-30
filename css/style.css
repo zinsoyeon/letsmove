@@ -336,12 +336,12 @@ main { margin:0 ; padding:0 ; }
 .govList li.artson { background-image: url("../image/comm/logo_artson.png");  }
 .govList li a { display: inline-block; width: 100%; height: 100%; text-indent: -9999px; }
 
-.interviewContents {margin-top: 30px; }
+.interviewContents {margin-top: 10px; }
 .interviewContents article {
     position: relative; text-align: center;
     height:100%; width: 100%; display: inline-block; margin-bottom: 50px;
 }
-.interviewContents h6 { font-size: 1.6em ; font-weight:700; height:90px; width:350px; padding: 50px 0 0 0 ; margin-bottom: 10px;
+.interviewContents h6 {  font-weight:700; height:90px; width:350px; padding: 50px 0 0 0 ; margin-bottom: 10px;
     background-repeat: no-repeat; background-size: auto 30px ; background-position: left top;
     background-image: url("../image/comm/bull_yoga.png"); vertical-align:bottom; line-height: 1em;  }
 
@@ -353,19 +353,19 @@ main { margin:0 ; padding:0 ; }
 .interviewContents .interviewContentsTitle{ position:relative; clear:both; float: left; width:100%; max-width:880px; display: inline-block ; }
 .interviewContents .interviewContentsTitle .author { position:absolute; top:50px; right: 0; display: inline-block ; }
 .interviewContents .interviewContentsTitle .author .sns {  float: left; display: inline-block; height:20px;   }
-.interviewContents .interviewContentsTitle .author .nm {  float: left;  font-size: 1em ; line-height:20px; height:20px;   }
+.interviewContents .interviewContentsTitle .author .nm {  float: left;  font-size: 17px; line-height:20px; height:20px;   }
 
 .interviewContents .interviewContentsTitle h6 span { float: left; height:22px; line-height: 22px;  vertical-align: text-bottom;    }
-.interviewContents .interviewContentsTitle h6 span:first-child {font-size: 1em; }
-.interviewContents .interviewContentsTitle h6 span:last-child { font-size: 0.7em; font-weight: 500; margin-left: 3px; }
+.interviewContents .interviewContentsTitle h6 span:first-child { font-size: 23px; }
+.interviewContents .interviewContentsTitle h6 span:last-child { font-size: 17px; font-weight: 500; margin-left: 3px; }
 
 
 .interviewContents > article > div p { float: left; max-width: 880px;
   clear:both; /*line-height: 1.6em; font-size: 1.2em; */ margin-bottom: 20px;  display: inline-block ; color:#333;}
 
-.interviewContents article { padding:50px; }
+.interviewContents article { padding: 0px 50px 50px 50px ; }
 .interviewContents > article > .interviewCont {   max-width:880px;  display: inline-block ; }
-.interviewContents > article > .interviewCont p {font-size: 1.1em; line-height: 1.8em; letter-spacing: -0.05em}
+.interviewContents > article > .interviewCont p {font-size: 19px; line-height: 180%; letter-spacing: -0.05em}
 .interviewContents > article > .interviewCont p.txtindent{ margin-left: 20px; }
 .interviewContents > article > .interviewCont p.tit { font-weight: 600 !important;  color:#000;  }
 
@@ -548,12 +548,14 @@ main { margin:0 ; padding:0 ; }
     .letsmove article p.kor { font-size: 1.1em }
     .letsmove article p.eng { font-size: 1em }
 
+    .interviewContents .interviewContentsTitle h6 span:first-child { font-size: 21px; }
+    .interviewContents .interviewContentsTitle h6 span:last-child { font-size: 17px; }
     /*.interviewContents > article  p.txtindent{ margin-left:0 !important; }*/
     .interviewContents > article { padding:30px 30px 50px 50px ;   }
     .interviewContents > article > .interviewCont {max-width: 800px; }
 
-    .interviewContents > article > .interviewCont p { font-size:18px; line-height: 180%;}
-    .interviewContents > article > .interviewCont p.tit { font-weight: 600 !important;  color:#000; /*font-size: 1.05em */ }
+    .interviewContents > article > .interviewCont p { font-size:18px; line-height: 170%;}
+    .interviewContents > article > .interviewCont p.tit { font-weight: 600 !important;  color:#000; font-size: 19px;  }
     .interviewContents > article > div p { float: left;
         clear:both; margin-bottom: 20px; display: inline-block ; color:#333;}
 
@@ -603,14 +605,14 @@ main { margin:0 ; padding:0 ; }
 
     .judoillust02 { width: 100%; padding-top: 0; display: inline-block;
         padding-left:0px;
-        background-repeat: no-repeat; background-size: auto 400px ; background-position: left top 0px;
+        background-repeat: no-repeat; background-size: auto 400px ; background-position: left top 50px;
         /*background-image: none;*/
     }
 
     .judoillust02 p:nth-child(1) { padding-left:200px;}
     .judoillust02 p:nth-child(2) { padding-left:200px;}
-    .judoillust02 p:nth-child(3) { padding-left:0!important; }
-    .judoillust02 p:nth-child(4) { padding-left:0!important; }
+    .judoillust02 p:nth-child(3) { padding-left:200px;!important; }
+    .judoillust02 p:nth-child(4) { padding-left:200px;!important; }
 
 
     .futsalillust02 {
@@ -649,7 +651,7 @@ main { margin:0 ; padding:0 ; }
     }
     .futsalillust02 p:first-child {margin-left: 250px;}
     .futsalillust02 p:nth-child(2) {margin-left: 230px;}
-    .futsalillust02 p:nth-child(3) {margin-left: 30px;}
+    .futsalillust02 p:nth-child(3) {margin-left: 180px;}
     .futsalillust02 p:nth-child(4) {margin-left: 50px;}
 
     .judoillust02 { width: 100%; padding-top: 0; display: inline-block;
@@ -711,7 +713,7 @@ main { margin:0 ; padding:0 ; }
     .staff article .supportSection {  float: left; clear: none;  width: calc(100% - 480px);  }
     .staff article ul.stafflist li { position:relative; height:60px !important; line-height: 18px;}
 
-    .staff article h6 { width: 150px !important;    height: 50px; display: inline-block;   float: left !important;  clear: none !important; margin-bottom: 30px;  }
+    .staff article h6 { width: 150px !important;  height: 50px; display: inline-block;   float: left !important;  clear: none !important; margin-bottom: 30px;  }
     .staff article .supportSection > .thanksDiv,
     .staff article .supportSection > .interviewDiv {width: 100%; }
     .staff article .supportSection > .interviewDiv > ul ,
