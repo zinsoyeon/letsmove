@@ -322,10 +322,7 @@ main { margin:0 ; padding:0 ; }
 .staff article ul.supportlist li p.nm span:nth-child(1) { font-size: 0.9em;  color: #000000;  font-weight:600 }
 .staff article ul.supportlist li p.nm span:nth-child(2) {  font-size: 0.8em  ;color: #7e7e7e ; }
 
-
-
-
-.staff article ul li span.sns { width:auto; max-width: 80px;}
+.staff article ul li span.sns { width:auto; max-width: 80px; margin-top:4px }
 
 .govSupport { margin: 0; padding:20px; width: 100%; text-align: center;   display: inline-block;  }
 .govList { margin: 0 auto; padding:0; height:180px; text-align: center; }
@@ -721,6 +718,7 @@ main { margin:0 ; padding:0 ; }
     .staff article ul.supportlist { width: 100%; float: left ; margin-right:0px !important; ;  }
     .staff article ul li p.sns { position: absolute; right:0; width: 75px; }
     .staff article .supportSection { float: left; margin-left:0 !important;   }
+    .staff article ul.supportlist li {  height: 60px }
 }
 
 
@@ -756,7 +754,7 @@ main { margin:0 ; padding:0 ; }
 
     .staff article ul.stafflist li.li_sns {  height:80px !important;  }
     .staff article ul.stafflist li.li_sns p.nm {  height:100%;position: relative;   }
-    .staff article ul.stafflist li.li_sns p.nm .sns { margin-left: 0; position: absolute; bottom: 15px; left: 0; }
+    .staff article ul.stafflist li.li_sns p.nm .sns { margin-left: 0; position: absolute; bottom: 18px; left: 0; }
     .staff article ul.stafflist li.li_sns p.nm .sns a { margin-left: 0; margin-right: 3px; }
 
 
@@ -770,7 +768,7 @@ main { margin:0 ; padding:0 ; }
     .staff article .supportSection > .interviewDiv { clear:none !important;  width: 100% !important;   }
     .staff article .supportSection > .thanksDiv { clear:none !important;   width: 100% !important;   }
 
-    .staff article supportSection li { height:100%; margin-bottom: 5px; display: inline-block; width: 100%; }
+    .staff article .supportSection li { height:100%; margin-bottom: 5px; display: inline-block; width: 100%; }
 
     .staff article ul.supportlist { width:200px; margin-left:0; margin-top:0; clear:none !important;float: left; }
 
@@ -783,7 +781,7 @@ main { margin:0 ; padding:0 ; }
     .staff article .supportSection .interviewDiv ul,
     .staff article .supportSection .thanksDiv ul { float: left!important;   width: calc(100% - 130px) ;  clear: none !important ;}
     .staff article ul.supportlist li p.nm span:nth-child(1) { color: #000000;  font-weight:600 }
-    .staff article ul.supportlist li p.nm span:nth-child(2) {    color: #7e7e7e}
+    .staff article ul.supportlist li p.nm span:nth-child(2) { color: #7e7e7e }
 
 }
 
