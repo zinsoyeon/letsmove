@@ -59,13 +59,9 @@
         } else {
             $headerNavUl.css({"left": "-200%"});
         }
-        if ( windowWidth > 1024 ){
-            $("#vimeoTrailer iframe").css('height', windowHeight-60);
-            $("#vimeoTrailer iframe").css('width', windowWidth);
-        } else {
-            $("#vimeoTrailer iframe").css('width', windowWidth);
-            $("#vimeoTrailer iframe").css('height', windowWidth/16*9);
-        }
+
+        $("#vimeoTrailer iframe").css('width', windowWidth);
+        $("#vimeoTrailer iframe").css('height', windowWidth/16*9);
 
         $('.btn_cate').on('click', function() {
             if ( $headerNavUl.css('left') == '0px' ){

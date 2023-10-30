@@ -361,11 +361,11 @@ main { margin:0 ; padding:0 ; }
 
 
 .interviewContents > article > div p { float: left; max-width: 880px;
-  clear:both; /*line-height: 1.6em; font-size: 1.2em; */ margin-bottom: 20px; letter-spacing: -0.05em ; display: inline-block ; color:#333;}
+  clear:both; /*line-height: 1.6em; font-size: 1.2em; */ margin-bottom: 20px;  display: inline-block ; color:#333;}
 
 .interviewContents article { padding:50px; }
 .interviewContents > article > .interviewCont {   max-width:880px;  display: inline-block ; }
-.interviewContents > article > .interviewCont p {font-size: 1.1em; line-height: 1.8em;}
+.interviewContents > article > .interviewCont p {font-size: 1.1em; line-height: 1.8em; letter-spacing: -0.05em}
 .interviewContents > article > .interviewCont p.txtindent{ margin-left: 20px; }
 .interviewContents > article > .interviewCont p.tit { font-weight: 600 !important;  color:#000;  }
 
@@ -402,8 +402,8 @@ main { margin:0 ; padding:0 ; }
 
 
 .poleillust01 {
-    width: 100%;   margin-bottom: 0;   display: inline-block;
-    background-repeat: no-repeat; background-size: auto 450px ; background-position: right bottom 10px;
+    width: 100%;   margin-bottom: 0;   display: inline-block; padding-bottom: 50px;
+    background-repeat: no-repeat; background-size: auto 430px ; background-position: right bottom 0px;
     background-image: url("../image/comm/cont_pole_illust_01.png");
 }
 
@@ -540,7 +540,7 @@ main { margin:0 ; padding:0 ; }
     .main { margin-top: 50px !important; }
 
     .letsmove  { margin-top:60px; }
-    .letsmove article { padding:0px 40px 60px 40px;}
+    .letsmove article { padding:0px 40px 60px 40px; }
 
     /*.letsmove article p.kor { font-size: 1.1em }*/
     /*.letsmove article p.eng { font-size: 0.95em }*/
@@ -549,11 +549,13 @@ main { margin:0 ; padding:0 ; }
     .letsmove article p.eng { font-size: 1em }
 
     /*.interviewContents > article  p.txtindent{ margin-left:0 !important; }*/
+    .interviewContents > article { padding:30px 30px 50px 50px ;   }
     .interviewContents > article > .interviewCont {max-width: 800px; }
-    .interviewContents article { padding:30px 30px 50px 50px ; }
+
+    .interviewContents > article > .interviewCont p { font-size:18px; line-height: 180%;}
     .interviewContents > article > .interviewCont p.tit { font-weight: 600 !important;  color:#000; /*font-size: 1.05em */ }
     .interviewContents > article > div p { float: left;
-        clear:both; margin-bottom: 20px; letter-spacing: -0.05em ; display: inline-block ; color:#333;}
+        clear:both; margin-bottom: 20px; display: inline-block ; color:#333;}
 
     .introduce article { padding:30px 40px 50px 40px !important;   }
     .introduce nav.gall { padding: 10px 35px;  text-align: center; }
@@ -588,7 +590,7 @@ main { margin:0 ; padding:0 ; }
         background-repeat: no-repeat; background-size: auto 350px; background-position: bottom right;
     }
 
-    .poleillust02 { padding-right:200px; padding-bottom: 50px !important; height: auto !important;
+    .poleillust02 { padding-right:200px; padding-bottom: 120px !important; height: auto !important;
         background-repeat: no-repeat; background-size: auto 250px; background-position: top right;
     }
 
@@ -913,7 +915,7 @@ main { margin:0 ; padding:0 ; }
     .futsalillust03 p:nth-child(2) { padding-right:0px;}
 
     .interviewContents > article > div p { float: left;
-        clear:both; margin-bottom: 20px; letter-spacing: -0.05em ; display: inline-block ; color:#333;}
+        clear:both; margin-bottom: 20px; display: inline-block ; color:#333;}
 
     .interviewContents > article > .interviewCont p.txtindent2 .name { top: 4px; left:0 ; }
     .interviewContents > article > .interviewCont p.txtindent2 { padding-left:45px !important; }
