@@ -4,29 +4,63 @@
 @-webkit-viewport{width:device-width;}
 @viewport{width:device-width;}
 
-@font-face { /* 애플산돌고딕 폰트 적용 */
-    font-family: "SDGothic";
-    src: url("../font/AppleSDGothicNeoL.ttf") format("truetype");
-    font-weight: 500;
+@font-face {
+    font-family: "Apple SD Gothic Neo";
+    src: url("../font/AppleSDGothicNeoT.woff2") format("woff2"), url("../font/AppleSDGothicNeoT.woff") format("woff");
+    font-weight: 100;
+    font-style: normal;
 }
-@font-face { /* 애플산돌고딕 폰트 적용 */
-    font-family: "SDGothic";
-    src: url("../font/AppleSDGothicNeoM.ttf") format("truetype");
+@font-face {
+    font-family: "Apple SD Gothic Neo";
+    src: url("../font/AppleSDGothicNeoUL.woff2") format("woff2"), url("../font/AppleSDGothicNeoUL.woff") format("woff");
+    font-weight: 200;
+    font-style: normal;
+}
+@font-face {
+    font-family: "Apple SD Gothic Neo";
+    src: url("../font/AppleSDGothicNeoL.woff2") format("woff2"), url("../font/AppleSDGothicNeoL.woff") format("woff");
+    font-weight: 300;
+    font-style: normal;
+}
+@font-face {
+    font-family: "Apple SD Gothic Neo";
+    src: url("../font/AppleSDGothicNeoR.woff2") format("woff2"), url("../font/AppleSDGothicNeoR.woff") format("woff");
+    font-weight: 400;
+    font-style: normal;
+}
+@font-face {
+    font-family: "Apple SD Gothic Neo";
+    src: url("../font/AppleSDGothicNeoM.woff2") format("woff2"), url("../font/AppleSDGothicNeoM.woff") format("woff");
+    font-weight: 500;
+    /*font-style: medium;*/
+}
+@font-face {
+    font-family: "Apple SD Gothic Neo";
+    src: url("../font/AppleSDGothicNeoSB.woff2") format("woff2"), url("../font/AppleSDGothicNeoSB.woff") format("woff");
     font-weight: 600;
 }
-@font-face { /* 애플산돌고딕 폰트 적용 */
-    font-family: "SDGothic";
-    src: url("../font/AppleSDGothicNeoEB.ttf") format("truetype");
+
+@font-face {
+    font-family: "Apple SD Gothic Neo";
+    src: url("../font/AppleSDGothicNeoB.woff2") format("woff2"), url("../font/AppleSDGothicNeoB.woff") format("woff");
     font-weight: 700;
 }
-@font-face { /* 애플산돌고딕 폰트 적용 */
-    font-family: "SDGothic";
-    src: url("../font/AppleSDGothicNeoEB.ttf") format("truetype");
+@font-face {
+    font-family: "Apple SD Gothic Neo";
+    src: url("../font/AppleSDGothicNeoEB.woff2") format("woff2"), url("../font/AppleSDGothicNeoEB.woff") format("woff");
     font-weight: 800;
 }
+@font-face {
+    font-family: "Apple SD Gothic Neo";
+    src: url("../font/AppleSDGothicNeoH.woff2") format("woff2"), url("../font/AppleSDGothicNeoH.woff") format("woff");
+    font-weight: 900;
+}
+
+
+
 html {overflow-x: hidden; overflow-y: scroll}
 * { margin:0; padding:0;
-    font-family: 'SDGothic', AppleSDGothicNeo-Regular, /*'Malgun Gothic', '맑은 고딕',*/ dotum, '돋움', sans-serif;
+    font-family: "Apple SD Gothic Neo", 'SDGothic', AppleSDGothicNeo-Regular, /*'Malgun Gothic', '맑은 고딕',*/ dotum, '돋움', sans-serif;
     word-break:keep-all; list-style:none; text-indent: 0; font-size: 1em; line-height: 1em;
     box-sizing: border-box;  text-align: left;
 }

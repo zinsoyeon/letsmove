@@ -1158,7 +1158,7 @@
         });
 
 
-        onvisible.add('.interviewCont p.poleillust01', {
+        onvisible.add('.interviewCont .poleillust01', {
             style: 'fade-down',
             speed: 1000,
             intensity: 8,
@@ -1167,7 +1167,7 @@
             replay: false
         });
 
-        onvisible.add('.interviewCont p.poleillust02', {
+        onvisible.add('.interviewCont .poleillust02', {
             style: 'fade-down',
             speed: 1000,
             intensity: 8,

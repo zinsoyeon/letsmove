@@ -1,6 +1,7 @@
 <!DOCTYPE html>
 <html lang="ko">
 <head>
+    <!-- Google tag (gtag.js) --> <script async src="https://www.googletagmanager.com/gtag/js?id=G-0Q1STX5YFT"></script> <script> window.dataLayer = window.dataLayer || []; function gtag(){dataLayer.push(arguments);} gtag('js', new Date()); gtag('config', 'G-0Q1STX5YFT'); </script>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="robots" content="index, follow" />
@@ -27,15 +28,14 @@
     <link rel="stylesheet" href="./css/style.css">
     <title>움직여!</title>
 </head>
-
-<script src="./js/jquery.js"></script>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
 <script src="./js/swiper.js"></script>
 <script src="./js/player.js"></script>
 
 <script>
 
     /* html 최초 로드 및 이벤트 상시 대기 실시 */
-    $(window).load(function(){
+    $(window).on('load', function() {
         //메소드 호출
         main();
     });
