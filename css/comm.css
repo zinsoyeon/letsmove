@@ -4,55 +4,97 @@
 @-webkit-viewport{width:device-width;}
 @viewport{width:device-width;}
 
+@font-face { /* 애플산돌고딕 폰트 적용 */
+    font-family: "SDGothic";
+    src: url("../font/AppleSDGothicNeoL.ttf") format("truetype");
+    font-weight: 500;
+}
+@font-face { /* 애플산돌고딕 폰트 적용 */
+    font-family: "SDGothic";
+    src: url("../font/AppleSDGothicNeoM.ttf") format("truetype");
+    font-weight: 600;
+}
+@font-face { /* 애플산돌고딕 폰트 적용 */
+    font-family: "SDGothic";
+    src: url("../font/AppleSDGothicNeoEB.ttf") format("truetype");
+    font-weight: 700;
+}
+@font-face { /* 애플산돌고딕 폰트 적용 */
+    font-family: "SDGothic";
+    src: url("../font/AppleSDGothicNeoEB.ttf") format("truetype");
+    font-weight: 800;
+}
+
 @font-face {
     font-family: "Apple SD Gothic Neo";
-    src: url("../font/AppleSDGothicNeoT.woff2") format("woff2"), url("../font/AppleSDGothicNeoT.woff") format("woff");
+    src:
+         url("../font/AppleSDGothicNeoT.woff2") format("woff2"),
+         url("../font/AppleSDGothicNeoT.woff") format("woff");
     font-weight: 100;
-    font-style: normal;
 }
+
 @font-face {
     font-family: "Apple SD Gothic Neo";
-    src: url("../font/AppleSDGothicNeoUL.woff2") format("woff2"), url("../font/AppleSDGothicNeoUL.woff") format("woff");
+    src:
+         url("../font/AppleSDGothicNeoUL.woff2") format("woff2"),
+         url("../font/AppleSDGothicNeoUL.woff") format("woff");
     font-weight: 200;
-    font-style: normal;
 }
 @font-face {
     font-family: "Apple SD Gothic Neo";
-    src: url("../font/AppleSDGothicNeoL.woff2") format("woff2"), url("../font/AppleSDGothicNeoL.woff") format("woff");
+    src:
+         url("../font/AppleSDGothicNeoL.woff2") format("woff2"),
+         url("../font/AppleSDGothicNeoL.woff") format("woff"),
+url("../font/AppleSDGothicNeoL.ttf") format("truetype");
     font-weight: 300;
-    font-style: normal;
 }
 @font-face {
     font-family: "Apple SD Gothic Neo";
-    src: url("../font/AppleSDGothicNeoR.woff2") format("woff2"), url("../font/AppleSDGothicNeoR.woff") format("woff");
+    src:
+          url("../font/AppleSDGothicNeoR.woff2") format("woff2"),
+          url("../font/AppleSDGothicNeoR.woff") format("woff"),
+          url("../font/AppleSDGothicNeoR.ttf") format("truetype");
     font-weight: 400;
     font-style: normal;
 }
 @font-face {
     font-family: "Apple SD Gothic Neo";
-    src: url("../font/AppleSDGothicNeoM.woff2") format("woff2"), url("../font/AppleSDGothicNeoM.woff") format("woff");
+    src:
+          url("../font/AppleSDGothicNeoM.woff2") format("woff2"),
+          url("../font/AppleSDGothicNeoM.woff") format("woff"),
+          url("../font/AppleSDGothicNeoM.ttf") format("truetype");
     font-weight: 500;
-    /*font-style: medium;*/
 }
 @font-face {
     font-family: "Apple SD Gothic Neo";
-    src: url("../font/AppleSDGothicNeoSB.woff2") format("woff2"), url("../font/AppleSDGothicNeoSB.woff") format("woff");
+    src:
+         url("../font/AppleSDGothicNeoSB.woff2") format("woff2"),
+         url("../font/AppleSDGothicNeoSB.woff") format("woff"),
+         url("../font/AppleSDGothicNeoSB.ttf") format("truetype");
     font-weight: 600;
 }
 
 @font-face {
     font-family: "Apple SD Gothic Neo";
-    src: url("../font/AppleSDGothicNeoB.woff2") format("woff2"), url("../font/AppleSDGothicNeoB.woff") format("woff");
+    src:
+         url("../font/AppleSDGothicNeoB.woff2") format("woff2"),
+         url("../font/AppleSDGothicNeoB.woff") format("woff"),
+         url("../font/AppleSDGothicNeoB.ttf") format("truetype");
     font-weight: 700;
 }
 @font-face {
     font-family: "Apple SD Gothic Neo";
-    src: url("../font/AppleSDGothicNeoEB.woff2") format("woff2"), url("../font/AppleSDGothicNeoEB.woff") format("woff");
+    src:
+          url("../font/AppleSDGothicNeoEB.woff2") format("woff2"),
+          url("../font/AppleSDGothicNeoEB.woff") format("woff"),
+        url("../font/AppleSDGothicNeoEB.ttf") format("truetype");
     font-weight: 800;
 }
 @font-face {
     font-family: "Apple SD Gothic Neo";
-    src: url("../font/AppleSDGothicNeoH.woff2") format("woff2"), url("../font/AppleSDGothicNeoH.woff") format("woff");
+    src:
+        url("../font/AppleSDGothicNeoH.woff2") format("woff2"),
+        url("../font/AppleSDGothicNeoH.woff") format("woff");
     font-weight: 900;
 }
 
@@ -60,9 +102,13 @@
 
 html {overflow-x: hidden; overflow-y: scroll}
 * { margin:0; padding:0;
-    font-family: "Apple SD Gothic Neo", 'SDGothic', AppleSDGothicNeo-Regular, /*'Malgun Gothic', '맑은 고딕',*/ dotum, '돋움', sans-serif;
+    font-family:  "Apple SD Gothic Neo",'SDGothic',  AppleSDGothicNeo-Regular
+    , 'Malgun Gothic', '맑은 고딕', dotum, '돋움', sans-serif;
     word-break:keep-all; list-style:none; text-indent: 0; font-size: 1em; line-height: 1em;
-    box-sizing: border-box;  text-align: left;
+    box-sizing: border-box;  text-align: left; font-weight: 300;
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
 }
 
 article { margin:0 auto; overflow-x: hidden ; }
@@ -95,7 +141,7 @@ footer p:nth-child(1) { margin-bottom: 5px; color:#666666;   font-weight: 600; }
 footer p:nth-child(2) { margin-bottom: 5px; color:#7E7E7E; font-size: 0.9em; font-weight: 400; }
 footer p:nth-child(2) a { color:#666 !important; text-decoration: none !important; }
 footer p:nth-child(3) { color:#7E7E7E; font-size:  0.9em; font-weight: 400; }
-footer p strong{ font-weight: 700 !important;  }
+footer p strong{ font-weight: 600 !important;  }
 footer p.logo{
     height:40px; width:40px; margin: 0 auto;
     background-image: url("../image/comm/footer_logo.png" ) ;
@@ -114,7 +160,7 @@ footer p.logo{
     background-image: url("../image/comm/highlight_yellow.png"); }
 
 @media (max-width: 820px) {
-    footer { font-size: 1em; padding:40px 0 40px 0; }
+    footer { font-size: 0.9em; padding:40px 0 40px 0; }
     footer p {  line-height: 16px; height: 16px;}
     .sns a { width: 16px !important;  height: 16px !important; background-size: 16px auto;  }
     .line2 { margin-bottom:25px; margin-top: 25px;}
